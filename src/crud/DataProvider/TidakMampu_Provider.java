@@ -2,55 +2,65 @@
 package crud.DataProvider;
 
 public class TidakMampu_Provider {
-    private String kodepagawai,namapegawai,jeniskelamin, alamat, nopenduduk, status;
+    private String nomorIndukKependudukan,namaWarga,tempatLahir, tanggalLahir, Agama, pekerjaanWarga, jenisKelamin;
 
-    public void setKodePegawai(String kodepagawai){
-        this.kodepagawai = kodepagawai;
+    public String getNomorIndukKependudukan() {
+        return nomorIndukKependudukan;
     }
 
-    public String getKodePegawai(){
-        return this.kodepagawai;
+    public void setNomorIndukKependudukan(String nomorIndukKependudukan) {
+        this.nomorIndukKependudukan = nomorIndukKependudukan;
     }
 
-    public void setNamaPegawai(String namapegawai){
-        this.namapegawai = namapegawai;
+    public String getNamaWarga() {
+        return namaWarga;
     }
 
-    public String getNamaPegawai(){
-        return this.namapegawai;
+    public void setNamaWarga(String namaWarga) {
+        this.namaWarga = namaWarga;
     }
 
-    public void setJenisKelamin(String jeniskelamin){
-        this.jeniskelamin = jeniskelamin;
+    public String getTempatLahir() {
+        return tempatLahir;
     }
 
-    public String getJenisKelamin(){
-        return this.jeniskelamin;
+    public void setTempatLahir(String tempatLahir) {
+        this.tempatLahir = tempatLahir;
     }
 
-    public String getAlamat() {
-        return alamat;
+    public String getTanggalLahir() {
+        return tanggalLahir;
     }
 
-    public void setAlamat(String alamat) {
-        this.alamat = alamat;
+    public void setTanggalLahir(String tanggalLahir) {
+        this.tanggalLahir = tanggalLahir;
     }
 
-    public String getNopenduduk() {
-        return nopenduduk;
+    public String getAgama() {
+        return Agama;
     }
 
-    public void setNopenduduk(String nopenduduk) {
-        this.nopenduduk = nopenduduk;
+    public void setAgama(String Agama) {
+        this.Agama = Agama;
     }
 
-    public String getStatus() {
-        return status;
+    public String getPekerjaanWarga() {
+        return pekerjaanWarga;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setPekerjaanWarga(String pekerjaanWarga) {
+        this.pekerjaanWarga = pekerjaanWarga;
     }
+
+    public String getJenisKelamin() {
+        return jenisKelamin;
+    }
+
+    public void setJenisKelamin(String jenisKelamin) {
+        this.jenisKelamin = jenisKelamin;
+    }
+    
+    
     
     
 }

@@ -13,6 +13,8 @@ public class TidakMampu_Form extends javax.swing.JFrame {
         initComponents();
         buttonGroup1.add(radiobutton_pria);
         buttonGroup1.add(radiobutton_wanita);
+        
+        //Penyesuaian koneksi ke database MYSQL
         try{
             database= "kantor";
             url = "jdbc:mysql://localhost:3306/"+database;
@@ -29,7 +31,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
     private ResultSet hasil;
     private Statement stat;
     private String query,url,database;
-    private TidakMampu_Provider pegawai;
+    private TidakMampu_Provider warga_tidakmampu;
     private List<TidakMampu_Provider> list;
     private TableModel model;
 
@@ -39,9 +41,9 @@ public class TidakMampu_Form extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
-        text_kodepegawai = new javax.swing.JTextField();
+        text_nik = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        text_namapegawai = new javax.swing.JTextField();
+        text_namalengkap = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         radiobutton_pria = new javax.swing.JRadioButton();
         radiobutton_wanita = new javax.swing.JRadioButton();
@@ -53,22 +55,22 @@ public class TidakMampu_Form extends javax.swing.JFrame {
         btn_cari = new javax.swing.JButton();
         btn_bersih = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        text_alamat = new javax.swing.JTextField();
+        text_tempatlahir = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        text_nopenduduk = new javax.swing.JTextField();
-        text_status = new javax.swing.JTextField();
+        text_agama = new javax.swing.JTextField();
+        text_pekerjaan = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        text_tanggallahir = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        text_nomorket = new javax.swing.JTextField();
+        text_tanggalket = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jTextField4 = new javax.swing.JTextField();
+        textarea_keperluan = new javax.swing.JTextArea();
+        text_keteranganrt = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Java Connect Mysql");
@@ -81,9 +83,9 @@ public class TidakMampu_Form extends javax.swing.JFrame {
 
         jLabel1.setText("NIK");
 
-        text_kodepegawai.addActionListener(new java.awt.event.ActionListener() {
+        text_nik.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text_kodepegawaiActionPerformed(evt);
+                text_nikActionPerformed(evt);
             }
         });
 
@@ -142,9 +144,9 @@ public class TidakMampu_Form extends javax.swing.JFrame {
 
         jLabel4.setText("Tempat");
 
-        text_alamat.addActionListener(new java.awt.event.ActionListener() {
+        text_tempatlahir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text_alamatActionPerformed(evt);
+                text_tempatlahirActionPerformed(evt);
             }
         });
 
@@ -154,9 +156,9 @@ public class TidakMampu_Form extends javax.swing.JFrame {
 
         jLabel7.setText("Tanggal Lahir");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        text_tanggallahir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                text_tanggallahirActionPerformed(evt);
             }
         });
 
@@ -166,21 +168,21 @@ public class TidakMampu_Form extends javax.swing.JFrame {
 
         jLabel10.setText("Tanggal");
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        text_nomorket.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                text_nomorketActionPerformed(evt);
             }
         });
 
         jLabel11.setText("Keperluan");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane2.setViewportView(jTextArea1);
+        textarea_keperluan.setColumns(20);
+        textarea_keperluan.setRows(5);
+        jScrollPane2.setViewportView(textarea_keperluan);
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        text_keteranganrt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                text_keteranganrtActionPerformed(evt);
             }
         });
 
@@ -210,27 +212,27 @@ public class TidakMampu_Form extends javax.swing.JFrame {
                                     .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(text_namapegawai, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(text_namalengkap, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(text_alamat, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(text_tempatlahir, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel7)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField1))
-                                    .addComponent(text_nopenduduk, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(text_status, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(text_tanggallahir))
+                                    .addComponent(text_agama, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(text_pekerjaan, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(text_keteranganrt, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel9)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(text_nomorket, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(jLabel10)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE))
+                                        .addComponent(text_tanggalket, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE))
                                     .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(text_kodepegawai)))
+                                    .addComponent(text_nik)))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 909, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(301, 301, 301)
@@ -251,24 +253,24 @@ public class TidakMampu_Form extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(text_kodepegawai, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(text_nik, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(text_namapegawai, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_namalengkap, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(text_alamat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_tempatlahir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
                     .addComponent(jLabel7)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(text_tanggallahir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(text_nopenduduk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_agama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(text_status, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_pekerjaan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -280,9 +282,9 @@ public class TidakMampu_Form extends javax.swing.JFrame {
                     .addComponent(jLabel8)
                     .addComponent(jLabel9)
                     .addComponent(jLabel10)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(text_nomorket, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_tanggalket, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_keteranganrt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -319,19 +321,22 @@ public class TidakMampu_Form extends javax.swing.JFrame {
             btn_delete.setEnabled(false);
             btn_bersih.setEnabled(false);
             btn_cari.setEnabled(true);
-            text_kodepegawai.setText("");
-            text_kodepegawai.setEnabled(true);
-            text_kodepegawai.requestFocus();
-            text_namapegawai.setText("");
-            text_alamat.setText("");
-            text_nopenduduk.setText("");
-            text_status.setText("");
+            text_nik.setText("");
+            text_nik.setEnabled(true);
+            text_nik.requestFocus();
+            text_namalengkap.setText("");
+            text_tempatlahir.setText("");
+            text_agama.setText("");
+            text_pekerjaan.setText("");
             buttonGroup1.clearSelection();
+            
         }catch(SQLException ex){
             JOptionPane.showMessageDialog(null, ex);
         }
     }//GEN-LAST:event_formWindowOpened
 
+    
+    //Simpan data
     private void btn_simpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_simpanActionPerformed
         
         try{
@@ -342,10 +347,13 @@ public class TidakMampu_Form extends javax.swing.JFrame {
                 j_kelamin = "Wanita";
             }else{}
 
-            if(text_kodepegawai.getText().equals("") && text_namapegawai.getText().equals("") || j_kelamin.equals("")){
-                JOptionPane.showMessageDialog(null, "data Tidak lengkap");
+            if(text_nik.getText().equals("") && text_namalengkap.getText().equals("") && text_tempatlahir.getText().equals("")
+                    && text_tanggallahir.getText().equals("") && text_agama.getText().equals("") &&
+                    text_pekerjaan.getText().equals("") || j_kelamin.equals("")){
+                JOptionPane.showMessageDialog(null, "Data Tidak lengkap");
             }else{
-                query = "insert into pegawai values ('"+text_kodepegawai.getText()+"','"+text_namapegawai.getText()+"','"+j_kelamin+"')";
+                query = "insert into pegawai values ('"+text_nik.getText()+"','"+text_namalengkap.getText()+"','"+ text_tanggallahir +"','"+
+                        text_tanggallahir +"','"+ text_agama +"','"+ text_pekerjaan +"','"+j_kelamin+"')";
                 stat = koneksi.createStatement();
                 int res = stat.executeUpdate(query);
                 if(res == 1){
@@ -358,22 +366,24 @@ public class TidakMampu_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_simpanActionPerformed
 
+    
+    //Cari data
     private void btn_cariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cariActionPerformed
         try{
             String j_kelamin = "";
-            if(text_kodepegawai.getText().equals("")){
+            if(text_nik.getText().equals("")){
                 JOptionPane.showMessageDialog(null, "Tidak Ada data Yang Anda Pilih");
             }else{
-                query = "select * from pegawai where kodepegawai = '"+text_kodepegawai.getText()+"'";
+                query = "select * from pegawai where nik = '"+text_nik.getText()+"'";
                 stat = koneksi.createStatement();
                 hasil = stat.executeQuery(query);                
                 while(hasil.next()){
                     
                     //Set data dari pencarian ke field inputan
-                    text_namapegawai.setText(hasil.getString("namapegawai"));
-                    text_alamat.setText(hasil.getString("namapegawai"));
-                    text_nopenduduk.setText(hasil.getString("namapegawai"));
-                    text_status.setText(hasil.getString("namapegawai"));
+                    text_namalengkap.setText(hasil.getString("namalengkap"));
+                    text_tempatlahir.setText(hasil.getString("namalengkap"));
+                    text_agama.setText(hasil.getString("namalengkap"));
+                    text_pekerjaan.setText(hasil.getString("namalengkap"));
                     j_kelamin = hasil.getString("jeniskelamin");
                 }
 
@@ -386,7 +396,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
                     }else{
                         radiobutton_wanita.setSelected(true);
                     }
-                    query = "select * from pegawai where kodepegawai = '"+text_kodepegawai.getText()+"'";
+                    query = "select * from pegawai where nik = '"+text_nik.getText()+"'";
                     stat = koneksi.createStatement();
                     hasil = stat.executeQuery(query);
                     _setModel(hasil);
@@ -395,7 +405,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
                     btn_delete.setEnabled(true);
                     btn_cari.setEnabled(false);
                     btn_bersih.setEnabled(true);
-                    text_kodepegawai.setEnabled(false);
+                    text_nik.setEnabled(false);
                 }
             }
         }catch(SQLException ex){
@@ -420,7 +430,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
             }else if(radiobutton_wanita.isSelected()){
                 j_kelamin = "Wanita";
             }else{}
-            query = "update pegawai set namapegawai = '"+text_namapegawai.getText()+"', jeniskelamin = '"+j_kelamin+"' where kodepegawai = '"+text_kodepegawai.getText()+"'";
+            query = "update pegawai set namalengkap = '"+text_namalengkap.getText()+"', jeniskelamin = '"+j_kelamin+"' where nik = '"+text_nik.getText()+"'";
             stat = koneksi.createStatement();
             int res = stat.executeUpdate(query);
             if(res == 1){
@@ -435,7 +445,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
     private void btn_deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_deleteActionPerformed
         try{
             if(JOptionPane.showConfirmDialog(null, "Anda Yakin menghapus Data ini ??","Warning",2) == JOptionPane.YES_OPTION){
-                query = "delete from pegawai where kodepegawai = '"+text_kodepegawai.getText()+"'";
+                query = "delete from pegawai where kodepegawai = '"+text_nik.getText()+"'";
                 stat = koneksi.createStatement();
                 int res = stat.executeUpdate(query);
                 if(res == 1){
@@ -448,36 +458,42 @@ public class TidakMampu_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_deleteActionPerformed
 
-    private void text_alamatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_alamatActionPerformed
+    private void text_tempatlahirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_tempatlahirActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_text_alamatActionPerformed
+    }//GEN-LAST:event_text_tempatlahirActionPerformed
 
-    private void text_kodepegawaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_kodepegawaiActionPerformed
+    private void text_nikActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_nikActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_text_kodepegawaiActionPerformed
+    }//GEN-LAST:event_text_nikActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void text_tanggallahirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_tanggallahirActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_text_tanggallahirActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void text_keteranganrtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_keteranganrtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_text_keteranganrtActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void text_nomorketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_nomorketActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_text_nomorketActionPerformed
 
     private void _setModel(ResultSet hasil)
     {
         try{
             list = new ArrayList<TidakMampu_Provider>();
             while(hasil.next()){
-                pegawai = new TidakMampu_Provider();
-                pegawai.setKodePegawai(hasil.getString("kodepegawai"));
-                pegawai.setNamaPegawai(hasil.getString("namapegawai"));
-                pegawai.setJenisKelamin(hasil.getString("jeniskelamin"));
-                list.add(pegawai);
+                
+                //Untuk Select Data dan menaruhnya di tableView
+                warga_tidakmampu = new TidakMampu_Provider();
+                warga_tidakmampu.setNomorIndukKependudukan(hasil.getString("nik"));
+                warga_tidakmampu.setNamaWarga(hasil.getString("namalengkap"));
+                warga_tidakmampu.setTempatLahir(hasil.getString("tempatlahir"));
+                warga_tidakmampu.setTanggalLahir(hasil.getString("tanggallahir"));
+                warga_tidakmampu.setAgama(hasil.getString("agama"));
+                warga_tidakmampu.setPekerjaanWarga(hasil.getString("pekerjaan"));
+                warga_tidakmampu.setJenisKelamin(hasil.getString("jeniskelamin"));
+                list.add(warga_tidakmampu);
             }
             model = new TidakMampu_Adapter(list);
             jTable1.setModel(model);
@@ -507,18 +523,18 @@ public class TidakMampu_Form extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JRadioButton radiobutton_pria;
     private javax.swing.JRadioButton radiobutton_wanita;
-    private javax.swing.JTextField text_alamat;
-    private javax.swing.JTextField text_kodepegawai;
-    private javax.swing.JTextField text_namapegawai;
-    private javax.swing.JTextField text_nopenduduk;
-    private javax.swing.JTextField text_status;
+    private javax.swing.JTextField text_agama;
+    private javax.swing.JTextField text_keteranganrt;
+    private javax.swing.JTextField text_namalengkap;
+    private javax.swing.JTextField text_nik;
+    private javax.swing.JTextField text_nomorket;
+    private javax.swing.JTextField text_pekerjaan;
+    private javax.swing.JTextField text_tanggalket;
+    private javax.swing.JTextField text_tanggallahir;
+    private javax.swing.JTextField text_tempatlahir;
+    private javax.swing.JTextArea textarea_keperluan;
     // End of variables declaration//GEN-END:variables
 
 }

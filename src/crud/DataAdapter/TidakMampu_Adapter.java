@@ -17,23 +17,25 @@ public class TidakMampu_Adapter extends AbstractTableModel {
     }
 
     public int getColumnCount() {
-        return 6;
+        return 7;
     }
 
     public Object getValueAt(int rowIndex, int columnIndex) {
         switch (columnIndex) {
             case 0:
-                return list.get(rowIndex).getKodePegawai();
+                return list.get(rowIndex).getNomorIndukKependudukan();
             case 1:
-                return list.get(rowIndex).getNamaPegawai();
+                return list.get(rowIndex).getNamaWarga();
             case 2:
-                return list.get(rowIndex).getJenisKelamin();
+                return list.get(rowIndex).getTempatLahir();
             case 3:
-                return list.get(rowIndex).getAlamat();
+                return list.get(rowIndex).getTanggalLahir();
             case 4:
-                return list.get(rowIndex).getNopenduduk();
+                return list.get(rowIndex).getAgama();
             case 5:
-                return list.get(rowIndex).getStatus();
+                return list.get(rowIndex).getPekerjaanWarga();
+            case 6:
+                return list.get(rowIndex) .getJenisKelamin();
                 
             default:
                 return null;
@@ -43,17 +45,19 @@ public class TidakMampu_Adapter extends AbstractTableModel {
     public String getColumnName(int column) {
         switch (column) {
             case 0:
-                return "Kode Pegawai";
+                return "NIK";
             case 1:
-                return "Nama Pegawai";
+                return "Nama Lengkap";
             case 2:
-                return "Jenis Kelamin";
+                return "Tempat Lahir";
             case 3 :
-                return "Alamat";
+                return "Tanggal Lahir";
             case 4 :
-                return "No Penduduk";
+                return "Agama";
             case 5 :
-                return "Status";
+                return "Pekerjaan";
+            case 6 :
+                return "Jenis Kelamin";
             default:
                 return null;
         }

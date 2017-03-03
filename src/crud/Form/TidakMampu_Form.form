@@ -58,29 +58,29 @@
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="text_namapegawai" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="text_namalengkap" alignment="0" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="text_alamat" min="-2" pref="278" max="-2" attributes="0"/>
+                                      <Component id="text_tempatlahir" min="-2" pref="278" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jTextField1" max="32767" attributes="0"/>
+                                      <Component id="text_tanggallahir" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="text_nopenduduk" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="text_status" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="text_agama" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="text_pekerjaan" alignment="0" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jTextField4" min="-2" pref="165" max="-2" attributes="0"/>
+                                      <Component id="text_keteranganrt" min="-2" pref="165" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jTextField2" min="-2" pref="134" max="-2" attributes="0"/>
+                                      <Component id="text_nomorket" min="-2" pref="134" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jTextField3" pref="287" max="32767" attributes="0"/>
+                                      <Component id="text_tanggalket" pref="287" max="32767" attributes="0"/>
                                   </Group>
                                   <Component id="jScrollPane2" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="text_kodepegawai" max="32767" attributes="0"/>
+                                  <Component id="text_nik" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="jScrollPane1" alignment="0" min="-2" pref="909" max="-2" attributes="0"/>
@@ -109,28 +109,28 @@
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="text_kodepegawai" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="text_nik" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="text_namapegawai" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="text_namalengkap" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="text_alamat" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="text_tempatlahir" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="text_tanggallahir" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="text_nopenduduk" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="text_agama" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="text_status" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="text_pekerjaan" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -144,9 +144,9 @@
                   <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="text_nomorket" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="text_tanggalket" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="text_keteranganrt" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -179,9 +179,9 @@
         <Property name="text" type="java.lang.String" value="NIK"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="text_kodepegawai">
+    <Component class="javax.swing.JTextField" name="text_nik">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_kodepegawaiActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_nikActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
@@ -189,7 +189,7 @@
         <Property name="text" type="java.lang.String" value="Nama Lengkap"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="text_namapegawai">
+    <Component class="javax.swing.JTextField" name="text_namalengkap">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
@@ -270,9 +270,9 @@
         <Property name="text" type="java.lang.String" value="Tempat"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="text_alamat">
+    <Component class="javax.swing.JTextField" name="text_tempatlahir">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_alamatActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_tempatlahirActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
@@ -280,9 +280,9 @@
         <Property name="text" type="java.lang.String" value="Agama"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="text_nopenduduk">
+    <Component class="javax.swing.JTextField" name="text_agama">
     </Component>
-    <Component class="javax.swing.JTextField" name="text_status">
+    <Component class="javax.swing.JTextField" name="text_pekerjaan">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
@@ -294,9 +294,9 @@
         <Property name="text" type="java.lang.String" value="Tanggal Lahir"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1">
+    <Component class="javax.swing.JTextField" name="text_tanggallahir">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_tanggallahirActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
@@ -314,12 +314,12 @@
         <Property name="text" type="java.lang.String" value="Tanggal"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField2">
+    <Component class="javax.swing.JTextField" name="text_nomorket">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_nomorketActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField3">
+    <Component class="javax.swing.JTextField" name="text_tanggalket">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel11">
       <Properties>
@@ -333,7 +333,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextArea" name="jTextArea1">
+        <Component class="javax.swing.JTextArea" name="textarea_keperluan">
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
@@ -341,9 +341,9 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JTextField" name="jTextField4">
+    <Component class="javax.swing.JTextField" name="text_keteranganrt">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField4ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="text_keteranganrtActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
