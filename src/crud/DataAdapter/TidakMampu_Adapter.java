@@ -23,24 +23,30 @@ public class TidakMampu_Adapter extends AbstractTableModel {
     public Object getValueAt(int rowIndex, int columnIndex) {
         switch (columnIndex) {
             case 0:
-                return list.get(rowIndex).getNomorIndukKependudukan();
+                return list.get(rowIndex).getNomorIndukKependudukan();//NIK
             case 1:
-                return list.get(rowIndex).getNamaWarga();
+                return list.get(rowIndex).getNamaWarga();//Nama Lengkap
             case 2:
-                return list.get(rowIndex).getTempatLahir();
+                return list.get(rowIndex).getTempatLahir();//Tempat Lahir
             case 3:
-                return list.get(rowIndex).getTanggalLahir();
+                return list.get(rowIndex).getTanggalLahir();//Tanggal Lahir
             case 4:
-                return list.get(rowIndex).getAgama();
+                return list.get(rowIndex).getAgama();//Agama
             case 5:
-                return list.get(rowIndex).getPekerjaanWarga();
+                return list.get(rowIndex).getPekerjaanWarga();//Pekerjaan
             case 6:
-                return list.get(rowIndex) .getJenisKelamin();
+                return list.get(rowIndex).getJenisKelamin();//Jenis Kelamin
                 
             default:
                 return null;
         }
     }
+    
+    /***
+     * 
+     * Pastikan jumlah kolom sesuai dengan database dan getColumCount
+     * 
+     */
     @Override
     public String getColumnName(int column) {
         switch (column) {

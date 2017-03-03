@@ -2,7 +2,7 @@
 package crud.DataProvider;
 
 public class TidakMampu_Provider {
-    private String nomorIndukKependudukan,namaWarga,tempatLahir, tanggalLahir, Agama, pekerjaanWarga, jenisKelamin;
+    private String nomorIndukKependudukan, namaWarga, tempatLahir, tanggalLahir, Agama, pekerjaanWarga, jenisKelamin;
 
     public String getNomorIndukKependudukan() {
         return nomorIndukKependudukan;

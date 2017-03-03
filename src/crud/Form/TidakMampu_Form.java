@@ -9,6 +9,8 @@ import javax.swing.table.TableModel;
 
 public class TidakMampu_Form extends javax.swing.JFrame {
 
+    
+    //Constructor
     public TidakMampu_Form() {
         initComponents();
         buttonGroup1.add(radiobutton_pria);
@@ -27,6 +29,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
         }
     }
 
+    //Variable penting
     private Connection koneksi;
     private ResultSet hasil;
     private Statement stat;
@@ -309,7 +312,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     
-    //Fungsi untuk membersihkan isi semua field
+    //Fungsi untuk membersihkan isi semua field (FIX)
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         try{
             
@@ -344,7 +347,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowOpened
 
     
-    //Simpan data
+    //Simpan data (Masih ada BUG)
     private void btn_simpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_simpanActionPerformed
         
         try{
@@ -362,7 +365,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Data Tidak lengkap");
             }else{
                 query = "insert into pegawai values ('"+text_nik.getText()+"','"+text_namalengkap.getText()+"','"+text_tanggallahir+"','"+
-                        text_tanggallahir +"','"+ text_agama +"','"+ text_pekerjaan +"','"+j_kelamin+"')";
+                        text_tempatlahir +"','"+ text_agama +"','"+ text_pekerjaan +"','"+j_kelamin+"')";
                 stat = koneksi.createStatement();
                 int res = stat.executeUpdate(query);
                 if(res == 1){
@@ -376,7 +379,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_simpanActionPerformed
 
     
-    //Cari data
+    //Cari data (FIX)
     private void btn_cariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cariActionPerformed
         try{
             String j_kelamin = "";
@@ -423,7 +426,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_cariActionPerformed
 
-    //Membersihkan semua field
+    //Membersihkan semua field (FIX)
     private void btn_bersihActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_bersihActionPerformed
         try{
             //Menjalankan fungsi formWindowOpened
@@ -433,7 +436,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_bersihActionPerformed
 
-    //Upadate Data
+    //Upadate Data (FIX)
     private void btn_updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_updateActionPerformed
         try{
             String j_kelamin = "";
@@ -456,7 +459,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_updateActionPerformed
 
-    //Alert untuk delete data
+    //Alert untuk delete data (FIX)
     private void btn_deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_deleteActionPerformed
         try{
             if(JOptionPane.showConfirmDialog(null, "Anda Yakin menghapus Data ini ??","Warning",2) == JOptionPane.YES_OPTION){
@@ -500,7 +503,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
      * perhatikan setNya dan argumen getStringnya
      * untuk bisa menampilkan data sesuai dengan urutan table yang ada di database
      * 
-     */
+     */ //(FIX)
     private void _setModel(ResultSet hasil)
     {
         try{
