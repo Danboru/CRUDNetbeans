@@ -1,7 +1,7 @@
 
-package crud;
+package crud.DataProvider;
 
-public class L_Pegawai {
+public class TidakMampu_Provider {
     private String kodepagawai,namapegawai,jeniskelamin, alamat, nopenduduk, status;
 
     public void setKodePegawai(String kodepagawai){

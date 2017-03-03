@@ -1,13 +1,15 @@
-package crud;
+package crud.Form;
+import crud.DataAdapter.TidakMampu_Adapter;
+import crud.DataProvider.TidakMampu_Provider;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.TableModel;
 
-public class MainForm extends javax.swing.JFrame {
+public class TidakMampu_Form extends javax.swing.JFrame {
 
-    public MainForm() {
+    public TidakMampu_Form() {
         initComponents();
         buttonGroup1.add(radiobutton_pria);
         buttonGroup1.add(radiobutton_wanita);
@@ -27,8 +29,8 @@ public class MainForm extends javax.swing.JFrame {
     private ResultSet hasil;
     private Statement stat;
     private String query,url,database;
-    private L_Pegawai pegawai;
-    private List<L_Pegawai> list;
+    private TidakMampu_Provider pegawai;
+    private List<TidakMampu_Provider> list;
     private TableModel model;
 
     @SuppressWarnings("unchecked")
@@ -158,7 +160,7 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
-        jLabel8.setText("Kterangan RT");
+        jLabel8.setText("Keterangan RT");
 
         jLabel9.setText("Nomor");
 
@@ -469,15 +471,15 @@ public class MainForm extends javax.swing.JFrame {
     private void _setModel(ResultSet hasil)
     {
         try{
-            list = new ArrayList<L_Pegawai>();
+            list = new ArrayList<TidakMampu_Provider>();
             while(hasil.next()){
-                pegawai = new L_Pegawai();
+                pegawai = new TidakMampu_Provider();
                 pegawai.setKodePegawai(hasil.getString("kodepegawai"));
                 pegawai.setNamaPegawai(hasil.getString("namapegawai"));
                 pegawai.setJenisKelamin(hasil.getString("jeniskelamin"));
                 list.add(pegawai);
             }
-            model = new TmodelPegawai(list);
+            model = new TidakMampu_Adapter(list);
             jTable1.setModel(model);
         }catch(SQLException ex){
             JOptionPane.showMessageDialog(null, ex);
