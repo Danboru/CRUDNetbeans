@@ -346,13 +346,14 @@ public class TidakMampu_Form extends javax.swing.JFrame {
             }else if(radiobutton_wanita.isSelected()){
                 j_kelamin = "Wanita";
             }else{}
-
+            
+            //NIK - namalengkap - tempatlahir - tanggallahir - agama - pekerjaan - jeniskelamin
             if(text_nik.getText().equals("") && text_namalengkap.getText().equals("") && text_tempatlahir.getText().equals("")
                     && text_tanggallahir.getText().equals("") && text_agama.getText().equals("") &&
                     text_pekerjaan.getText().equals("") || j_kelamin.equals("")){
                 JOptionPane.showMessageDialog(null, "Data Tidak lengkap");
             }else{
-                query = "insert into pegawai values ('"+text_nik.getText()+"','"+text_namalengkap.getText()+"','"+ text_tanggallahir +"','"+
+                query = "insert into pegawai values ('"+text_nik.getText()+"','"+text_namalengkap.getText()+"','"+text_tanggallahir+"','"+
                         text_tanggallahir +"','"+ text_agama +"','"+ text_pekerjaan +"','"+j_kelamin+"')";
                 stat = koneksi.createStatement();
                 int res = stat.executeUpdate(query);
@@ -433,7 +434,9 @@ public class TidakMampu_Form extends javax.swing.JFrame {
             }else if(radiobutton_wanita.isSelected()){
                 j_kelamin = "Wanita";
             }else{}
-            query = "update pegawai set namalengkap = '"+text_namalengkap.getText()+"', jeniskelamin = '"+j_kelamin+"' where nik = '"+text_nik.getText()+"'";
+            query = "update pegawai set namalengkap = '"+text_namalengkap.getText()+ "', tempatlahir = '" + text_tempatlahir.getText() + 
+                    "', tanggallahir = '" + text_tanggallahir.getText() + "', agama = '" + text_agama.getText() + "', pekerjaan = '" + text_pekerjaan.getText() +
+                    "', jeniskelamin = '"+j_kelamin+"' where nik = '"+text_nik.getText()+"'";
             stat = koneksi.createStatement();
             int res = stat.executeUpdate(query);
             if(res == 1){
@@ -449,7 +452,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
     private void btn_deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_deleteActionPerformed
         try{
             if(JOptionPane.showConfirmDialog(null, "Anda Yakin menghapus Data ini ??","Warning",2) == JOptionPane.YES_OPTION){
-                query = "delete from pegawai where kodepegawai = '"+text_nik.getText()+"'";
+                query = "delete from pegawai where nik = '"+text_nik.getText()+"'";
                 stat = koneksi.createStatement();
                 int res = stat.executeUpdate(query);
                 if(res == 1){
