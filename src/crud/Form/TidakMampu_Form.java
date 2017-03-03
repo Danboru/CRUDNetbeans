@@ -308,6 +308,8 @@ public class TidakMampu_Form extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    //Fungsi untuk membersihkan isi semua field
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         try{
             
@@ -324,10 +326,16 @@ public class TidakMampu_Form extends javax.swing.JFrame {
             text_nik.setText("");
             text_nik.setEnabled(true);
             text_nik.requestFocus();
+           
             text_namalengkap.setText("");
             text_tempatlahir.setText("");
+            text_tanggallahir.setText("");
             text_agama.setText("");
             text_pekerjaan.setText("");
+            text_keteranganrt.setText("");
+            text_nomorket.setText("");
+            text_tanggalket.setText("");
+            
             buttonGroup1.clearSelection();
             
         }catch(SQLException ex){
