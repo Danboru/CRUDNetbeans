@@ -142,7 +142,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setText("Tempat");
+        jLabel4.setText("Tempat Lahir");
 
         text_tempatlahir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -381,9 +381,10 @@ public class TidakMampu_Form extends javax.swing.JFrame {
                     
                     //Set data dari pencarian ke field inputan
                     text_namalengkap.setText(hasil.getString("namalengkap"));
-                    text_tempatlahir.setText(hasil.getString("namalengkap"));
-                    text_agama.setText(hasil.getString("namalengkap"));
-                    text_pekerjaan.setText(hasil.getString("namalengkap"));
+                    text_tempatlahir.setText(hasil.getString("tempatlahir"));
+                    text_tanggallahir.setText(hasil.getString("tanggallahir"));
+                    text_agama.setText(hasil.getString("agama"));
+                    text_pekerjaan.setText(hasil.getString("pekerjaan"));
                     j_kelamin = hasil.getString("jeniskelamin");
                 }
 
@@ -413,6 +414,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_cariActionPerformed
 
+    //Membersihkan semua field
     private void btn_bersihActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_bersihActionPerformed
         try{
             //Menjalankan fungsi formWindowOpened
@@ -422,6 +424,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_bersihActionPerformed
 
+    //Upadate Data
     private void btn_updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_updateActionPerformed
         try{
             String j_kelamin = "";
@@ -442,6 +445,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_updateActionPerformed
 
+    //Alert untuk delete data
     private void btn_deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_deleteActionPerformed
         try{
             if(JOptionPane.showConfirmDialog(null, "Anda Yakin menghapus Data ini ??","Warning",2) == JOptionPane.YES_OPTION){
@@ -478,6 +482,14 @@ public class TidakMampu_Form extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_text_nomorketActionPerformed
 
+    
+    /***
+     * 
+     * Fungsi ini di gunakan untuk menset setiap kolum yang akan di tampilkan di table
+     * perhatikan setNya dan argumen getStringnya
+     * untuk bisa menampilkan data sesuai dengan urutan table yang ada di database
+     * 
+     */
     private void _setModel(ResultSet hasil)
     {
         try{
@@ -496,7 +508,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
                 list.add(warga_tidakmampu);
             }
             model = new TidakMampu_Adapter(list);
-            jTable1.setModel(model);
+            jTable1.setModel(model); //nama table yang di gunakan
         }catch(SQLException ex){
             JOptionPane.showMessageDialog(null, ex);
         }
