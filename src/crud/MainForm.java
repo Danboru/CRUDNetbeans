@@ -50,6 +50,12 @@ public class MainForm extends javax.swing.JFrame {
         btn_update = new javax.swing.JButton();
         btn_cari = new javax.swing.JButton();
         btn_bersih = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        text_alamat = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        text_nopenduduk = new javax.swing.JTextField();
+        text_status = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Java Connect Mysql");
@@ -61,6 +67,12 @@ public class MainForm extends javax.swing.JFrame {
         });
 
         jLabel1.setText("Kode Pegawai");
+
+        text_kodepegawai.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_kodepegawaiActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Nama Pegawai");
 
@@ -115,48 +127,61 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setText("Alamat");
+
+        text_alamat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text_alamatActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setText("No Penduduk");
+
+        jLabel6.setText("Status");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(44, 44, 44)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 852, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(text_namapegawai, javax.swing.GroupLayout.DEFAULT_SIZE, 755, Short.MAX_VALUE)
+                            .addComponent(text_kodepegawai, javax.swing.GroupLayout.DEFAULT_SIZE, 755, Short.MAX_VALUE)
+                            .addComponent(text_alamat)
+                            .addComponent(text_nopenduduk)
+                            .addComponent(text_status)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(jLabel3)
                         .addGap(18, 18, 18)
                         .addComponent(radiobutton_pria)
-                        .addGap(70, 70, 70)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(radiobutton_wanita)
-                        .addContainerGap())
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 441, Short.MAX_VALUE)
-                            .addGap(52, 52, 52))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(btn_simpan)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(btn_update)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(btn_delete)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btn_cari, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btn_bersih, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addContainerGap())
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel1)
-                                    .addGap(21, 21, 21))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel2)
-                                    .addGap(18, 18, 18)))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(text_namapegawai, javax.swing.GroupLayout.DEFAULT_SIZE, 356, Short.MAX_VALUE)
-                                .addComponent(text_kodepegawai, javax.swing.GroupLayout.DEFAULT_SIZE, 356, Short.MAX_VALUE))
-                            .addGap(49, 49, 49)))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addGap(49, 49, 49))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_simpan)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btn_update)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btn_delete)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_cari, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_bersih, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(276, 276, 276))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -169,29 +194,43 @@ public class MainForm extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(text_namapegawai, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
-                .addGap(3, 3, 3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text_alamat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text_nopenduduk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text_status, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
                     .addComponent(radiobutton_pria)
-                    .addComponent(radiobutton_wanita)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(radiobutton_wanita))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_simpan)
                     .addComponent(btn_update)
                     .addComponent(btn_delete)
                     .addComponent(btn_cari)
                     .addComponent(btn_bersih))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE)
+                .addGap(22, 22, 22))
         );
 
-        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-553)/2, (screenSize.height-379)/2, 553, 379);
+        setSize(new java.awt.Dimension(961, 541));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         try{
+            
+            //Bagian untuk mebersihkan field
             query = "select * from pegawai";
             stat = koneksi.createStatement();
             hasil = stat.executeQuery(query);
@@ -205,6 +244,9 @@ public class MainForm extends javax.swing.JFrame {
             text_kodepegawai.setEnabled(true);
             text_kodepegawai.requestFocus();
             text_namapegawai.setText("");
+            text_alamat.setText("");
+            text_nopenduduk.setText("");
+            text_status.setText("");
             buttonGroup1.clearSelection();
         }catch(SQLException ex){
             JOptionPane.showMessageDialog(null, ex);
@@ -247,7 +289,12 @@ public class MainForm extends javax.swing.JFrame {
                 stat = koneksi.createStatement();
                 hasil = stat.executeQuery(query);                
                 while(hasil.next()){
+                    
+                    //Set data dari pencarian ke field inputan
                     text_namapegawai.setText(hasil.getString("namapegawai"));
+                    text_alamat.setText(hasil.getString("namapegawai"));
+                    text_nopenduduk.setText(hasil.getString("namapegawai"));
+                    text_status.setText(hasil.getString("namapegawai"));
                     j_kelamin = hasil.getString("jeniskelamin");
                 }
 
@@ -279,6 +326,7 @@ public class MainForm extends javax.swing.JFrame {
 
     private void btn_bersihActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_bersihActionPerformed
         try{
+            //Menjalankan fungsi formWindowOpened
             formWindowOpened(null);
         }catch(Exception ex){
             JOptionPane.showMessageDialog(null, ex);
@@ -321,6 +369,14 @@ public class MainForm extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_deleteActionPerformed
 
+    private void text_alamatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_alamatActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_alamatActionPerformed
+
+    private void text_kodepegawaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_kodepegawaiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_kodepegawaiActionPerformed
+
     private void _setModel(ResultSet hasil)
     {
         try{
@@ -349,12 +405,18 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JRadioButton radiobutton_pria;
     private javax.swing.JRadioButton radiobutton_wanita;
+    private javax.swing.JTextField text_alamat;
     private javax.swing.JTextField text_kodepegawai;
     private javax.swing.JTextField text_namapegawai;
+    private javax.swing.JTextField text_nopenduduk;
+    private javax.swing.JTextField text_status;
     // End of variables declaration//GEN-END:variables
 
 }
