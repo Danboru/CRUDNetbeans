@@ -1,6 +1,7 @@
 package crud.Form;
 import crud.DataAdapter.TidakMampu_Adapter;
 import crud.DataProvider.TidakMampu_Provider;
+import java.awt.Color;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +17,16 @@ public class TidakMampu_Form extends javax.swing.JFrame {
         buttonGroup1.add(radiobutton_pria);
         buttonGroup1.add(radiobutton_wanita);
         
+        //Set disable untuk field yang tidak di gunakan di awal
+        text_keteranganrt.setEnabled(false);
+        text_keteranganrt.setBackground(Color.GRAY);
+        text_nomorket.setEnabled(false);
+        text_nomorket.setBackground(Color.GRAY);
+        text_tanggalket.setEnabled(false);
+        text_tanggalket.setBackground(Color.GRAY);
+        textarea_keperluan.setEnabled(false);
+        textarea_keperluan.setBackground(Color.GRAY);
+                 
         //Penyesuaian koneksi ke database MYSQL
         try{
             database= "kantor";
@@ -342,6 +353,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
             text_nik.setText("");
             text_nik.setEnabled(true);
             text_nik.requestFocus();
+            text_nik.setBackground(Color.WHITE);
            
             text_namalengkap.setText("");
             text_tempatlahir.setText("");
@@ -354,6 +366,16 @@ public class TidakMampu_Form extends javax.swing.JFrame {
             textarea_keperluan.setText("");
             
             buttonGroup1.clearSelection();
+            
+            //Set disable untuk field yang tidak di gunakan di awal
+            text_keteranganrt.setEnabled(false);
+            text_keteranganrt.setBackground(Color.GRAY);
+            text_nomorket.setEnabled(false);
+            text_nomorket.setBackground(Color.GRAY);
+            text_tanggalket.setEnabled(false);
+            text_tanggalket.setBackground(Color.GRAY);
+            textarea_keperluan.setEnabled(false);
+            textarea_keperluan.setBackground(Color.GRAY);
             
         }catch(SQLException ex){
             JOptionPane.showMessageDialog(null, ex);
@@ -433,6 +455,18 @@ public class TidakMampu_Form extends javax.swing.JFrame {
                     btn_cari.setEnabled(false);
                     btn_bersih.setEnabled(true);
                     text_nik.setEnabled(false);
+                    text_nik.setBackground(Color.GRAY);
+                    
+                    //Aktifkan field yang sebelumnya mati
+                    text_keteranganrt.setEnabled(true);
+                    text_keteranganrt.setBackground(Color.WHITE);
+                    text_nomorket.setEnabled(true);
+                    text_nomorket.setBackground(Color.WHITE);
+                    text_tanggalket.setEnabled(true);
+                    text_tanggalket.setBackground(Color.WHITE);
+                    textarea_keperluan.setEnabled(true);
+                    textarea_keperluan.setBackground(Color.WHITE);
+                    
                 }
             }
         }catch(SQLException ex){
@@ -551,7 +585,6 @@ public class TidakMampu_Form extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_btn_cetaksuratActionPerformed
-
     
     /***
      * 
