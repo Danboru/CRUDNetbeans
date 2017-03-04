@@ -1,18 +1,19 @@
 package crud.Form;
-import crud.DataAdapter.TidakMampu_Adapter;
+import crud.DataAdapter.Data_Adapter;
 import crud.DataProvider.TidakMampu_Provider;
 import java.awt.Color;
+import java.awt.HeadlessException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.TableModel;
 
-public class TidakMampu_Form extends javax.swing.JFrame {
+public class Main_Form extends javax.swing.JFrame {
 
     
     //Constructor
-    public TidakMampu_Form() {
+    public Main_Form() {
         initComponents();
         buttonGroup1.add(radiobutton_pria);
         buttonGroup1.add(radiobutton_wanita);
@@ -271,7 +272,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
                                         .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 711, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(78, Short.MAX_VALUE)
+                .addContainerGap(63, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                         .addComponent(btn_simpan)
@@ -425,7 +426,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
                         .addComponent(jLabel11))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jTabbedPane1)))
+                        .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1038, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -629,14 +630,14 @@ public class TidakMampu_Form extends javax.swing.JFrame {
                 j_kelamin = "Wanita";
             }else{}
 
-            //NIK - namalengkap - tempatlahir - tanggallahir - agama - pekerjaan - jeniskelamin
+            //Validasi input kosong
             if(text_nik.getText().equals("") && text_namalengkap.getText().equals("") && text_tempatlahir.getText().equals("")
                 && text_tanggallahir.getText().equals("") && text_agama.getText().equals("") &&
                 text_pekerjaan.getText().equals("") || j_kelamin.equals("")){
                 JOptionPane.showMessageDialog(null, "Data Tidak lengkap");
             }else{
                 query = "insert into pegawai values ('"+text_nik.getText()+"','"+text_namalengkap.getText()+"','"+text_tanggallahir+"','"+
-                text_tempatlahir.getText() +"','"+ text_agama.getText() +"','"+ text_pekerjaan.getText() +"','"+j_kelamin+"')";
+                text_tempatlahir.getText().toString() +"','"+ text_agama.getText() +"','"+ text_pekerjaan.getText() +"','"+j_kelamin+"')";
                 stat = koneksi.createStatement();
                 int res = stat.executeUpdate(query);
                 if(res == 1){
@@ -673,7 +674,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
             }else{
                JOptionPane.showMessageDialog(null, "Akan Cetak Data");
             }
-        }catch(Exception ex){
+        }catch(HeadlessException ex){
             JOptionPane.showMessageDialog(null, ex);
         }
         
@@ -704,7 +705,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
                 warga_tidakmampu.setJenisKelamin(hasil.getString("jeniskelamin"));
                 list.add(warga_tidakmampu);
             }
-            model = new TidakMampu_Adapter(list);
+            model = new Data_Adapter(list);
             jTable1.setModel(model); //nama table yang di gunakan
         }catch(SQLException ex){
             JOptionPane.showMessageDialog(null, ex);

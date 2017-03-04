@@ -1,13 +1,13 @@
 package crud;
 
-import crud.Form.TidakMampu_Form;
+import crud.Form.Main_Form;
 
-public class Main {
+public class Main_Activity {
     
     public static void main(String[] args) {
         
         try{
-            TidakMampu_Form form = new TidakMampu_Form();
+            Main_Form form = new Main_Form();
             form.setVisible(true);
             
         }catch(Exception ex){

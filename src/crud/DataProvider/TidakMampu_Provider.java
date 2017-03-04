@@ -58,9 +58,6 @@ public class TidakMampu_Provider {
 
     public void setJenisKelamin(String jenisKelamin) {
         this.jenisKelamin = jenisKelamin;
-    }
-    
-    
-    
+    }    
     
 }
