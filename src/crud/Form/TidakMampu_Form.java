@@ -518,9 +518,12 @@ public class TidakMampu_Form extends javax.swing.JFrame {
      * 
      */
     
-    //Bagian cetak Surat
+    //Bagian cetak Surat (Masih ada BUG)
     private void btn_cetaksuratActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cetaksuratActionPerformed
 
+        boolean cetakSurat = text_keteranganrt.getText().equals("") && text_nomorket.getText().equals("")
+                    && text_tanggalket.getText().equals("") && textarea_keperluan.getText().equals("");
+        
         try{
             String j_kelamin = "";
             if(radiobutton_pria.isSelected()){
@@ -534,14 +537,13 @@ public class TidakMampu_Form extends javax.swing.JFrame {
                     text_nik.getText().equals("") && text_namalengkap.getText().equals("")
                     && text_tempatlahir.getText().equals("") && text_tanggallahir.getText().equals("")
                     && text_agama.getText().equals("") && text_pekerjaan.getText().equals("")
-                    && text_keteranganrt.getText().equals("") && text_nomorket.getText().equals("")
-                    && text_tanggalket.getText().equals("") && textarea_keperluan.getText().equals("")
-                    && j_kelamin.equals("")
+                    && cetakSurat || j_kelamin.equals("")
                     
                ){
                 JOptionPane.showMessageDialog(null, "Data Tidak lengkap");
+                
             }else{ 
-                 JOptionPane.showMessageDialog(null, "Akan Cetak Surat");
+                 JOptionPane.showMessageDialog(null, "Akan di Cetak");
                 }
             }
           catch(Exception ex){
