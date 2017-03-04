@@ -618,7 +618,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_updateActionPerformed
 
-    //Simpan data (Masih ada BUG)
+    //Simpan data (Masih ada BUG) //Logical Error
     private void btn_simpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_simpanActionPerformed
 
         try{
@@ -636,7 +636,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Data Tidak lengkap");
             }else{
                 query = "insert into pegawai values ('"+text_nik.getText()+"','"+text_namalengkap.getText()+"','"+text_tanggallahir+"','"+
-                text_tempatlahir +"','"+ text_agama +"','"+ text_pekerjaan +"','"+j_kelamin+"')";
+                text_tempatlahir.getText() +"','"+ text_agama.getText() +"','"+ text_pekerjaan.getText() +"','"+j_kelamin+"')";
                 stat = koneksi.createStatement();
                 int res = stat.executeUpdate(query);
                 if(res == 1){
@@ -649,6 +649,12 @@ public class TidakMampu_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_simpanActionPerformed
 
+    
+    /***
+     * 
+     * Memanggil Form baru untuk cetak surat
+     * 
+     */ //Masih ada bug di bagian validasi input (Logical Error)
     private void btn_cetaksuratActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cetaksuratActionPerformed
 
         try{
@@ -672,9 +678,6 @@ public class TidakMampu_Form extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_btn_cetaksuratActionPerformed
-
-    
-    
 
    
     /***

@@ -64,6 +64,7 @@ public class TidakMampu_Adapter extends AbstractTableModel {
                 return "Pekerjaan";
             case 6 :
                 return "Jenis Kelamin";
+                
             default:
                 return null;
         }
