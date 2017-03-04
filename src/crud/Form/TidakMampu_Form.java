@@ -74,6 +74,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         textarea_keperluan = new javax.swing.JTextArea();
         text_keteranganrt = new javax.swing.JTextField();
+        btn_cetaksurat = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Java Connect Mysql");
@@ -189,6 +190,13 @@ public class TidakMampu_Form extends javax.swing.JFrame {
             }
         });
 
+        btn_cetaksurat.setText("CETAK SURAT");
+        btn_cetaksurat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_cetaksuratActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -247,7 +255,10 @@ public class TidakMampu_Form extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btn_cari, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_bersih, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btn_bersih, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(135, 135, 135)
+                        .addComponent(btn_cetaksurat, javax.swing.GroupLayout.PREFERRED_SIZE, 709, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(48, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -303,11 +314,13 @@ public class TidakMampu_Form extends javax.swing.JFrame {
                     .addComponent(btn_cari)
                     .addComponent(btn_bersih))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 223, Short.MAX_VALUE)
-                .addGap(22, 22, 22))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btn_cetaksurat, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        setSize(new java.awt.Dimension(1017, 651));
+        setSize(new java.awt.Dimension(1017, 650));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -338,6 +351,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
             text_keteranganrt.setText("");
             text_nomorket.setText("");
             text_tanggalket.setText("");
+            textarea_keperluan.setText("");
             
             buttonGroup1.clearSelection();
             
@@ -496,6 +510,46 @@ public class TidakMampu_Form extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_text_nomorketActionPerformed
 
+
+    /***
+     * 
+     * Bagian ini di gunakan untuk mencetak surat
+     * system akan memastikan apakah semua field sudah ada isinya ato belum
+     * 
+     */
+    
+    //Bagian cetak Surat
+    private void btn_cetaksuratActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cetaksuratActionPerformed
+
+        try{
+            String j_kelamin = "";
+            if(radiobutton_pria.isSelected()){
+                j_kelamin = "Pria";
+            }else if(radiobutton_wanita.isSelected()){
+                j_kelamin = "Wanita";
+            }else{}
+            
+            //Semua field
+            if(
+                    text_nik.getText().equals("") && text_namalengkap.getText().equals("")
+                    && text_tempatlahir.getText().equals("") && text_tanggallahir.getText().equals("")
+                    && text_agama.getText().equals("") && text_pekerjaan.getText().equals("")
+                    && text_keteranganrt.getText().equals("") && text_nomorket.getText().equals("")
+                    && text_tanggalket.getText().equals("") && textarea_keperluan.getText().equals("")
+                    && j_kelamin.equals("")
+                    
+               ){
+                JOptionPane.showMessageDialog(null, "Data Tidak lengkap");
+            }else{ 
+                 JOptionPane.showMessageDialog(null, "Akan Cetak Surat");
+                }
+            }
+          catch(Exception ex){
+            JOptionPane.showMessageDialog(null, ex);
+        }
+        
+    }//GEN-LAST:event_btn_cetaksuratActionPerformed
+
     
     /***
      * 
@@ -531,6 +585,7 @@ public class TidakMampu_Form extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_bersih;
     private javax.swing.JButton btn_cari;
+    private javax.swing.JButton btn_cetaksurat;
     private javax.swing.JButton btn_delete;
     private javax.swing.JButton btn_simpan;
     private javax.swing.JButton btn_update;
