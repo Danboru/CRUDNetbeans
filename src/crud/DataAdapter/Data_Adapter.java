@@ -1,14 +1,14 @@
 
 package crud.DataAdapter;
 
-import crud.DataProvider.TidakMampu_Provider;
+import crud.DataProvider.Data_Provider;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
 
 public class Data_Adapter extends AbstractTableModel {
-    private List<TidakMampu_Provider> list;
+    private List<Data_Provider> list;
 
-    public Data_Adapter(List<TidakMampu_Provider> list) {
+    public Data_Adapter(List<Data_Provider> list) {
         this.list = list;
     }
 
@@ -17,7 +17,7 @@ public class Data_Adapter extends AbstractTableModel {
     }
 
     public int getColumnCount() {
-        return 7;
+        return 8;
     }
 
     public Object getValueAt(int rowIndex, int columnIndex) {
@@ -36,6 +36,8 @@ public class Data_Adapter extends AbstractTableModel {
                 return list.get(rowIndex).getPekerjaanWarga();//Pekerjaan
             case 6:
                 return list.get(rowIndex).getJenisKelamin();//Jenis Kelamin
+            case 7:
+                return list.get(rowIndex).getGoldarah();//Golongan Darah
                 
             default:
                 return null;
@@ -64,6 +66,8 @@ public class Data_Adapter extends AbstractTableModel {
                 return "Pekerjaan";
             case 6 :
                 return "Jenis Kelamin";
+            case 7 :
+                return "Golongan Darah";
                 
             default:
                 return null;

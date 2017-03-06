@@ -1,10 +1,9 @@
 
 package crud.DataProvider;
 
-public class TidakMampu_Provider {
+public class Data_Provider {
     
-    //sesuaikan dengan kolom yang akan di tampilkan, setipa provider memiliki data yang berbeda dan juga boleh sama
-    private String nomorIndukKependudukan, namaWarga, tempatLahir, tanggalLahir, Agama, pekerjaanWarga, jenisKelamin;
+    private String nomorIndukKependudukan, namaWarga, tempatLahir, tanggalLahir, Agama, pekerjaanWarga, jenisKelamin, goldarah;
 
     public String getNomorIndukKependudukan() {
         return nomorIndukKependudukan;
@@ -61,5 +60,13 @@ public class TidakMampu_Provider {
     public void setJenisKelamin(String jenisKelamin) {
         this.jenisKelamin = jenisKelamin;
     }    
+
+    public String getGoldarah() {
+        return goldarah;
+    }
+
+    public void setGoldarah(String goldarah) {
+        this.goldarah = goldarah;
+    }
     
 }
