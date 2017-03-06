@@ -11,7 +11,6 @@ import javax.swing.table.TableModel;
 
 public class Main_Form extends javax.swing.JFrame {
 
-    
     //Constructor
     public Main_Form() {
         initComponents();
@@ -30,7 +29,7 @@ public class Main_Form extends javax.swing.JFrame {
                  
         //Penyesuaian koneksi ke database MYSQL
         try{
-            database= "kantor";
+            database= "urutsewu";
             url = "jdbc:mysql://localhost:3306/"+database;
             Class.forName("com.mysql.jdbc.Driver");
             koneksi = DriverManager.getConnection(url, "root", "");            
@@ -124,6 +123,7 @@ public class Main_Form extends javax.swing.JFrame {
         jButton9 = new javax.swing.JButton();
         jTextField9 = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
+        jButton10 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
 
         jLabel20.setText("jLabel12");
@@ -307,7 +307,7 @@ public class Main_Form extends javax.swing.JFrame {
                                         .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 711, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(63, Short.MAX_VALUE)
+                .addContainerGap(54, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                         .addComponent(btn_simpan)
@@ -603,7 +603,7 @@ public class Main_Form extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(378, 378, 378)
                         .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(322, Short.MAX_VALUE))
+                .addContainerGap(313, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -627,15 +627,23 @@ public class Main_Form extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("tab3", jPanel2);
 
+        jButton10.setText("jButton10");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1036, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(315, 315, 315)
+                .addComponent(jButton10)
+                .addContainerGap(628, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 635, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(jButton10)
+                .addContainerGap(453, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab4", jPanel3);
@@ -644,7 +652,7 @@ public class Main_Form extends javax.swing.JFrame {
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1036, Short.MAX_VALUE)
+            .addGap(0, 1027, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -664,8 +672,8 @@ public class Main_Form extends javax.swing.JFrame {
                         .addComponent(jLabel11))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jTabbedPane1)))
-                .addContainerGap())
+                        .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1029, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -677,7 +685,7 @@ public class Main_Form extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        setSize(new java.awt.Dimension(1066, 712));
+        setSize(new java.awt.Dimension(1057, 712));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -687,7 +695,7 @@ public class Main_Form extends javax.swing.JFrame {
         try{
             
             //Bagian untuk mebersihkan field
-            query = "select * from pegawai";
+            query = "select * from warga";
             stat = koneksi.createStatement();
             hasil = stat.executeQuery(query);
             this._setModel(hasil);
@@ -701,6 +709,7 @@ public class Main_Form extends javax.swing.JFrame {
             text_nik.requestFocus();
             text_nik.setBackground(Color.WHITE);
            
+            //set textfield dengan string kosong
             text_namalengkap.setText("");
             text_tempatlahir.setText("");
             text_tanggallahir.setText("");
@@ -758,6 +767,15 @@ public class Main_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_bersihActionPerformed
 
+    
+    /***
+     * 
+     * Fungsi ini di gunakan untuk mengrab data yang ada di dalam database
+     * data akan di simpan dan akan di gunakan untuk menset setiap textfield yang bersangkutan
+     * hali ni juga di gunakan untuk update data, karen ketika tombol cari mendapat action
+     * ada 2 tombol yang di aktifkan "Update" dan "Delete"
+     * 
+     */
     //Cari data (FIX)
     private void btn_cariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cariActionPerformed
         try{
@@ -765,7 +783,7 @@ public class Main_Form extends javax.swing.JFrame {
             if(text_nik.getText().equals("")){
                 JOptionPane.showMessageDialog(null, "Tidak Ada data Yang Anda Pilih");
             }else{
-                query = "select * from pegawai where nik = '"+text_nik.getText()+"'";
+                query = "select * from warga where nik = '"+text_nik.getText()+"'";
                 stat = koneksi.createStatement();
                 hasil = stat.executeQuery(query);
                 while(hasil.next()){
@@ -780,7 +798,7 @@ public class Main_Form extends javax.swing.JFrame {
                 }
 
                 if(j_kelamin.equals("")){
-                    JOptionPane.showMessageDialog(null, "Data Yang Anda Pilih Tidak Ada di database");
+                    JOptionPane.showMessageDialog(null, "Data Yang Anda Pilih Tidak Ada di database");//pesan ketika data tidak di temukan
                     formWindowOpened(null);
                 }else{
                     if(j_kelamin.equals("Pria")){
@@ -788,7 +806,7 @@ public class Main_Form extends javax.swing.JFrame {
                     }else{
                         radiobutton_wanita.setSelected(true);
                     }
-                    query = "select * from pegawai where nik = '"+text_nik.getText()+"'";
+                    query = "select * from warga where nik = '"+text_nik.getText()+"'";
                     stat = koneksi.createStatement();
                     hasil = stat.executeQuery(query);
                     _setModel(hasil);
@@ -817,11 +835,17 @@ public class Main_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_cariActionPerformed
 
+    /***
+     * 
+     * Fungsi utama untik delete data ada di dalam alert dialog, bukan di tombol utamanya
+     * tombol utama hanya memanggil fungsi ini
+     * 
+     */
     //Alert untuk delete data (FIX)
     private void btn_deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_deleteActionPerformed
         try{
             if(JOptionPane.showConfirmDialog(null, "Anda Yakin menghapus Data ini ??","Warning",2) == JOptionPane.YES_OPTION){
-                query = "delete from pegawai where nik = '"+text_nik.getText()+"'";
+                query = "delete from warga where nik = '"+text_nik.getText()+"'";
                 stat = koneksi.createStatement();
                 int res = stat.executeUpdate(query);
                 if(res == 1){
@@ -834,6 +858,12 @@ public class Main_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_deleteActionPerformed
 
+    /***
+     * 
+     * Ini bagian untuk update data, tombol akan aktif ketika tombol cari sudah di click
+     * dan akan disable atau fungsi tidak di jalankan ketika tombol cari belum mendapatkan action
+     * 
+     */
     //Upadate Data (FIX)
     private void btn_updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_updateActionPerformed
         try{
@@ -843,7 +873,7 @@ public class Main_Form extends javax.swing.JFrame {
             }else if(radiobutton_wanita.isSelected()){
                 j_kelamin = "Wanita";
             }else{}
-            query = "update pegawai set namalengkap = '"+text_namalengkap.getText()+ "', tempatlahir = '" + text_tempatlahir.getText() +
+            query = "update warga set namalengkap = '"+text_namalengkap.getText()+ "', tempatlahir = '" + text_tempatlahir.getText() +
             "', tanggallahir = '" + text_tanggallahir.getText() + "', agama = '" + text_agama.getText() + "', pekerjaan = '" + text_pekerjaan.getText() +
             "', jeniskelamin = '"+j_kelamin+"' where nik = '"+text_nik.getText()+"'";
             stat = koneksi.createStatement();
@@ -874,7 +904,7 @@ public class Main_Form extends javax.swing.JFrame {
                 text_pekerjaan.getText().equals("") || j_kelamin.equals("")){
                 JOptionPane.showMessageDialog(null, "Data Tidak lengkap");
             }else{
-                query = "insert into pegawai values ('"+text_nik.getText()+"','"+text_namalengkap.getText()+"','"+text_tanggallahir+"','"+
+                query = "insert into warga values ('"+text_nik.getText()+"','"+text_namalengkap.getText()+"','"+text_tanggallahir+"','"+
                 text_tempatlahir.getText().toString() +"','"+ text_agama.getText() +"','"+ text_pekerjaan.getText() +"','"+j_kelamin+"')";
                 stat = koneksi.createStatement();
                 int res = stat.executeUpdate(query);
@@ -915,7 +945,6 @@ public class Main_Form extends javax.swing.JFrame {
         }catch(HeadlessException ex){
             JOptionPane.showMessageDialog(null, ex);
         }
-        
     }//GEN-LAST:event_btn_cetaksuratActionPerformed
 
    
@@ -959,6 +988,7 @@ public class Main_Form extends javax.swing.JFrame {
     private javax.swing.JButton btn_update;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
