@@ -60,7 +60,6 @@ public class Main_Form extends javax.swing.JFrame {
         TabSatu = new javax.swing.JTabbedPane();
         PanelUtama = new javax.swing.JPanel();
         TidakMampu = new javax.swing.JPanel();
-        btn_cetaksurat = new javax.swing.JButton();
         scrollview_wargasatu = new javax.swing.JScrollPane();
         table_wargasatu = new javax.swing.JTable();
         btn_simpan = new javax.swing.JButton();
@@ -91,6 +90,7 @@ public class Main_Form extends javax.swing.JFrame {
         label_namalengkap = new javax.swing.JLabel();
         label_nik = new javax.swing.JLabel();
         text_nik = new javax.swing.JTextField();
+        btn_cetaksurat = new javax.swing.JButton();
         TabDua = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -146,13 +146,6 @@ public class Main_Form extends javax.swing.JFrame {
         });
 
         jLabel11.setText("Keperluan");
-
-        btn_cetaksurat.setText("CETAK SURAT");
-        btn_cetaksurat.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_cetaksuratActionPerformed(evt);
-            }
-        });
 
         table_wargasatu.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -265,6 +258,13 @@ public class Main_Form extends javax.swing.JFrame {
             }
         });
 
+        btn_cetaksurat.setText("CETAK SURAT");
+        btn_cetaksurat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_cetaksuratActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout TidakMampuLayout = new javax.swing.GroupLayout(TidakMampu);
         TidakMampu.setLayout(TidakMampuLayout);
         TidakMampuLayout.setHorizontalGroup(
@@ -324,20 +324,20 @@ public class Main_Form extends javax.swing.JFrame {
                                             .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 711, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                             .addGroup(TidakMampuLayout.createSequentialGroup()
                                 .addGap(3, 3, 3)
-                                .addComponent(scrollview_wargasatu, javax.swing.GroupLayout.PREFERRED_SIZE, 909, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(TidakMampuLayout.createSequentialGroup()
-                        .addGap(316, 316, 316)
-                        .addComponent(btn_cetaksurat, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(scrollview_wargasatu, javax.swing.GroupLayout.PREFERRED_SIZE, 909, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(0, 58, Short.MAX_VALUE))
             .addGroup(TidakMampuLayout.createSequentialGroup()
                 .addGap(325, 325, 325)
-                .addComponent(btn_simpan)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_update, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_delete, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_bersih, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(TidakMampuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btn_cetaksurat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(TidakMampuLayout.createSequentialGroup()
+                        .addComponent(btn_simpan)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btn_update, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btn_delete, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btn_bersih, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         TidakMampuLayout.setVerticalGroup(
@@ -389,8 +389,8 @@ public class Main_Form extends javax.swing.JFrame {
                     .addComponent(btn_delete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_bersih, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_cetaksurat, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btn_cetaksurat, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(scrollview_wargasatu, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -978,9 +978,9 @@ public class Main_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_simpanActionPerformed
 
-//GEN-FIRST:event_btn_cetaksuratActionPerformed
- 
-//GEN-LAST:event_btn_cetaksuratActionPerformed
+    private void btn_cetaksuratActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cetaksuratActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_cetaksuratActionPerformed
 
  
     /***
