@@ -45,8 +45,14 @@ public class Main_Form extends javax.swing.JFrame {
     private ResultSet hasil;
     private Statement stat;
     private String query,url,database;
+    
+    //Provider yang di gunakan, yang akkan di hubungkan dengan model
     private TidakMampu_Provider warga_tidakmampu;
+    
+    //List untuk menampung data yang akan di tampilkan di table
     private List<TidakMampu_Provider> list;
+    
+    //Variable yang di gunakan untuk menyimpdan model untuk setiap data Provider, tambah sesuai dengan kebutuhan
     private TableModel model;
 
     @SuppressWarnings("unchecked")
@@ -749,7 +755,6 @@ public class Main_Form extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(1057, 712));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
     
     //Fungsi untuk membersihkan isi semua field (FIX)
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened

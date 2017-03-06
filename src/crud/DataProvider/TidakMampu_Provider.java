@@ -2,6 +2,8 @@
 package crud.DataProvider;
 
 public class TidakMampu_Provider {
+    
+    //sesuaikan dengan kolom yang akan di tampilkan, setipa provider memiliki data yang berbeda dan juga boleh sama
     private String nomorIndukKependudukan, namaWarga, tempatLahir, tanggalLahir, Agama, pekerjaanWarga, jenisKelamin;
 
     public String getNomorIndukKependudukan() {
