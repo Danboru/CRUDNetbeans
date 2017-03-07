@@ -40,9 +40,9 @@ public class Data_Adapter extends AbstractTableModel {
             case 7:
                 return list.get(rowIndex).getAlamat();//Alamat  
             case 8:
-                return list.get(rowIndex).getRt();//RT
+                return list.get(rowIndex).getRt();//Rt
             case 9:
-                return list.get(rowIndex).getRw();//RW
+                return list.get(rowIndex).getRw();//Rw
             case 10:
                 return list.get(rowIndex).getJenisKelamin();//Jenis Kelamin
             case 11:
@@ -53,7 +53,6 @@ public class Data_Adapter extends AbstractTableModel {
                 return list.get(rowIndex).getNamaibu();//Pendidikan
             case 14:
                 return list.get(rowIndex).getGoldarah();//Golongan Darah
-                
             default:
                 return null;
         }

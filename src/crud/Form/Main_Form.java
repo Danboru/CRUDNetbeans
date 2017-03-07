@@ -995,11 +995,21 @@ public class Main_Form extends javax.swing.JFrame {
             text_tanggalket.setText("");
             textarea_keperluan.setText("");
             
+            //`namalengkap`, `tempatlahir`, `tanggallahir`, `agama`, `pekerjaan`, `pendidikan`, `alamat`
+            //`rt`, `rw`, `statuskawin`, `namaayah`, `namaibu`, `goldarah`
             text_namalengkap_warga.setText("");
             text_tempatlahir_warga.setText("");
             text_tanggallahir_warga.setText("");
             text_agama_warga.setText("");
+            text_pekerjaan_warga.setText("");
+            text_pendidikan_warga.setText("");
             text_alamat_warga.setText("");
+            text_rt_warga.setText("");
+            text_rw_warga.setText("");
+            text_statuskawin_warga.setText("");
+            text_namaayah_warga.setText("");
+            text_namaibu_warga.setText("");
+            text_golongandarah_warga.setText("");
             
 
             buttonGroup1.clearSelection();
@@ -1136,14 +1146,27 @@ public class Main_Form extends javax.swing.JFrame {
             }
 
             //Validasi input kosong
-            if (text_nik_warga.getText().equals("") && text_namalengkap_warga.getText().equals("") && text_tempatlahir_warga.getText().equals("")
-                    && text_tanggallahir_warga.getText().equals("") && text_agama_warga.getText().equals("")
-                    && text_alamat_warga.getText().equals("") && j_kelamin_warga.equals("")) {
+            //`nik`, `namalengkap`, `tempatlahir`, `tanggallahir`, `agama`, `pekerjaan`, `pendidikan`, `alamat`, `rt`, `rw`
+            //`jeniskelamin`, `statuskawin`, `namaayah`, `namaibu`, `goldarah`
+                   if (text_nik_warga.getText().equals("") && text_namalengkap_warga.getText().equals("")
+                    && text_tempatlahir_warga.getText().equals("") && text_tanggallahir_warga.getText().equals("")
+                    && text_agama_warga.getText().equals("") && text_pekerjaan_warga.getText().equals("")
+                    && text_pendidikan_warga.getText().equals("") && text_alamat_warga.getText().equals("")
+                    && text_rt_warga.getText().equals("") && text_rw_warga.getText().equals("")
+                    && j_kelamin_warga.equals("") && text_statuskawin_warga.getText().equals("")
+                    && text_namaayah_warga.getText().equals("") && text_namaibu_warga.getText().equals("")
+                    && text_golongandarah_warga.getText().equals("")
+                           ) {
                 JOptionPane.showMessageDialog(null, "Data Tidak lengkap");
             } else {
                 
-                //INSERT INTO `warga`(`nik`, `namalengkap`, `tempatlahir`, `tanggallahir`, `agama`, `pekerjaan`, `pendidikan`, `alamat`, `rt`, `rw`, `jeniskelamin`, `statuskawin`, `namaayah`, `namaibu`, `goldarah`)
-                 query = "INSERT INTO warga VALUES ('"+ text_nik_warga.getText().trim() +"', 'xx','xx','xx','xx','xx','xx','xx','xx','xx','xx','xx','xx','xx','xx');";
+                //`nik`, `namalengkap`, `tempatlahir`, `tanggallahir`, `agama`, `pekerjaan`, `pendidikan`, `alamat`, `rt`, `rw`, `jeniskelamin`, `statuskawin`, `namaayah`, `namaibu`, `goldarah`
+                query = "INSERT INTO warga VALUES ('"+ text_nik_warga.getText().toString().trim() +"','"+ text_namalengkap_warga.getText().toString().trim() +
+                        "','" + text_tempatlahir_warga.getText().toString().trim() +"','" + text_tanggallahir_warga.getText().toString().trim() +"','"+ text_agama_warga.getText().toString().trim() +
+                        "','"+ text_pekerjaan_warga.getText().toString().trim() +"','"+ text_pendidikan_warga.getText().toString().trim() +
+                        "','"+ text_alamat_warga.getText().toString().trim() +"','"+ text_rt_warga.getText().toString().trim() +"','"+ text_rw_warga.getText().toString().trim() +
+                        "','"+ j_kelamin_warga +"','"+ text_statuskawin_warga.getText().toString().trim() +"','"+ text_namaayah_warga.getText().toString().trim() +"','"+ text_namaibu_warga.getText().toString().trim() +
+                        "','"+ text_golongandarah_warga.getText().toString().trim() +"');";
 
                 stat = koneksi.createStatement();
                 int res = stat.executeUpdate(query);
@@ -1181,7 +1204,6 @@ public class Main_Form extends javax.swing.JFrame {
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
         }
-
     }//GEN-LAST:event_btn_update_wargaActionPerformed
 
     //Delete data warga (FIX)
@@ -1224,12 +1246,22 @@ public class Main_Form extends javax.swing.JFrame {
                 while (hasil.next()) {
 
                     //Set data dari pencarian ke field inputan
+                    //`namalengkap`, `tempatlahir`, `tanggallahir`, `agama`, `pekerjaan`, `pendidikan`, `alamat`
+                    //`rt`, `rw`, `jeniskelamin`, `statuskawin`, `namaayah`, `namaibu`, `goldarah`
                     text_namalengkap_warga.setText(hasil.getString("namalengkap"));
                     text_tempatlahir_warga.setText(hasil.getString("tempatlahir"));
                     text_tanggallahir_warga.setText(hasil.getString("tanggallahir"));
                     text_agama_warga.setText(hasil.getString("agama"));
-                    text_alamat_warga.setText(hasil.getString("pekerjaan"));
+                    text_pekerjaan_warga.setText(hasil.getString("pekerjaan"));
+                    text_pendidikan_warga.setText(hasil.getString("pendidikan"));
+                    text_alamat_warga.setText(hasil.getString("alamat"));
+                    text_rt_warga.setText(hasil.getString("rt"));
+                    text_rw_warga.setText(hasil.getString("rw"));
                     j_kelamin_warga = hasil.getString("jeniskelamin");
+                    text_statuskawin_warga.setText(hasil.getString("statuskawin"));
+                    text_namaayah_warga.setText(hasil.getString("namaayah"));
+                    text_namaibu_warga.setText(hasil.getString("namaibu"));
+                    text_golongandarah_warga.setText(hasil.getString("goldarah"));           
                 }
 
                 if (j_kelamin_warga.equals("")) {
@@ -1345,15 +1377,15 @@ public class Main_Form extends javax.swing.JFrame {
                 warga_tidakmampu.setTanggalLahir(hasil.getString("tanggallahir"));
                 warga_tidakmampu.setAgama(hasil.getString("agama"));
                 warga_tidakmampu.setPekerjaanWarga(hasil.getString("pekerjaan"));
-                warga_tidakmampu.setPendidikan("pendidikan");
-                warga_tidakmampu.setAlamat("alamat");
-                warga_tidakmampu.setRt("rt");
-                warga_tidakmampu.setRw("rw");
+                warga_tidakmampu.setPendidikan(hasil.getString("pendidikan"));
+                warga_tidakmampu.setAlamat(hasil.getString("alamat"));
+                warga_tidakmampu.setRt(hasil.getString("rt"));
+                warga_tidakmampu.setRw(hasil.getString("rw"));
                 warga_tidakmampu.setJenisKelamin(hasil.getString("jeniskelamin"));
-                warga_tidakmampu.setStatuskawin("statuskawin");
-                warga_tidakmampu.setNamaayah("namaayah");
-                warga_tidakmampu.setNamaibu("namaibu");
-                warga_tidakmampu.setGoldarah("goldarah");
+                warga_tidakmampu.setStatuskawin(hasil.getString("statuskawin"));
+                warga_tidakmampu.setNamaayah(hasil.getString("namaayah"));
+                warga_tidakmampu.setNamaibu(hasil.getString("namaibu"));
+                warga_tidakmampu.setGoldarah(hasil.getString("goldarah"));
                 
                 list.add(warga_tidakmampu);
             }

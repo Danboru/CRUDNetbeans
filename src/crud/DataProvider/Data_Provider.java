@@ -3,7 +3,7 @@ package crud.DataProvider;
 
 public class Data_Provider {
     
-    private String nomorIndukKependudukan, namaWarga, tempatLahir, tanggalLahir, Agama, pekerjaanWarga,pendidikan, alamat, rt, rw, jenisKelamin, statuskawin, namaayah, namaibu, goldarah;
+    private String nomorIndukKependudukan, namaWarga, tempatLahir, tanggalLahir, Agama, pekerjaanWarga, pendidikan, alamat, rt, rw, jenisKelamin, statuskawin, namaayah, namaibu, goldarah;
 
     public String getNomorIndukKependudukan() {
         return nomorIndukKependudukan;
@@ -125,5 +125,6 @@ public class Data_Provider {
         this.goldarah = goldarah;
     }
 
+    
     
 }
