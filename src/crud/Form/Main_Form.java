@@ -3,7 +3,6 @@ package crud.Form;
 import crud.DataAdapter.Data_Adapter;
 import crud.DataProvider.Data_Provider;
 import java.awt.Color;
-import java.awt.HeadlessException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -1161,12 +1160,12 @@ public class Main_Form extends javax.swing.JFrame {
             } else {
                 
                 //`nik`, `namalengkap`, `tempatlahir`, `tanggallahir`, `agama`, `pekerjaan`, `pendidikan`, `alamat`, `rt`, `rw`, `jeniskelamin`, `statuskawin`, `namaayah`, `namaibu`, `goldarah`
-                query = "INSERT INTO warga VALUES ('"+ text_nik_warga.getText().toString().trim() +"','"+ text_namalengkap_warga.getText().toString().trim() +
-                        "','" + text_tempatlahir_warga.getText().toString().trim() +"','" + text_tanggallahir_warga.getText().toString().trim() +"','"+ text_agama_warga.getText().toString().trim() +
-                        "','"+ text_pekerjaan_warga.getText().toString().trim() +"','"+ text_pendidikan_warga.getText().toString().trim() +
-                        "','"+ text_alamat_warga.getText().toString().trim() +"','"+ text_rt_warga.getText().toString().trim() +"','"+ text_rw_warga.getText().toString().trim() +
-                        "','"+ j_kelamin_warga +"','"+ text_statuskawin_warga.getText().toString().trim() +"','"+ text_namaayah_warga.getText().toString().trim() +"','"+ text_namaibu_warga.getText().toString().trim() +
-                        "','"+ text_golongandarah_warga.getText().toString().trim() +"');";
+                query = "INSERT INTO warga VALUES ('"+ text_nik_warga.getText().trim() +"','"+ text_namalengkap_warga.getText().trim() +
+                        "','" + text_tempatlahir_warga.getText().trim() +"','" + text_tanggallahir_warga.getText().trim() +"','"+ text_agama_warga.getText().trim() +
+                        "','"+ text_pekerjaan_warga.getText().trim() +"','"+ text_pendidikan_warga.getText().trim() +
+                        "','"+ text_alamat_warga.getText().trim() +"','"+ text_rt_warga.getText().trim() +"','"+ text_rw_warga.getText().trim() +
+                        "','"+ j_kelamin_warga +"','"+ text_statuskawin_warga.getText().trim() +"','"+ text_namaayah_warga.getText().trim() +"','"+ text_namaibu_warga.getText().trim() +
+                        "','"+ text_golongandarah_warga.getText().trim() +"');";
 
                 stat = koneksi.createStatement();
                 int res = stat.executeUpdate(query);
