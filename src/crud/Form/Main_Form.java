@@ -1192,9 +1192,15 @@ public class Main_Form extends javax.swing.JFrame {
                 j_kelamin_warga = "Wanita";
             } else {
             }
+            
+            //`namalengkap`, `tempatlahir`, `tanggallahir`, `agama`, `pekerjaan`, `pendidikan`, `alamat`, `rt`, `rw`
+            //`jeniskelamin`, `statuskawin`, `namaayah`, `namaibu`, `goldarah`
             query = "update warga set namalengkap = '" + text_namalengkap_warga.getText() + "', tempatlahir = '" + text_tempatlahir_warga.getText()
                     + "', tanggallahir = '" + text_tanggallahir_warga.getText() + "', agama = '" + text_agama_warga.getText() + "', pekerjaan = '" + text_alamat_warga.getText()
-                    + "', jeniskelamin = '" + j_kelamin_warga + "' where nik = '" + text_nik_warga.getText() + "'";
+                    + "', pendidikan = '" + text_pendidikan_warga.getText() + "', alamat = '" + text_alamat_warga.getText() + "', rt = '" + text_rt_warga.getText()
+                    + "', rw = '" + text_rw_warga.getText()+ "', jeniskelamin = '" + j_kelamin_warga + "', statuskawin = '" + text_statuskawin_warga.getText()
+                    + "', namaayah = '" + text_namaayah_warga.getText()+ "', namaibu = '" + text_namaibu_warga.getText()
+                    + "', goldarah = '" + text_golongandarah_warga.getText() + "' where nik = '" + text_nik_warga.getText() + "'";
             stat = koneksi.createStatement();
             int res = stat.executeUpdate(query);
             if (res == 1) {
