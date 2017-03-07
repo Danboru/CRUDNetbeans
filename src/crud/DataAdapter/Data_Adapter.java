@@ -17,11 +17,12 @@ public class Data_Adapter extends AbstractTableModel {
     }
 
     public int getColumnCount() {
-        return 8;
+        return 15;
     }
 
     public Object getValueAt(int rowIndex, int columnIndex) {
         switch (columnIndex) {
+            //`nik`, `namalengkap`, `tempatlahir`, `tanggallahir`, `agama`, `pekerjaan`, `pendidikan`, `alamat`, `rt`, `rw`, `jeniskelamin`, `statuskawin`, `namaayah`, `namaibu`, `goldarah`
             case 0:
                 return list.get(rowIndex).getNomorIndukKependudukan();//NIK
             case 1:
@@ -35,8 +36,22 @@ public class Data_Adapter extends AbstractTableModel {
             case 5:
                 return list.get(rowIndex).getPekerjaanWarga();//Pekerjaan
             case 6:
-                return list.get(rowIndex).getJenisKelamin();//Jenis Kelamin
+                return list.get(rowIndex).getPendidikan();//Pendidikan
             case 7:
+                return list.get(rowIndex).getAlamat();//Alamat  
+            case 8:
+                return list.get(rowIndex).getRt();//RT
+            case 9:
+                return list.get(rowIndex).getRw();//RW
+            case 10:
+                return list.get(rowIndex).getJenisKelamin();//Jenis Kelamin
+            case 11:
+                return list.get(rowIndex).getStatuskawin();//Status Kawin
+            case 12:
+                return list.get(rowIndex).getNamaayah();//Pendidikan
+            case 13:
+                return list.get(rowIndex).getNamaibu();//Pendidikan
+            case 14:
                 return list.get(rowIndex).getGoldarah();//Golongan Darah
                 
             default:
@@ -52,23 +67,38 @@ public class Data_Adapter extends AbstractTableModel {
     @Override
     public String getColumnName(int column) {
         switch (column) {
+            
+            //`nik`, `namalengkap`, `tempatlahir`, `tanggallahir`, `agama`, `pekerjaan`, `pendidikan`, `alamat`, `rt`, `rw`, `jeniskelamin`, `statuskawin`, `namaayah`, `namaibu`, `goldarah`
             case 0:
                 return "NIK";
             case 1:
                 return "Nama Lengkap";
             case 2:
                 return "Tempat Lahir";
-            case 3 :
+            case 3:
                 return "Tanggal Lahir";
-            case 4 :
+            case 4:
                 return "Agama";
-            case 5 :
+            case 5:
                 return "Pekerjaan";
-            case 6 :
+            case 6:
+                return "Pendidikan";
+            case 7:
+                return "Alamat";
+            case 8:
+                return "Rt";
+            case 9:
+                return "Rw";
+            case 10:
                 return "Jenis Kelamin";
-            case 7 :
+            case 11:
+                return "Status Kawin";
+            case 12:
+                return "Nama Ayah";
+            case 13:
+                return "Nama Ibu";
+            case 14:
                 return "Golongan Darah";
-                
             default:
                 return null;
         }

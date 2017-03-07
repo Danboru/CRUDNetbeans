@@ -3,7 +3,7 @@ package crud.DataProvider;
 
 public class Data_Provider {
     
-    private String nomorIndukKependudukan, namaWarga, tempatLahir, tanggalLahir, Agama, pekerjaanWarga, jenisKelamin, goldarah;
+    private String nomorIndukKependudukan, namaWarga, tempatLahir, tanggalLahir, Agama, pekerjaanWarga,pendidikan, alamat, rt, rw, jenisKelamin, statuskawin, namaayah, namaibu, goldarah;
 
     public String getNomorIndukKependudukan() {
         return nomorIndukKependudukan;
@@ -53,13 +53,69 @@ public class Data_Provider {
         this.pekerjaanWarga = pekerjaanWarga;
     }
 
+    public String getPendidikan() {
+        return pendidikan;
+    }
+
+    public void setPendidikan(String pendidikan) {
+        this.pendidikan = pendidikan;
+    }
+
+    public String getAlamat() {
+        return alamat;
+    }
+
+    public void setAlamat(String alamat) {
+        this.alamat = alamat;
+    }
+
+    public String getRt() {
+        return rt;
+    }
+
+    public void setRt(String rt) {
+        this.rt = rt;
+    }
+
+    public String getRw() {
+        return rw;
+    }
+
+    public void setRw(String rw) {
+        this.rw = rw;
+    }
+
     public String getJenisKelamin() {
         return jenisKelamin;
     }
 
     public void setJenisKelamin(String jenisKelamin) {
         this.jenisKelamin = jenisKelamin;
-    }    
+    }
+
+    public String getStatuskawin() {
+        return statuskawin;
+    }
+
+    public void setStatuskawin(String statuskawin) {
+        this.statuskawin = statuskawin;
+    }
+
+    public String getNamaayah() {
+        return namaayah;
+    }
+
+    public void setNamaayah(String namaayah) {
+        this.namaayah = namaayah;
+    }
+
+    public String getNamaibu() {
+        return namaibu;
+    }
+
+    public void setNamaibu(String namaibu) {
+        this.namaibu = namaibu;
+    }
 
     public String getGoldarah() {
         return goldarah;
@@ -68,5 +124,6 @@ public class Data_Provider {
     public void setGoldarah(String goldarah) {
         this.goldarah = goldarah;
     }
+
     
 }

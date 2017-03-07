@@ -155,7 +155,7 @@ public class Main_Form extends javax.swing.JFrame {
         text_tempatlahir_warga = new javax.swing.JTextField();
         text_tanggallahir_warga = new javax.swing.JTextField();
         text_agama_warga = new javax.swing.JTextField();
-        text_pekerjaan_warga = new javax.swing.JTextField();
+        text_alamat_warga = new javax.swing.JTextField();
         radiobutton_pria_warga = new javax.swing.JRadioButton();
         radiobutton_wanita_warga = new javax.swing.JRadioButton();
         btn_insert_warga = new javax.swing.JButton();
@@ -165,9 +165,21 @@ public class Main_Form extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         btn_clear_warga = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
+        text_golongandarah_warga = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
+        text_pendidikan_warga = new javax.swing.JTextField();
+        jLabel26 = new javax.swing.JLabel();
+        text_pekerjaan_warga = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
+        text_rt_warga = new javax.swing.JTextField();
+        jLabel28 = new javax.swing.JLabel();
+        text_rw_warga = new javax.swing.JTextField();
+        jLabel29 = new javax.swing.JLabel();
+        text_statuskawin_warga = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
+        text_namaayah_warga = new javax.swing.JTextField();
+        jLabel31 = new javax.swing.JLabel();
+        text_namaibu_warga = new javax.swing.JTextField();
 
         jLabel20.setText("jLabel12");
 
@@ -448,6 +460,11 @@ public class Main_Form extends javax.swing.JFrame {
         jLabel24.setText("Penanda Tangan");
 
         jButton1.setText("SEARCH");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("CLEAR");
 
@@ -465,79 +482,79 @@ public class Main_Form extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(29, 29, 29))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TabDuaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(TabDuaLayout.createSequentialGroup()
-                            .addGap(7, 7, 7)
-                            .addGroup(TabDuaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(TabDuaLayout.createSequentialGroup()
-                                    .addComponent(jLabel18)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jLabel21)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(342, 342, 342))
-                                .addGroup(TabDuaLayout.createSequentialGroup()
-                                    .addGap(35, 35, 35)
-                                    .addGroup(TabDuaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel14)
-                                        .addComponent(jLabel16))
-                                    .addGap(18, 18, 18)
-                                    .addGroup(TabDuaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(TabDuaLayout.createSequentialGroup()
-                                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(jLabel15)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(TabDuaLayout.createSequentialGroup()
-                                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(17, 17, 17)
-                                            .addComponent(jLabel17)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGap(418, 418, 418))))
-                        .addGroup(TabDuaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(TabDuaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(TabDuaLayout.createSequentialGroup()
-                                    .addGroup(TabDuaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(TabDuaLayout.createSequentialGroup()
-                                            .addComponent(jLabel13)
-                                            .addGap(18, 18, 18))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TabDuaLayout.createSequentialGroup()
-                                            .addComponent(jLabel12)
-                                            .addGap(27, 27, 27)))
-                                    .addGroup(TabDuaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(TabDuaLayout.createSequentialGroup()
-                                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addGroup(TabDuaLayout.createSequentialGroup()
-                                    .addGap(29, 29, 29)
-                                    .addComponent(jLabel19)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jLabel23)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TabDuaLayout.createSequentialGroup()
+                        .addGroup(TabDuaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(TabDuaLayout.createSequentialGroup()
-                                .addGap(15, 15, 15)
-                                .addComponent(jLabel22)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGap(7, 7, 7)
                                 .addGroup(TabDuaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(TabDuaLayout.createSequentialGroup()
-                                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(104, 104, 104)
-                                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(TabDuaLayout.createSequentialGroup()
-                                        .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(24, 24, 24)
-                                        .addComponent(jLabel24)
+                                        .addComponent(jLabel18)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
+                                        .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel21)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(TabDuaLayout.createSequentialGroup()
+                                        .addGap(35, 35, 35)
+                                        .addGroup(TabDuaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel14)
+                                            .addComponent(jLabel16))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(TabDuaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(TabDuaLayout.createSequentialGroup()
+                                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jLabel15)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(TabDuaLayout.createSequentialGroup()
+                                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(17, 17, 17)
+                                                .addComponent(jLabel17)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                            .addGroup(TabDuaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(TabDuaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(TabDuaLayout.createSequentialGroup()
+                                        .addGroup(TabDuaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(TabDuaLayout.createSequentialGroup()
+                                                .addComponent(jLabel13)
+                                                .addGap(18, 18, 18))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TabDuaLayout.createSequentialGroup()
+                                                .addComponent(jLabel12)
+                                                .addGap(27, 27, 27)))
+                                        .addGroup(TabDuaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(TabDuaLayout.createSequentialGroup()
+                                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addGroup(TabDuaLayout.createSequentialGroup()
+                                        .addGap(29, 29, 29)
+                                        .addComponent(jLabel19)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jLabel23)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(TabDuaLayout.createSequentialGroup()
+                                    .addGap(15, 15, 15)
+                                    .addComponent(jLabel22)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addGroup(TabDuaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(TabDuaLayout.createSequentialGroup()
+                                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(104, 104, 104)
+                                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(TabDuaLayout.createSequentialGroup()
+                                            .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(24, 24, 24)
+                                            .addComponent(jLabel24)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                        .addGap(176, 176, 176))))
         );
         TabDuaLayout.setVerticalGroup(
             TabDuaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -734,7 +751,7 @@ public class Main_Form extends javax.swing.JFrame {
             }
         });
 
-        jLabel8.setText("Pekerjaan");
+        jLabel8.setText("Alamat");
 
         btn_clear_warga.setText("CELAR");
         btn_clear_warga.addActionListener(new java.awt.event.ActionListener() {
@@ -745,7 +762,19 @@ public class Main_Form extends javax.swing.JFrame {
 
         jLabel7.setText("Golongan Darah");
 
-        jLabel9.setText("jLabel9");
+        jLabel9.setText("Pendidikan");
+
+        jLabel26.setText("Pekerjaan");
+
+        jLabel27.setText("RT");
+
+        jLabel28.setText("RW");
+
+        jLabel29.setText("Status Kawin");
+
+        jLabel30.setText("Nama Ayah");
+
+        jLabel31.setText("Nama Ibu");
 
         javax.swing.GroupLayout TabLimaLayout = new javax.swing.GroupLayout(TabLima);
         TabLima.setLayout(TabLimaLayout);
@@ -764,49 +793,72 @@ public class Main_Form extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(btn_delete_warga))))
                     .addGroup(TabLimaLayout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(jLabel6)
-                        .addGap(86, 86, 86)
-                        .addComponent(radiobutton_pria_warga)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(radiobutton_wanita_warga))
-                    .addGroup(TabLimaLayout.createSequentialGroup()
                         .addGap(27, 27, 27)
                         .addComponent(scrollview_warga, javax.swing.GroupLayout.PREFERRED_SIZE, 974, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(TabLimaLayout.createSequentialGroup()
-                        .addGroup(TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(TabLimaLayout.createSequentialGroup()
-                                .addGap(70, 70, 70)
-                                .addGroup(TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel5)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TabLimaLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel7)))
+                                .addGap(77, 77, 77)
+                                .addComponent(jLabel6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(radiobutton_pria_warga)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(radiobutton_wanita_warga)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 176, Short.MAX_VALUE)
+                                .addComponent(jLabel30))
+                            .addGroup(TabLimaLayout.createSequentialGroup()
+                                .addGroup(TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(TabLimaLayout.createSequentialGroup()
+                                        .addGap(70, 70, 70)
+                                        .addGroup(TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel2)
+                                            .addComponent(jLabel1)
+                                            .addComponent(jLabel4)
+                                            .addComponent(jLabel5)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TabLimaLayout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addGroup(TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel29, javax.swing.GroupLayout.Alignment.TRAILING))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TabLimaLayout.createSequentialGroup()
+                                        .addComponent(text_nik_warga)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btn_search_warga))
+                                    .addComponent(text_golongandarah_warga, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
+                                    .addComponent(text_namalengkap_warga)
+                                    .addComponent(text_agama_warga)
+                                    .addComponent(text_tempatlahir_warga)
+                                    .addComponent(text_statuskawin_warga))
+                                .addGroup(TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(TabLimaLayout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel3)
+                                            .addComponent(jLabel8)
+                                            .addComponent(jLabel9)
+                                            .addComponent(jLabel26)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TabLimaLayout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel31)))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(TabLimaLayout.createSequentialGroup()
-                                .addComponent(text_nik_warga, javax.swing.GroupLayout.PREFERRED_SIZE, 588, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btn_search_warga, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(TabLimaLayout.createSequentialGroup()
-                                .addGroup(TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jTextField10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
-                                    .addComponent(text_namalengkap_warga, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(text_agama_warga, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(text_tempatlahir_warga, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addComponent(text_tanggallahir_warga, javax.swing.GroupLayout.DEFAULT_SIZE, 325, Short.MAX_VALUE)
+                            .addComponent(text_alamat_warga)
+                            .addComponent(text_pendidikan_warga)
+                            .addComponent(text_pekerjaan_warga)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TabLimaLayout.createSequentialGroup()
+                                .addComponent(jLabel27)
+                                .addGap(18, 18, 18)
+                                .addComponent(text_rt_warga, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel28)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel8)
-                                    .addComponent(jLabel9))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(text_tanggallahir_warga)
-                                    .addComponent(text_pekerjaan_warga)
-                                    .addComponent(jTextField11))))))
+                                .addComponent(text_rw_warga, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(75, 75, 75))
+                            .addComponent(text_namaayah_warga)
+                            .addComponent(text_namaibu_warga))))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
         TabLimaLayout.setVerticalGroup(
@@ -816,13 +868,15 @@ public class Main_Form extends javax.swing.JFrame {
                 .addGroup(TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(text_nik_warga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_search_warga)
-                    .addComponent(jLabel4))
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel26)
+                    .addComponent(text_pekerjaan_warga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(text_namalengkap_warga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(text_pendidikan_warga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10)
                 .addGroup(TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -835,22 +889,35 @@ public class Main_Form extends javax.swing.JFrame {
                     .addGroup(TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(text_agama_warga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel8)
-                        .addComponent(text_pekerjaan_warga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(text_alamat_warga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(10, 10, 10)
                 .addGroup(TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(17, 17, 17)
+                    .addComponent(text_golongandarah_warga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel27)
+                    .addComponent(text_rt_warga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel28)
+                    .addComponent(text_rw_warga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(TabLimaLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jLabel6))
                     .addGroup(TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel6)
                         .addComponent(radiobutton_pria_warga)
-                        .addComponent(radiobutton_wanita_warga)))
-                .addGap(33, 33, 33)
+                        .addComponent(radiobutton_wanita_warga))
+                    .addGroup(TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel30)
+                        .addComponent(text_namaayah_warga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel29)
+                        .addComponent(text_statuskawin_warga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel31)
+                        .addComponent(text_namaibu_warga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
                 .addComponent(btn_clear_warga, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_insert_warga)
                     .addComponent(btn_update_warga)
@@ -932,7 +999,7 @@ public class Main_Form extends javax.swing.JFrame {
             text_tempatlahir_warga.setText("");
             text_tanggallahir_warga.setText("");
             text_agama_warga.setText("");
-            text_pekerjaan_warga.setText("");
+            text_alamat_warga.setText("");
             
 
             buttonGroup1.clearSelection();
@@ -1046,7 +1113,6 @@ public class Main_Form extends javax.swing.JFrame {
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
         }
-
     }//GEN-LAST:event_btn_cariActionPerformed
 
     private void btn_cetaksuratActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cetaksuratActionPerformed
@@ -1072,16 +1138,13 @@ public class Main_Form extends javax.swing.JFrame {
             //Validasi input kosong
             if (text_nik_warga.getText().equals("") && text_namalengkap_warga.getText().equals("") && text_tempatlahir_warga.getText().equals("")
                     && text_tanggallahir_warga.getText().equals("") && text_agama_warga.getText().equals("")
-                    && text_pekerjaan_warga.getText().equals("") && j_kelamin_warga.equals("")) {
+                    && text_alamat_warga.getText().equals("") && j_kelamin_warga.equals("")) {
                 JOptionPane.showMessageDialog(null, "Data Tidak lengkap");
             } else {
                 
-                //INSERT INTO  warga VALUES (`nik`, `namalengkap`, `tempatlahir`, `tanggallahir`, `agama`, `pekerjaan`, `jeniskelamin`);
-                 query = "insert into warga values ('" + text_nik_warga.getText().trim() +"','"+ text_namalengkap_warga.getText().trim() +
-                         "','"+ text_tempatlahir_warga.getText().trim() +"','"+ text_tanggallahir_warga.getText().trim() +"','"+ text_agama_warga.getText().trim() +
-                         "','"+ text_pekerjaan_warga.getText().trim() +"','"+ j_kelamin_warga + "')";
+                //INSERT INTO `warga`(`nik`, `namalengkap`, `tempatlahir`, `tanggallahir`, `agama`, `pekerjaan`, `pendidikan`, `alamat`, `rt`, `rw`, `jeniskelamin`, `statuskawin`, `namaayah`, `namaibu`, `goldarah`)
+                 query = "INSERT INTO warga VALUES ('"+ text_nik_warga.getText().trim() +"', 'xx','xx','xx','xx','xx','xx','xx','xx','xx','xx','xx','xx','xx','xx');";
 
-                
                 stat = koneksi.createStatement();
                 int res = stat.executeUpdate(query);
                 if (res == 1) {
@@ -1107,7 +1170,7 @@ public class Main_Form extends javax.swing.JFrame {
             } else {
             }
             query = "update warga set namalengkap = '" + text_namalengkap_warga.getText() + "', tempatlahir = '" + text_tempatlahir_warga.getText()
-                    + "', tanggallahir = '" + text_tanggallahir_warga.getText() + "', agama = '" + text_agama_warga.getText() + "', pekerjaan = '" + text_pekerjaan_warga.getText()
+                    + "', tanggallahir = '" + text_tanggallahir_warga.getText() + "', agama = '" + text_agama_warga.getText() + "', pekerjaan = '" + text_alamat_warga.getText()
                     + "', jeniskelamin = '" + j_kelamin_warga + "' where nik = '" + text_nik_warga.getText() + "'";
             stat = koneksi.createStatement();
             int res = stat.executeUpdate(query);
@@ -1165,7 +1228,7 @@ public class Main_Form extends javax.swing.JFrame {
                     text_tempatlahir_warga.setText(hasil.getString("tempatlahir"));
                     text_tanggallahir_warga.setText(hasil.getString("tanggallahir"));
                     text_agama_warga.setText(hasil.getString("agama"));
-                    text_pekerjaan_warga.setText(hasil.getString("pekerjaan"));
+                    text_alamat_warga.setText(hasil.getString("pekerjaan"));
                     j_kelamin_warga = hasil.getString("jeniskelamin");
                 }
 
@@ -1204,6 +1267,61 @@ public class Main_Form extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_text_tempatlahir_wargaActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+            try {
+            String j_kelamin = "";
+            if (text_nik.getText().equals("")) {
+                JOptionPane.showMessageDialog(null, "Tidak Ada data Yang Anda Pilih");
+            } else {
+                query = "select * from warga where nik = '" + text_nik.getText() + "'";
+                stat = koneksi.createStatement();
+                hasil = stat.executeQuery(query);
+                while (hasil.next()) {
+
+                    //Set data dari pencarian ke field inputan
+                    text_namalengkap.setText(hasil.getString("namalengkap"));
+                    text_tempatlahir.setText(hasil.getString("tempatlahir"));
+                    text_tanggallahir.setText(hasil.getString("tanggallahir"));
+                    text_agama.setText(hasil.getString("agama"));
+                    text_pekerjaan.setText(hasil.getString("pekerjaan"));
+                    j_kelamin = hasil.getString("jeniskelamin");
+                }
+
+                if (j_kelamin.equals("")) {
+                    JOptionPane.showMessageDialog(null, "Data Yang Anda Pilih Tidak Ada di database");//pesan ketika data tidak di temukan
+                    formWindowOpened(null);
+                } else {
+                    if (j_kelamin.equals("Pria")) {
+                        radiobutton_pria.setSelected(true);
+                    } else {
+                        radiobutton_wanita.setSelected(true);
+                    }
+                    query = "select * from warga where nik = '" + text_nik.getText() + "'";
+                    stat = koneksi.createStatement();
+                    hasil = stat.executeQuery(query);
+                    _setModel(hasil);
+                    btn_cari.setEnabled(false);
+                    btn_bersih.setEnabled(true);
+                    text_nik.setEnabled(false);
+                    text_nik.setBackground(Color.GRAY);
+
+                    //Aktifkan field yang sebelumnya mati
+                    text_keteranganrt.setEnabled(true);
+                    text_keteranganrt.setBackground(Color.WHITE);
+                    text_nomorket.setEnabled(true);
+                    text_nomorket.setBackground(Color.WHITE);
+                    text_tanggalket.setEnabled(true);
+                    text_tanggalket.setBackground(Color.WHITE);
+                    textarea_keperluan.setEnabled(true);
+                    textarea_keperluan.setBackground(Color.WHITE);
+
+                }
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * *
      *
@@ -1217,7 +1335,9 @@ public class Main_Form extends javax.swing.JFrame {
             list = new ArrayList<Data_Provider>();
             while (hasil.next()) {
 
+                //`nik`, `namalengkap`, `tempatlahir`, `tanggallahir`, `agama`, `pekerjaan`, `pendidikan`, `alamat`, `rt`, `rw`, `jeniskelamin`, `statuskawin`, `namaayah`, `namaibu`, `goldarah`
                 //Untuk Select Data dan menaruhnya di tableView
+                //String yang menjadi parameter adalah nama kolom yang ada di dalam database yang di gunakan
                 warga_tidakmampu = new Data_Provider();
                 warga_tidakmampu.setNomorIndukKependudukan(hasil.getString("nik"));
                 warga_tidakmampu.setNamaWarga(hasil.getString("namalengkap"));
@@ -1225,15 +1345,23 @@ public class Main_Form extends javax.swing.JFrame {
                 warga_tidakmampu.setTanggalLahir(hasil.getString("tanggallahir"));
                 warga_tidakmampu.setAgama(hasil.getString("agama"));
                 warga_tidakmampu.setPekerjaanWarga(hasil.getString("pekerjaan"));
+                warga_tidakmampu.setPendidikan("pendidikan");
+                warga_tidakmampu.setAlamat("alamat");
+                warga_tidakmampu.setRt("rt");
+                warga_tidakmampu.setRw("rw");
                 warga_tidakmampu.setJenisKelamin(hasil.getString("jeniskelamin"));
+                warga_tidakmampu.setStatuskawin("statuskawin");
+                warga_tidakmampu.setNamaayah("namaayah");
+                warga_tidakmampu.setNamaibu("namaibu");
+                warga_tidakmampu.setGoldarah("goldarah");
+                
                 list.add(warga_tidakmampu);
             }
             model = new Data_Adapter(list);
 
             //nama table yang di gunakan
             table_warga.setModel(model);
-            table_warga.setModel(model);
-
+            
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
         }
@@ -1282,7 +1410,13 @@ public class Main_Form extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1295,8 +1429,6 @@ public class Main_Form extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField jTextField14;
@@ -1327,7 +1459,11 @@ public class Main_Form extends javax.swing.JFrame {
     private javax.swing.JTable table_warga;
     private javax.swing.JTextField text_agama;
     private javax.swing.JTextField text_agama_warga;
+    private javax.swing.JTextField text_alamat_warga;
+    private javax.swing.JTextField text_golongandarah_warga;
     private javax.swing.JTextField text_keteranganrt;
+    private javax.swing.JTextField text_namaayah_warga;
+    private javax.swing.JTextField text_namaibu_warga;
     private javax.swing.JTextField text_namalengkap;
     private javax.swing.JTextField text_namalengkap_warga;
     private javax.swing.JTextField text_nik;
@@ -1335,6 +1471,10 @@ public class Main_Form extends javax.swing.JFrame {
     private javax.swing.JTextField text_nomorket;
     private javax.swing.JTextField text_pekerjaan;
     private javax.swing.JTextField text_pekerjaan_warga;
+    private javax.swing.JTextField text_pendidikan_warga;
+    private javax.swing.JTextField text_rt_warga;
+    private javax.swing.JTextField text_rw_warga;
+    private javax.swing.JTextField text_statuskawin_warga;
     private javax.swing.JTextField text_tanggalket;
     private javax.swing.JTextField text_tanggallahir;
     private javax.swing.JTextField text_tanggallahir_warga;
