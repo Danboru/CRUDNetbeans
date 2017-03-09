@@ -1,4 +1,3 @@
-
 package crud.DataAdapter;
 
 import crud.DataProvider.Data_Provider;
@@ -6,6 +5,7 @@ import java.util.List;
 import javax.swing.table.AbstractTableModel;
 
 public class Data_Adapter extends AbstractTableModel {
+
     private List<Data_Provider> list;
 
     public Data_Adapter(List<Data_Provider> list) {
@@ -17,12 +17,12 @@ public class Data_Adapter extends AbstractTableModel {
     }
 
     public int getColumnCount() {
-        return 15;
+        return 16;
     }
 
     public Object getValueAt(int rowIndex, int columnIndex) {
         switch (columnIndex) {
-            //`nik`, `namalengkap`, `tempatlahir`, `tanggallahir`, `agama`, `pekerjaan`, `pendidikan`, `alamat`, `rt`, `rw`, `jeniskelamin`, `statuskawin`, `namaayah`, `namaibu`, `goldarah`
+            //`nik`, `namalengkap`, `tempatlahir`, `tanggallahir`, `agama`, `pekerjaan`, `pendidikan`, `alamat`, `rt`, `rw`, `jeniskelamin`, `statuskawin`, `namaayah`, `namaibu`, `goldarah`, 'warganegara'
             case 0:
                 return list.get(rowIndex).getNomorIndukKependudukan();//NIK
             case 1:
@@ -53,21 +53,25 @@ public class Data_Adapter extends AbstractTableModel {
                 return list.get(rowIndex).getNamaibu();//Pendidikan
             case 14:
                 return list.get(rowIndex).getGoldarah();//Golongan Darah
+            case 15:
+                return list.get(rowIndex).getWarganegara();//Warga Negara
             default:
                 return null;
         }
     }
-    
-    /***
-     * 
+
+    /**
+     * *
+     *
      * Pastikan jumlah kolom sesuai dengan database dan getColumCount
-     * 
+     *
      */
     @Override
     public String getColumnName(int column) {
         switch (column) {
-            
-            //`nik`, `namalengkap`, `tempatlahir`, `tanggallahir`, `agama`, `pekerjaan`, `pendidikan`, `alamat`, `rt`, `rw`, `jeniskelamin`, `statuskawin`, `namaayah`, `namaibu`, `goldarah`
+
+            //`nik`, `namalengkap`, `tempatlahir`, `tanggallahir`, `agama`, `pekerjaan`, `pendidikan`, `alamat`
+            //`rt`, `rw`, `jeniskelamin`, `statuskawin`, `namaayah`, `namaibu`, `goldarah`, 'warganegara'
             case 0:
                 return "NIK";
             case 1:
@@ -98,6 +102,8 @@ public class Data_Adapter extends AbstractTableModel {
                 return "Nama Ibu";
             case 14:
                 return "Golongan Darah";
+            case 15:
+                return "Warga Negara";
             default:
                 return null;
         }
