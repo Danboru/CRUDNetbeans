@@ -775,6 +775,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="PRINT"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_print_ketumumActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

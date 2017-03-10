@@ -570,6 +570,11 @@ public class Main_Form extends javax.swing.JFrame {
         btn_clear_ketumum.setText("CLEAR");
 
         btn_print_ketumum.setText("PRINT");
+        btn_print_ketumum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_print_ketumumActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout TabDuaLayout = new javax.swing.GroupLayout(TabDua);
         TabDua.setLayout(TabDuaLayout);
@@ -1827,6 +1832,8 @@ public class Main_Form extends javax.swing.JFrame {
                 JButton btnLog = new JButton("Cetak & Simpan");
                 btnLog.setBounds(140, 300, 200, 50);
                 panel.add(btnLog);
+                
+                //Set action untuk button ceetak dan simpan
                 btnLog.addActionListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
                         takePicture(panel); //Memanggil fungsi take picture
@@ -1911,8 +1918,9 @@ public class Main_Form extends javax.swing.JFrame {
     void takePicture(JPanel panel) {
         BufferedImage img = new BufferedImage(panel.getWidth(), panel.getHeight(), BufferedImage.TYPE_INT_RGB);
         panel.print(img.getGraphics()); // or: panel.printAll(...);
+        
         try {
-            ImageIO.write(img, "jpg", new File("hasil//panel.jpg"));
+            ImageIO.write(img, "jpg", new File("Hasil//Hasil.jpg"));
             JOptionPane.showMessageDialog(null, "Data Tersimpan");
         } catch (IOException e) {
             e.printStackTrace();
@@ -2013,6 +2021,12 @@ public class Main_Form extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, ex);
         }
     }//GEN-LAST:event_btn_search_tidakmampuActionPerformed
+
+    private void btn_print_ketumumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_print_ketumumActionPerformed
+
+        
+      
+    }//GEN-LAST:event_btn_print_ketumumActionPerformed
 
     /**
      * *
