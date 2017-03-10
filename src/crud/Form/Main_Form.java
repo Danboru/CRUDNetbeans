@@ -132,7 +132,7 @@ public class Main_Form extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         text_pekerjaan_ketumum = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
-        text_tmpttinggal_ketumum = new javax.swing.JTextField();
+        text_tempattinggal_ketumum = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
         text_nokk_ketumum = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
@@ -149,87 +149,124 @@ public class Main_Form extends javax.swing.JFrame {
         btn_clear_ketumum = new javax.swing.JButton();
         btn_print_ketumum = new javax.swing.JButton();
         TabTiga = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
+        text_nosurat_ketdomisili = new javax.swing.JTextField();
         jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        text_nik_ketdomisili = new javax.swing.JTextField();
         jLabel34 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        text_namalengkap_ketdomisili = new javax.swing.JTextField();
         jLabel35 = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        text_bin_ketdomisili = new javax.swing.JTextField();
         jLabel37 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        text_tempatlahir_ketdomisili = new javax.swing.JTextField();
         jLabel38 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        text_warganegara_ketdomisili = new javax.swing.JTextField();
         jLabel39 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
+        text_agama_ketdomisili = new javax.swing.JTextField();
         jLabel40 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
+        text_pekerjaan_ketdomisili = new javax.swing.JTextField();
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
-        jTextField12 = new javax.swing.JTextField();
-        jTextField13 = new javax.swing.JTextField();
+        text_tempattinggal_ketdomisili = new javax.swing.JTextField();
+        text_keteranganrt_ketdomisili = new javax.swing.JTextField();
         jLabel43 = new javax.swing.JLabel();
-        jTextField14 = new javax.swing.JTextField();
+        text_tanggallahir_ketdomisili = new javax.swing.JTextField();
         jLabel44 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
-        jTextField15 = new javax.swing.JTextField();
-        jTextField16 = new javax.swing.JTextField();
+        text_nomorket_ketdomisili = new javax.swing.JTextField();
+        text_tanggalket_ketdomisili = new javax.swing.JTextField();
         jLabel46 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
+        textarea_keperluan_ketdomisili = new javax.swing.JTextArea();
+        btn_search_ketdomisili = new javax.swing.JButton();
         jLabel47 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
+        text_binti_ketdomisili = new javax.swing.JTextField();
         jLabel48 = new javax.swing.JLabel();
-        jTextField17 = new javax.swing.JTextField();
+        text_oenandatangan_ketdomisili = new javax.swing.JTextField();
         jCheckBox1 = new javax.swing.JCheckBox();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        btn_clear_ketdomisili = new javax.swing.JButton();
+        btn_print_ketdomisili = new javax.swing.JButton();
+        radiobutton_pria_ketdomisili = new javax.swing.JRadioButton();
+        radiobutton__wanita_ketdomisili = new javax.swing.JRadioButton();
         TabEmpat = new javax.swing.JPanel();
         jLabel50 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        text_nosurat_catkepolisian = new javax.swing.JTextField();
         jLabel51 = new javax.swing.JLabel();
-        jTextField18 = new javax.swing.JTextField();
+        text_namalengkap_catkepolisian = new javax.swing.JTextField();
         jLabel52 = new javax.swing.JLabel();
-        jTextField19 = new javax.swing.JTextField();
+        text_tempatlahir_catkepolisian = new javax.swing.JTextField();
         jLabel53 = new javax.swing.JLabel();
-        jTextField20 = new javax.swing.JTextField();
+        text_warganegara_catkepolisian = new javax.swing.JTextField();
         jLabel54 = new javax.swing.JLabel();
-        jTextField21 = new javax.swing.JTextField();
+        text_agama_catkepolisian = new javax.swing.JTextField();
         jLabel55 = new javax.swing.JLabel();
-        jTextField22 = new javax.swing.JTextField();
+        text_statuskawin_catkepolisian = new javax.swing.JTextField();
         jLabel56 = new javax.swing.JLabel();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        radiobutton_pria_catkepolisian = new javax.swing.JRadioButton();
+        radiobutton_wanita_catkepolisian = new javax.swing.JRadioButton();
         jLabel57 = new javax.swing.JLabel();
-        jTextField23 = new javax.swing.JTextField();
+        text_tangglalahir_catkepolisian = new javax.swing.JTextField();
         jLabel59 = new javax.swing.JLabel();
-        jTextField24 = new javax.swing.JTextField();
+        text_perkerjaan_catkepolisian = new javax.swing.JTextField();
         jLabel60 = new javax.swing.JLabel();
-        jTextField25 = new javax.swing.JTextField();
+        text_tempattinggal_catkepolisian = new javax.swing.JTextField();
         jLabel61 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        textarea_keperluan_catkepolisian = new javax.swing.JTextArea();
         jLabel62 = new javax.swing.JLabel();
-        jTextField26 = new javax.swing.JTextField();
+        text_penandatangan_catkepolisian = new javax.swing.JTextField();
         jLabel63 = new javax.swing.JLabel();
-        jTextField27 = new javax.swing.JTextField();
+        text_nik_catkepolisian = new javax.swing.JTextField();
         jLabel64 = new javax.swing.JLabel();
-        jTextField28 = new javax.swing.JTextField();
+        text_keteranganrt_catkepolisian = new javax.swing.JTextField();
         jLabel65 = new javax.swing.JLabel();
-        jTextField29 = new javax.swing.JTextField();
+        text_nomorket_catkepolisian = new javax.swing.JTextField();
         jLabel66 = new javax.swing.JLabel();
-        jTextField30 = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        text_tanggalket_catkepolisian = new javax.swing.JTextField();
+        btn_search_catkepolisian = new javax.swing.JButton();
+        btn_clear_catkepolisian = new javax.swing.JButton();
+        btn_print_catkepolisian = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel67 = new javax.swing.JLabel();
-        jTextField31 = new javax.swing.JTextField();
+        text_nosurat_perumum = new javax.swing.JTextField();
+        jLabel68 = new javax.swing.JLabel();
+        jLabel69 = new javax.swing.JLabel();
+        jLabel70 = new javax.swing.JLabel();
+        jLabel71 = new javax.swing.JLabel();
+        jLabel72 = new javax.swing.JLabel();
+        jLabel73 = new javax.swing.JLabel();
+        jLabel74 = new javax.swing.JLabel();
+        jLabel75 = new javax.swing.JLabel();
+        jLabel76 = new javax.swing.JLabel();
+        jLabel77 = new javax.swing.JLabel();
+        jLabel78 = new javax.swing.JLabel();
+        jLabel79 = new javax.swing.JLabel();
+        jLabel80 = new javax.swing.JLabel();
+        jLabel81 = new javax.swing.JLabel();
+        jLabel82 = new javax.swing.JLabel();
+        jLabel83 = new javax.swing.JLabel();
+        text_nik_perumum = new javax.swing.JTextField();
+        btn_search_perumum = new javax.swing.JButton();
+        text_namalengkap_perumum = new javax.swing.JTextField();
+        text_tempatlahir_perumum = new javax.swing.JTextField();
+        text_tanggallahir_perumum = new javax.swing.JTextField();
+        text_agama_perumum = new javax.swing.JTextField();
+        text_pekerjaan_perumum = new javax.swing.JTextField();
+        text_tempattinggal_perumum = new javax.swing.JTextField();
+        text_suratpernyataan_perumum = new javax.swing.JTextField();
+        text_saksisatu_perumum = new javax.swing.JTextField();
+        text_saksidua_perumum = new javax.swing.JTextField();
+        text_namart_perumum = new javax.swing.JTextField();
+        text_namarw_perumum = new javax.swing.JTextField();
+        text_penandatangan_perumum = new javax.swing.JTextField();
+        btn_clear_perumum = new javax.swing.JButton();
+        btn_print_perumum = new javax.swing.JButton();
+        text_warganegara_perumum = new javax.swing.JTextField();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
+        radiobutton_pria_perumum = new javax.swing.JRadioButton();
+        radiobutton_wanita_perumum = new javax.swing.JRadioButton();
         TabLima = new javax.swing.JPanel();
         scrollview_warga = new javax.swing.JScrollPane();
         table_warga = new javax.swing.JTable();
@@ -540,7 +577,7 @@ public class Main_Form extends javax.swing.JFrame {
 
         jLabel17.setText("Pekerjaan");
 
-        jLabel18.setText("Tmpat Tinggal");
+        jLabel18.setText("Tempat Tinggal");
 
         jLabel21.setText("No KK");
 
@@ -635,7 +672,7 @@ public class Main_Form extends javax.swing.JFrame {
                                         .addGroup(TabDuaLayout.createSequentialGroup()
                                             .addComponent(jLabel18)
                                             .addGap(18, 18, 18)
-                                            .addComponent(text_tmpttinggal_ketumum, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(text_tempattinggal_ketumum, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(TabDuaLayout.createSequentialGroup()
                                             .addGap(35, 35, 35)
                                             .addGroup(TabDuaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -700,7 +737,7 @@ public class Main_Form extends javax.swing.JFrame {
                             .addComponent(text_pekerjaan_ketumum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
                 .addGroup(TabDuaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(text_tmpttinggal_ketumum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_tempattinggal_ketumum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel18)
                     .addComponent(text_nokk_ketumum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel21))
@@ -755,11 +792,11 @@ public class Main_Form extends javax.swing.JFrame {
 
         jLabel46.setText("Keperluan");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane4.setViewportView(jTextArea1);
+        textarea_keperluan_ketdomisili.setColumns(20);
+        textarea_keperluan_ketdomisili.setRows(5);
+        jScrollPane4.setViewportView(textarea_keperluan_ketdomisili);
 
-        jButton1.setText("SEARCH");
+        btn_search_ketdomisili.setText("SEARCH");
 
         jLabel47.setText("Binti");
 
@@ -767,13 +804,13 @@ public class Main_Form extends javax.swing.JFrame {
 
         jCheckBox1.setText("Ttd Camat");
 
-        jButton2.setText("CLEAR");
+        btn_clear_ketdomisili.setText("CLEAR");
 
-        jButton3.setText("PRINT");
+        btn_print_ketdomisili.setText("PRINT");
 
-        jRadioButton1.setText("Pria");
+        radiobutton_pria_ketdomisili.setText("Pria");
 
-        jRadioButton2.setText("Wanita");
+        radiobutton__wanita_ketdomisili.setText("Wanita");
 
         javax.swing.GroupLayout TabTigaLayout = new javax.swing.GroupLayout(TabTiga);
         TabTiga.setLayout(TabTigaLayout);
@@ -785,14 +822,14 @@ public class Main_Form extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TabTigaLayout.createSequentialGroup()
                         .addComponent(jLabel32)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(text_nosurat_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(36, 36, 36))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TabTigaLayout.createSequentialGroup()
                         .addComponent(jLabel33)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(text_nik_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton1)
+                        .addComponent(btn_search_ketdomisili)
                         .addGap(340, 340, 340))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(TabTigaLayout.createSequentialGroup()
@@ -804,20 +841,20 @@ public class Main_Form extends javax.swing.JFrame {
                             .addGap(18, 18, 18)
                             .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(TabTigaLayout.createSequentialGroup()
-                                    .addComponent(jTextField3)
+                                    .addComponent(text_namalengkap_ketdomisili)
                                     .addGap(108, 108, 108))
                                 .addGroup(TabTigaLayout.createSequentialGroup()
                                     .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(TabTigaLayout.createSequentialGroup()
-                                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(text_bin_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGap(28, 28, 28)
                                             .addComponent(jLabel47)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(text_binti_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(TabTigaLayout.createSequentialGroup()
-                                            .addComponent(jRadioButton1)
+                                            .addComponent(radiobutton_pria_ketdomisili)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jRadioButton2)))
+                                            .addComponent(radiobutton__wanita_ketdomisili)))
                                     .addGap(451, 451, 451))))
                         .addGroup(TabTigaLayout.createSequentialGroup()
                             .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -833,24 +870,17 @@ public class Main_Form extends javax.swing.JFrame {
                                         .addComponent(jLabel48))
                                     .addGap(18, 18, 18)
                                     .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jTextField11)
-                                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(TabTigaLayout.createSequentialGroup()
-                                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(jLabel43))
                                         .addGroup(TabTigaLayout.createSequentialGroup()
                                             .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                .addComponent(jTextField17, javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(text_oenandatangan_ketdomisili, javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addGroup(TabTigaLayout.createSequentialGroup()
                                                         .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                                             .addGroup(TabTigaLayout.createSequentialGroup()
                                                                 .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                    .addComponent(text_keteranganrt_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                    .addComponent(text_tempattinggal_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                                 .addGap(24, 24, 24)
                                                                 .addComponent(jLabel44)
                                                                 .addGap(13, 13, 13))
@@ -858,8 +888,8 @@ public class Main_Form extends javax.swing.JFrame {
                                                                 .addComponent(jLabel45)
                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                                                         .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                            .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                                            .addComponent(text_nomorket_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addComponent(text_tanggalket_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                                             .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addGroup(TabTigaLayout.createSequentialGroup()
                                                     .addGap(18, 18, 18)
@@ -867,9 +897,19 @@ public class Main_Form extends javax.swing.JFrame {
                                                 .addGroup(TabTigaLayout.createSequentialGroup()
                                                     .addGap(50, 50, 50)
                                                     .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))))
-                                .addComponent(jTextField14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addComponent(btn_print_ketdomisili, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(btn_clear_ketdomisili, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                        .addGroup(TabTigaLayout.createSequentialGroup()
+                                            .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(text_warganegara_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(text_agama_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGroup(TabTigaLayout.createSequentialGroup()
+                                                    .addComponent(text_tempatlahir_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                    .addComponent(jLabel43))
+                                                .addComponent(text_pekerjaan_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGap(0, 0, Short.MAX_VALUE))))
+                                .addComponent(text_tanggallahir_ketdomisili, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGap(108, 108, 108)))))
         );
         TabTigaLayout.setVerticalGroup(
@@ -877,77 +917,77 @@ public class Main_Form extends javax.swing.JFrame {
             .addGroup(TabTigaLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_nosurat_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel32))
                 .addGap(18, 18, 18)
                 .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel33)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(text_nik_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_search_ketdomisili))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel34)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(text_namalengkap_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jRadioButton1)
-                        .addComponent(jRadioButton2))
+                        .addComponent(radiobutton_pria_ketdomisili)
+                        .addComponent(radiobutton__wanita_ketdomisili))
                     .addComponent(jLabel35))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel36, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(text_bin_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel47)
-                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(text_binti_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel37)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_tempatlahir_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel43)
-                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(text_tanggallahir_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel38)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(text_warganegara_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel39)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(text_agama_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel40)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(text_pekerjaan_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel41)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(text_tempattinggal_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(TabTigaLayout.createSequentialGroup()
                         .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel42)
-                            .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(text_keteranganrt_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(text_nomorket_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel44))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(text_tanggalket_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel45))
                         .addGap(18, 18, 18)
                         .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel46)
                             .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TabTigaLayout.createSequentialGroup()
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_clear_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_print_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(24, 24, 24)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel48)
-                    .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_oenandatangan_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jCheckBox1))
                 .addGap(42, 42, 42))
         );
@@ -968,9 +1008,9 @@ public class Main_Form extends javax.swing.JFrame {
 
         jLabel56.setText("Jenis Kelamin");
 
-        jRadioButton3.setText("Pria");
+        radiobutton_pria_catkepolisian.setText("Pria");
 
-        jRadioButton4.setText("Wanita");
+        radiobutton_wanita_catkepolisian.setText("Wanita");
 
         jLabel57.setText("Tanggal Lahir");
 
@@ -980,9 +1020,9 @@ public class Main_Form extends javax.swing.JFrame {
 
         jLabel61.setText("Keperluan");
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane5.setViewportView(jTextArea2);
+        textarea_keperluan_catkepolisian.setColumns(20);
+        textarea_keperluan_catkepolisian.setRows(5);
+        jScrollPane5.setViewportView(textarea_keperluan_catkepolisian);
 
         jLabel62.setText("Pejabat Penandatangan");
 
@@ -994,11 +1034,11 @@ public class Main_Form extends javax.swing.JFrame {
 
         jLabel66.setText("Tanggal");
 
-        jButton4.setText("SEARCH");
+        btn_search_catkepolisian.setText("SEARCH");
 
-        jButton5.setText("CLEAR");
+        btn_clear_catkepolisian.setText("CLEAR");
 
-        jButton6.setText("PRINT");
+        btn_print_catkepolisian.setText("PRINT");
 
         javax.swing.GroupLayout TabEmpatLayout = new javax.swing.GroupLayout(TabEmpat);
         TabEmpat.setLayout(TabEmpatLayout);
@@ -1008,96 +1048,89 @@ public class Main_Form extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel50)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(text_nosurat_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42))
+            .addGroup(TabEmpatLayout.createSequentialGroup()
+                .addGap(229, 229, 229)
+                .addComponent(jLabel63)
+                .addGap(41, 41, 41)
+                .addComponent(text_nik_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btn_search_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(TabEmpatLayout.createSequentialGroup()
                 .addGap(197, 197, 197)
                 .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(TabEmpatLayout.createSequentialGroup()
-                        .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TabEmpatLayout.createSequentialGroup()
-                                .addComponent(jLabel54)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(33, 33, 33))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TabEmpatLayout.createSequentialGroup()
-                                .addComponent(jLabel53)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(74, 74, 74)
+                        .addComponent(btn_clear_catkepolisian, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_print_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(181, 181, 181))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TabEmpatLayout.createSequentialGroup()
+                        .addComponent(jLabel53)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(text_warganegara_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(645, 645, 645))
                     .addGroup(TabEmpatLayout.createSequentialGroup()
                         .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(TabEmpatLayout.createSequentialGroup()
-                                .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel64)
-                                    .addComponent(jLabel59))
+                                .addComponent(jLabel62)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_penandatangan_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel54)
+                            .addGroup(TabEmpatLayout.createSequentialGroup()
+                                .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel56)
+                                    .addComponent(jLabel51))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(TabEmpatLayout.createSequentialGroup()
-                                        .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabel60)
+                                        .addComponent(radiobutton_pria_catkepolisian)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(TabEmpatLayout.createSequentialGroup()
-                                        .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabel65)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jLabel66)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(radiobutton_wanita_catkepolisian))
+                                    .addComponent(text_namalengkap_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(TabEmpatLayout.createSequentialGroup()
+                                .addComponent(jLabel61)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(TabEmpatLayout.createSequentialGroup()
+                                .addComponent(jLabel64)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_keteranganrt_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel65)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(text_nomorket_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel66)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(text_tanggalket_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(TabEmpatLayout.createSequentialGroup()
                                 .addComponent(jLabel52)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(45, 45, 45)
+                                .addComponent(text_tempatlahir_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel57)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(TabEmpatLayout.createSequentialGroup()
-                                .addComponent(jLabel55)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, TabEmpatLayout.createSequentialGroup()
-                                    .addComponent(jLabel62)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jTextField26))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, TabEmpatLayout.createSequentialGroup()
-                                    .addComponent(jLabel61)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap(295, Short.MAX_VALUE))
+                                .addComponent(text_tangglalahir_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(TabEmpatLayout.createSequentialGroup()
-                        .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel56)
-                            .addComponent(jLabel51))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel55)
+                            .addComponent(jLabel59))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(TabEmpatLayout.createSequentialGroup()
-                                .addComponent(jRadioButton3)
+                                .addComponent(text_perkerjaan_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel60)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton4))
+                                .addComponent(text_tempattinggal_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(text_statuskawin_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(TabEmpatLayout.createSequentialGroup()
-                                .addComponent(jTextField18)
-                                .addGap(332, 332, 332))))))
-            .addGroup(TabEmpatLayout.createSequentialGroup()
-                .addGap(268, 268, 268)
-                .addComponent(jLabel63)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(TabEmpatLayout.createSequentialGroup()
-                .addGap(271, 271, 271)
-                .addComponent(jButton5)
-                .addGap(43, 43, 43)
-                .addComponent(jButton6)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(text_agama_catkepolisian)
+                                .addGap(333, 333, 333))))))
         );
         TabEmpatLayout.setVerticalGroup(
             TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1105,84 +1138,223 @@ public class Main_Form extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel50)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(text_nosurat_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(25, 25, 25)
                 .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel63)
-                    .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4))
+                    .addComponent(text_nik_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_search_catkepolisian))
                 .addGap(18, 18, 18)
                 .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel51)
-                    .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(text_namalengkap_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel56)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton4))
+                    .addComponent(radiobutton_pria_catkepolisian)
+                    .addComponent(radiobutton_wanita_catkepolisian))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel52)
-                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_tempatlahir_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel57)
-                    .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(text_tangglalahir_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel53)
-                    .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(text_warganegara_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel54)
-                    .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(text_agama_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
                 .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel55)
-                    .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(text_statuskawin_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
                 .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel59)
-                    .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_perkerjaan_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_tempattinggal_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel60))
-                .addGap(10, 10, 10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel64)
-                    .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_keteranganrt_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel65)
-                    .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_nomorket_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel66)
-                    .addComponent(jTextField30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(text_tanggalket_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel61)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane5))
                 .addGap(9, 9, 9)
                 .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel62)
-                    .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(text_penandatangan_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
-                    .addComponent(jButton6))
-                .addContainerGap(42, Short.MAX_VALUE))
+                    .addComponent(btn_clear_catkepolisian)
+                    .addComponent(btn_print_catkepolisian))
+                .addGap(34, 34, 34))
         );
 
         TabSatu.addTab("CATATAN KEPOLISIAN", TabEmpat);
 
-        jLabel67.setText("jLabel67");
+        jLabel67.setText("No Surat");
 
-        jTextField31.setText("jTextField31");
+        jLabel68.setText("Nama Lengkap");
+
+        jLabel69.setText("NIK");
+
+        jLabel70.setText("Jenis Kelamin");
+
+        jLabel71.setText("Tempat Lahir");
+
+        jLabel72.setText("Tangal Lahir");
+
+        jLabel73.setText("Warga Negara");
+
+        jLabel74.setText("Agama");
+
+        jLabel75.setText("Pekerjaan");
+
+        jLabel76.setText("Tempat Tinggal");
+
+        jLabel77.setText("Surat Pernyataan");
+
+        jLabel78.setText("Menyatakan Bahwa");
+
+        jLabel79.setText("Saksi 1");
+
+        jLabel80.setText("Saksi 2");
+
+        jLabel81.setText("Nama Ketua RT");
+
+        jLabel82.setText("Nama Ketua RW");
+
+        jLabel83.setText("Pejabat Penandatangan");
+
+        btn_search_perumum.setText("SEARCH");
+
+        btn_clear_perumum.setText("CLEAR");
+
+        btn_print_perumum.setText("PRINT");
+
+        jTextArea3.setColumns(20);
+        jTextArea3.setRows(5);
+        jScrollPane6.setViewportView(jTextArea3);
+
+        radiobutton_pria_perumum.setText("Pria");
+
+        radiobutton_wanita_perumum.setText("Wanita");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(648, Short.MAX_VALUE)
-                .addComponent(jLabel67)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(282, 282, 282)
+                .addComponent(jLabel69)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
+                .addComponent(text_nik_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btn_search_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(162, 162, 162)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel81)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(text_namart_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel82)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(text_namarw_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel79)
+                                        .addGap(29, 29, 29)
+                                        .addComponent(text_saksisatu_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                                        .addComponent(jLabel80))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabel76)
+                                                    .addComponent(jLabel77))
+                                                .addGap(31, 31, 31))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                                .addComponent(jLabel73)
+                                                .addGap(48, 48, 48)))
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(text_warganegara_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(text_tempattinggal_perumum)
+                                                .addComponent(text_suratpernyataan_perumum, javax.swing.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE)))))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addComponent(text_saksidua_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(54, 54, 54)
+                                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel71)
+                                    .addComponent(jLabel74)
+                                    .addComponent(jLabel75))
+                                .addGap(196, 196, 196)
+                                .addComponent(jLabel72)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(text_tanggallahir_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel83)
+                                .addGap(18, 18, 18)
+                                .addComponent(text_penandatangan_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel68)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(text_namalengkap_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel70)
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(text_pekerjaan_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(text_agama_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(text_tempatlahir_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(radiobutton_pria_perumum)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(radiobutton_wanita_perumum)))
+                                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel78)))
+                        .addContainerGap(350, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel67)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(text_nosurat_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(btn_clear_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btn_print_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(64, 64, 64))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1190,8 +1362,74 @@ public class Main_Form extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel67)
-                    .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(586, Short.MAX_VALUE))
+                    .addComponent(text_nosurat_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(5, 5, 5)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel69)
+                    .addComponent(text_nik_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_search_perumum))
+                .addGap(13, 13, 13)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel68)
+                    .addComponent(text_namalengkap_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel70)
+                    .addComponent(radiobutton_pria_perumum)
+                    .addComponent(radiobutton_wanita_perumum))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel71)
+                    .addComponent(jLabel72)
+                    .addComponent(text_tempatlahir_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_tanggallahir_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel74)
+                            .addComponent(text_agama_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel75)
+                            .addComponent(text_pekerjaan_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel76)
+                            .addComponent(text_tempattinggal_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel77)
+                            .addComponent(text_suratpernyataan_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel73)
+                            .addComponent(text_warganegara_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel78)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel79)
+                    .addComponent(jLabel80)
+                    .addComponent(text_saksisatu_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_saksidua_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel81)
+                    .addComponent(jLabel82)
+                    .addComponent(text_namart_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_namarw_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel83)
+                    .addComponent(text_penandatangan_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(42, 42, 42)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_clear_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_print_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         TabSatu.addTab("PERNYATAAN UMUM", jPanel1);
@@ -2024,7 +2262,7 @@ public class Main_Form extends javax.swing.JFrame {
 
     private void btn_print_ketumumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_print_ketumumActionPerformed
 
-        
+         new TestPreview();
       
     }//GEN-LAST:event_btn_print_ketumumActionPerformed
 
@@ -2082,24 +2320,27 @@ public class Main_Form extends javax.swing.JFrame {
     private javax.swing.JTabbedPane TabSatu;
     private javax.swing.JPanel TabTiga;
     private javax.swing.JPanel TidakMampu;
+    private javax.swing.JButton btn_clear_catkepolisian;
+    private javax.swing.JButton btn_clear_ketdomisili;
     private javax.swing.JButton btn_clear_ketumum;
+    private javax.swing.JButton btn_clear_perumum;
     private javax.swing.JButton btn_clear_tidakmampu;
     private javax.swing.JButton btn_clear_warga;
     private javax.swing.JButton btn_delete_warga;
     private javax.swing.JButton btn_insert_warga;
+    private javax.swing.JButton btn_print_catkepolisian;
+    private javax.swing.JButton btn_print_ketdomisili;
     private javax.swing.JButton btn_print_ketumum;
+    private javax.swing.JButton btn_print_perumum;
     private javax.swing.JButton btn_print_tidakmampu;
+    private javax.swing.JButton btn_search_catkepolisian;
+    private javax.swing.JButton btn_search_ketdomisili;
     private javax.swing.JButton btn_search_ketumum;
+    private javax.swing.JButton btn_search_perumum;
     private javax.swing.JButton btn_search_tidakmampu;
     private javax.swing.JButton btn_search_warga;
     private javax.swing.JButton btn_update_warga;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -2165,52 +2406,34 @@ public class Main_Form extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
+    private javax.swing.JLabel jLabel76;
+    private javax.swing.JLabel jLabel77;
+    private javax.swing.JLabel jLabel78;
+    private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel80;
+    private javax.swing.JLabel jLabel81;
+    private javax.swing.JLabel jLabel82;
+    private javax.swing.JLabel jLabel83;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField20;
-    private javax.swing.JTextField jTextField21;
-    private javax.swing.JTextField jTextField22;
-    private javax.swing.JTextField jTextField23;
-    private javax.swing.JTextField jTextField24;
-    private javax.swing.JTextField jTextField25;
-    private javax.swing.JTextField jTextField26;
-    private javax.swing.JTextField jTextField27;
-    private javax.swing.JTextField jTextField28;
-    private javax.swing.JTextField jTextField29;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField30;
-    private javax.swing.JTextField jTextField31;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JLabel label_agama;
     private javax.swing.JLabel label_kelamin;
     private javax.swing.JLabel label_keterangan;
@@ -2221,48 +2444,100 @@ public class Main_Form extends javax.swing.JFrame {
     private javax.swing.JLabel label_pekerjaan;
     private javax.swing.JLabel label_tanggal;
     private javax.swing.JLabel label_tempatlahir;
+    private javax.swing.JRadioButton radiobutton__wanita_ketdomisili;
+    private javax.swing.JRadioButton radiobutton_pria_catkepolisian;
+    private javax.swing.JRadioButton radiobutton_pria_ketdomisili;
+    private javax.swing.JRadioButton radiobutton_pria_perumum;
     private javax.swing.JRadioButton radiobutton_pria_tidakmampu;
     private javax.swing.JRadioButton radiobutton_pria_warga;
+    private javax.swing.JRadioButton radiobutton_wanita_catkepolisian;
+    private javax.swing.JRadioButton radiobutton_wanita_perumum;
     private javax.swing.JRadioButton radiobutton_wanita_tidakmampu;
     private javax.swing.JRadioButton radiobutton_wanita_warga;
     private javax.swing.JScrollPane scrollview_warga;
     private javax.swing.JTable table_warga;
+    private javax.swing.JTextField text_agama_catkepolisian;
+    private javax.swing.JTextField text_agama_ketdomisili;
     private javax.swing.JTextField text_agama_ketumum;
+    private javax.swing.JTextField text_agama_perumum;
     private javax.swing.JTextField text_agama_tidakmampu;
     private javax.swing.JTextField text_agama_warga;
     private javax.swing.JTextField text_alamat_warga;
+    private javax.swing.JTextField text_bin_ketdomisili;
+    private javax.swing.JTextField text_binti_ketdomisili;
     private javax.swing.JTextField text_golongandarah_warga;
+    private javax.swing.JTextField text_keteranganrt_catkepolisian;
+    private javax.swing.JTextField text_keteranganrt_ketdomisili;
     private javax.swing.JTextField text_keteranganrt_tidakmampu;
     private javax.swing.JTextField text_masaberlaku_ketumum;
     private javax.swing.JTextField text_namaayah_warga;
     private javax.swing.JTextField text_namaibu_warga;
+    private javax.swing.JTextField text_namalengkap_catkepolisian;
+    private javax.swing.JTextField text_namalengkap_ketdomisili;
     private javax.swing.JTextField text_namalengkap_ketumum;
+    private javax.swing.JTextField text_namalengkap_perumum;
     private javax.swing.JTextField text_namalengkap_tidakmampu;
     private javax.swing.JTextField text_namalengkap_warga;
+    private javax.swing.JTextField text_namart_perumum;
+    private javax.swing.JTextField text_namarw_perumum;
+    private javax.swing.JTextField text_nik_catkepolisian;
+    private javax.swing.JTextField text_nik_ketdomisili;
     private javax.swing.JTextField text_nik_ketumum;
+    private javax.swing.JTextField text_nik_perumum;
     private javax.swing.JTextField text_nik_tidakmampu;
     private javax.swing.JTextField text_nik_warga;
     private javax.swing.JTextField text_nokk_ketumum;
+    private javax.swing.JTextField text_nomorket_catkepolisian;
+    private javax.swing.JTextField text_nomorket_ketdomisili;
     private javax.swing.JTextField text_nomorket_tidakmampu;
+    private javax.swing.JTextField text_nosurat_catkepolisian;
+    private javax.swing.JTextField text_nosurat_ketdomisili;
     private javax.swing.JTextField text_nosurat_ketumum;
+    private javax.swing.JTextField text_nosurat_perumum;
     private javax.swing.JTextField text_nosurat_tidakmampu;
+    private javax.swing.JTextField text_oenandatangan_ketdomisili;
+    private javax.swing.JTextField text_pekerjaan_ketdomisili;
     private javax.swing.JTextField text_pekerjaan_ketumum;
+    private javax.swing.JTextField text_pekerjaan_perumum;
     private javax.swing.JTextField text_pekerjaan_tidakmampu;
     private javax.swing.JTextField text_pekerjaan_warga;
+    private javax.swing.JTextField text_penandatangan_catkepolisian;
     private javax.swing.JTextField text_penandatangan_ketumum;
+    private javax.swing.JTextField text_penandatangan_perumum;
     private javax.swing.JTextField text_pendidikan_warga;
+    private javax.swing.JTextField text_perkerjaan_catkepolisian;
     private javax.swing.JTextField text_rt_warga;
     private javax.swing.JTextField text_rw_warga;
+    private javax.swing.JTextField text_saksidua_perumum;
+    private javax.swing.JTextField text_saksisatu_perumum;
+    private javax.swing.JTextField text_statuskawin_catkepolisian;
     private javax.swing.JTextField text_statuskawin_warga;
+    private javax.swing.JTextField text_suratpernyataan_perumum;
+    private javax.swing.JTextField text_tanggalket_catkepolisian;
+    private javax.swing.JTextField text_tanggalket_ketdomisili;
     private javax.swing.JTextField text_tanggalket_tidakmampu;
+    private javax.swing.JTextField text_tanggallahir_ketdomisili;
+    private javax.swing.JTextField text_tanggallahir_perumum;
     private javax.swing.JTextField text_tanggallahir_tidakmampu;
     private javax.swing.JTextField text_tanggallahir_warga;
+    private javax.swing.JTextField text_tangglalahir_catkepolisian;
+    private javax.swing.JTextField text_tempatlahir_catkepolisian;
+    private javax.swing.JTextField text_tempatlahir_ketdomisili;
     private javax.swing.JTextField text_tempatlahir_ketumum;
+    private javax.swing.JTextField text_tempatlahir_perumum;
     private javax.swing.JTextField text_tempatlahir_tidakmampu;
     private javax.swing.JTextField text_tempatlahir_warga;
+    private javax.swing.JTextField text_tempattinggal_catkepolisian;
+    private javax.swing.JTextField text_tempattinggal_ketdomisili;
+    private javax.swing.JTextField text_tempattinggal_ketumum;
+    private javax.swing.JTextField text_tempattinggal_perumum;
     private javax.swing.JTextField text_tgllagir__ketumum;
-    private javax.swing.JTextField text_tmpttinggal_ketumum;
+    private javax.swing.JTextField text_warganegara_catkepolisian;
+    private javax.swing.JTextField text_warganegara_ketdomisili;
+    private javax.swing.JTextField text_warganegara_perumum;
     private javax.swing.JTextField text_warganegara_warga;
+    private javax.swing.JTextArea textarea_keperluan_catkepolisian;
+    private javax.swing.JTextArea textarea_keperluan_ketdomisili;
     private javax.swing.JTextArea textarea_keperluan_ketumum;
     private javax.swing.JTextArea textarea_keperluan_tidakmampu;
     private javax.swing.JTextArea txtarena_keperluanlain_ketumum;
