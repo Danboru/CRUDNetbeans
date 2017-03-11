@@ -37,7 +37,33 @@ public class Main_Form extends javax.swing.JFrame {
         buttonGroup1.add(radiobutton_pria_warga);
         buttonGroup1.add(radiobutton_wanita_warga);
 
+        buttonGroup1.add(radiobutton_pria_catkepolisian);
+        buttonGroup1.add(radiobutton_wanita_catkepolisian);
+
+        buttonGroup1.add(radiobutton_pria_ketdomisili);
+        buttonGroup1.add(radiobutton_wanita_ketdomisili);
+
+        buttonGroup1.add(radiobutton_pria_perumum);
+        buttonGroup1.add(radiobutton_wanita_perumum);
+
         //Set disable untuk field yang tidak di gunakan di awal
+        //Tab Tidak Mampu
+        text_namalengkap_tidakmampu.setEnabled(false);
+        text_namalengkap_tidakmampu.setBackground(Color.GRAY);
+
+        //Tidak Mampu
+        text_nosurat_tidakmampu.setEnabled(false);
+        text_nosurat_tidakmampu.setBackground(Color.GRAY);
+        text_namalengkap_tidakmampu.setEnabled(false);
+        text_namalengkap_tidakmampu.setBackground(Color.GRAY);
+        text_tempatlahir_tidakmampu.setEnabled(false);
+        text_tempatlahir_tidakmampu.setBackground(Color.GRAY);
+        text_tanggallahir_tidakmampu.setEnabled(false);
+        text_tanggallahir_tidakmampu.setBackground(Color.GRAY);;
+        text_agama_tidakmampu.setEnabled(false);
+        text_agama_tidakmampu.setBackground(Color.GRAY);
+        text_pekerjaan_tidakmampu.setEnabled(false);
+        text_pekerjaan_tidakmampu.setBackground(Color.GRAY);
         text_keteranganrt_tidakmampu.setEnabled(false);
         text_keteranganrt_tidakmampu.setBackground(Color.GRAY);
         text_nomorket_tidakmampu.setEnabled(false);
@@ -47,6 +73,7 @@ public class Main_Form extends javax.swing.JFrame {
         textarea_keperluan_tidakmampu.setEnabled(false);
         textarea_keperluan_tidakmampu.setBackground(Color.GRAY);
 
+        //Keterangan Umum
         btn_delete_warga.setEnabled(false);
         btn_update_warga.setEnabled(false);
         btn_clear_warga.setEnabled(false);
@@ -1773,9 +1800,7 @@ public class Main_Form extends javax.swing.JFrame {
             //Keterangan Tidak Mampu (11 Fields) FIX
             text_nosurat_tidakmampu.setText("");
             text_nik_tidakmampu.setText("");
-            text_nik_tidakmampu.setEnabled(true);
             text_nik_tidakmampu.requestFocus();
-            text_nik_tidakmampu.setBackground(Color.WHITE);
             text_namalengkap_tidakmampu.setText("");
             text_tempatlahir_tidakmampu.setText("");
             text_tanggallahir_tidakmampu.setText("");
@@ -1785,6 +1810,29 @@ public class Main_Form extends javax.swing.JFrame {
             text_nomorket_tidakmampu.setText("");
             text_tanggalket_tidakmampu.setText("");
             textarea_keperluan_tidakmampu.setText("");
+
+            text_nik_tidakmampu.setEnabled(true);
+            text_nik_tidakmampu.setBackground(Color.WHITE);
+            text_nosurat_tidakmampu.setEnabled(false);
+            text_nosurat_tidakmampu.setBackground(Color.GRAY);
+            text_namalengkap_tidakmampu.setEnabled(false);
+            text_namalengkap_tidakmampu.setBackground(Color.GRAY);
+            text_tempatlahir_tidakmampu.setEnabled(false);
+            text_tempatlahir_tidakmampu.setBackground(Color.GRAY);
+            text_tanggallahir_tidakmampu.setEnabled(false);
+            text_tanggallahir_tidakmampu.setBackground(Color.GRAY);;
+            text_agama_tidakmampu.setEnabled(false);
+            text_agama_tidakmampu.setBackground(Color.GRAY);
+            text_pekerjaan_tidakmampu.setEnabled(false);
+            text_pekerjaan_tidakmampu.setBackground(Color.GRAY);
+            text_keteranganrt_tidakmampu.setEnabled(false);
+            text_keteranganrt_tidakmampu.setBackground(Color.GRAY);
+            text_nomorket_tidakmampu.setEnabled(false);
+            text_nomorket_tidakmampu.setBackground(Color.GRAY);
+            text_tanggalket_tidakmampu.setEnabled(false);
+            text_tanggalket_tidakmampu.setBackground(Color.GRAY);
+            textarea_keperluan_tidakmampu.setEnabled(false);
+            textarea_keperluan_tidakmampu.setBackground(Color.GRAY);
 
             //Keterangan Umum (13 Fileds) FIX
             text_nik_ketumum.setText("");
@@ -2338,6 +2386,18 @@ public class Main_Form extends javax.swing.JFrame {
                     text_nik_tidakmampu.setBackground(Color.GRAY);
 
                     //Aktifkan field yang sebelumnya mati
+                    text_nosurat_tidakmampu.setEnabled(true);
+                    text_nosurat_tidakmampu.setBackground(Color.WHITE);
+                    text_namalengkap_tidakmampu.setEnabled(true);
+                    text_namalengkap_tidakmampu.setBackground(Color.WHITE);
+                    text_tempatlahir_tidakmampu.setEnabled(true);
+                    text_tempatlahir_tidakmampu.setBackground(Color.WHITE);
+                    text_tanggallahir_tidakmampu.setEnabled(true);
+                    text_tanggallahir_tidakmampu.setBackground(Color.WHITE);;
+                    text_agama_tidakmampu.setEnabled(true);
+                    text_agama_tidakmampu.setBackground(Color.WHITE);
+                    text_pekerjaan_tidakmampu.setEnabled(true);
+                    text_pekerjaan_tidakmampu.setBackground(Color.WHITE);
                     text_keteranganrt_tidakmampu.setEnabled(true);
                     text_keteranganrt_tidakmampu.setBackground(Color.WHITE);
                     text_nomorket_tidakmampu.setEnabled(true);
@@ -2346,6 +2406,7 @@ public class Main_Form extends javax.swing.JFrame {
                     text_tanggalket_tidakmampu.setBackground(Color.WHITE);
                     textarea_keperluan_tidakmampu.setEnabled(true);
                     textarea_keperluan_tidakmampu.setBackground(Color.WHITE);
+
                 }
             }
         } catch (SQLException ex) {
@@ -2497,7 +2558,7 @@ public class Main_Form extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_search_catkepolisianActionPerformed
 
     private void btn_search_perumumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_search_perumumActionPerformed
-  try {
+        try {
             String j_kelamin = "";
             if (text_nik_perumum.getText().equals("")) {
                 JOptionPane.showMessageDialog(null, "Tidak Ada data Yang Anda Pilih");
