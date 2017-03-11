@@ -1789,6 +1789,7 @@ public class Main_Form extends javax.swing.JFrame {
             hasil = stat.executeQuery(query);
             this._setModel(hasil);
 
+            //Disable dan Enable Button
             btn_clear_tidakmampu.setEnabled(false);
             btn_search_tidakmampu.setEnabled(true);
             btn_search_warga.setEnabled(true);
@@ -2048,7 +2049,7 @@ public class Main_Form extends javax.swing.JFrame {
             //`namalengkap`, `tempatlahir`, `tanggallahir`, `agama`, `pekerjaan`, `pendidikan`, `alamat`, `rt`, `rw`
             //`jeniskelamin`, `statuskawin`, `namaayah`, `namaibu`, `goldarah`, warganegara
             query = "update warga set namalengkap = '" + text_namalengkap_warga.getText() + "', tempatlahir = '" + text_tempatlahir_warga.getText()
-                    + "', tanggallahir = '" + text_tanggallahir_warga.getText() + "', agama = '" + text_agama_warga.getText() + "', pekerjaan = '" + text_alamat_warga.getText()
+                    + "', tanggallahir = '" + text_tanggallahir_warga.getText() + "', agama = '" + text_agama_warga.getText() + "', pekerjaan = '" + text_pekerjaan_warga.getText()
                     + "', pendidikan = '" + text_pendidikan_warga.getText() + "', alamat = '" + text_alamat_warga.getText() + "', rt = '" + text_rt_warga.getText()
                     + "', rw = '" + text_rw_warga.getText() + "', jeniskelamin = '" + j_kelamin_warga + "', statuskawin = '" + text_statuskawin_warga.getText()
                     + "', namaayah = '" + text_namaayah_warga.getText() + "', namaibu = '" + text_namaibu_warga.getText()
@@ -2066,7 +2067,7 @@ public class Main_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_update_wargaActionPerformed
 
-    //insert data warga (Masih ada BUG)
+    //insert data warga (FIX)
     private void btn_insert_wargaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_insert_wargaActionPerformed
 
         try {
@@ -2121,6 +2122,7 @@ public class Main_Form extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_text_tempatlahir_wargaActionPerformed
 
+    //Button Search untuk tab keterangan umum
     private void btn_search_ketumumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_search_ketumumActionPerformed
         try {
 
@@ -2420,6 +2422,7 @@ public class Main_Form extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btn_print_ketumumActionPerformed
 
+    //Tombol clear keterangan umum
     private void btn_clear_ketumumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clear_ketumumActionPerformed
         try {
             //Menjalankan fungsi formWindowOpened
@@ -2429,6 +2432,7 @@ public class Main_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_clear_ketumumActionPerformed
 
+     //Tombol clear keterangan domisili
     private void btn_clear_ketdomisiliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clear_ketdomisiliActionPerformed
         try {
             //Menjalankan fungsi formWindowOpened
@@ -2438,6 +2442,7 @@ public class Main_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_clear_ketdomisiliActionPerformed
 
+     //Tombol clear catatan kepolisian
     private void btn_clear_catkepolisianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clear_catkepolisianActionPerformed
         try {
             //Menjalankan fungsi formWindowOpened
@@ -2447,6 +2452,7 @@ public class Main_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_clear_catkepolisianActionPerformed
 
+     //Tombol clear pernyataan umum
     private void btn_clear_perumumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clear_perumumActionPerformed
         try {
             //Menjalankan fungsi formWindowOpened
@@ -2456,6 +2462,7 @@ public class Main_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_clear_perumumActionPerformed
 
+    //Tombol cari keterangan umum
     private void btn_search_ketdomisiliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_search_ketdomisiliActionPerformed
         try {
             String j_kelamin = "";
@@ -2507,6 +2514,7 @@ public class Main_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_search_ketdomisiliActionPerformed
 
+     //Tombol cari catatan kepolisian
     private void btn_search_catkepolisianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_search_catkepolisianActionPerformed
         try {
             String j_kelamin = "";
@@ -2557,6 +2565,7 @@ public class Main_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_search_catkepolisianActionPerformed
 
+     //Tombol cari pernyataan umum
     private void btn_search_perumumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_search_perumumActionPerformed
         try {
             String j_kelamin = "";
