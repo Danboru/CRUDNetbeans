@@ -29,6 +29,8 @@ public class Main_Form extends javax.swing.JFrame {
     //Constructor
     public Main_Form() {
         initComponents();
+        
+        //Button Grup Setting
         buttonGroup1.add(radiobutton_pria_tidakmampu);
         buttonGroup1.add(radiobutton_wanita_tidakmampu);
 
@@ -810,6 +812,11 @@ public class Main_Form extends javax.swing.JFrame {
         checkbox_ttdcamat.setText("Ttd Camat");
 
         btn_clear_ketdomisili.setText("CLEAR");
+        btn_clear_ketdomisili.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_clear_ketdomisiliActionPerformed(evt);
+            }
+        });
 
         btn_print_ketdomisili.setText("PRINT");
 
@@ -1042,6 +1049,11 @@ public class Main_Form extends javax.swing.JFrame {
         btn_search_catkepolisian.setText("SEARCH");
 
         btn_clear_catkepolisian.setText("CLEAR");
+        btn_clear_catkepolisian.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_clear_catkepolisianActionPerformed(evt);
+            }
+        });
 
         btn_print_catkepolisian.setText("PRINT");
 
@@ -1244,6 +1256,11 @@ public class Main_Form extends javax.swing.JFrame {
         btn_search_perumum.setText("SEARCH");
 
         btn_clear_perumum.setText("CLEAR");
+        btn_clear_perumum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_clear_perumumActionPerformed(evt);
+            }
+        });
 
         btn_print_perumum.setText("PRINT");
 
@@ -1729,6 +1746,7 @@ public class Main_Form extends javax.swing.JFrame {
             stat = koneksi.createStatement();
             hasil = stat.executeQuery(query);
             this._setModel(hasil);
+            
             btn_clear_tidakmampu.setEnabled(false);
             btn_search_tidakmampu.setEnabled(true);
             btn_search_warga.setEnabled(true);
@@ -1737,17 +1755,12 @@ public class Main_Form extends javax.swing.JFrame {
             btn_update_warga.setEnabled(false);
             btn_clear_warga.setEnabled(false);
 
+            //Keterangan Tidak Mampu (11 Fields) FIX
+            text_nosurat_tidakmampu.setText("");
             text_nik_tidakmampu.setText("");
             text_nik_tidakmampu.setEnabled(true);
             text_nik_tidakmampu.requestFocus();
             text_nik_tidakmampu.setBackground(Color.WHITE);
-
-            text_nik_warga.setText("");
-            text_nik_warga.setEnabled(true);
-            text_nik_warga.requestFocus();
-            text_nik_warga.setBackground(Color.WHITE);
-
-            //Keterangan Tidak Mampu
             text_namalengkap_tidakmampu.setText("");
             text_tempatlahir_tidakmampu.setText("");
             text_tanggallahir_tidakmampu.setText("");
@@ -1758,27 +1771,79 @@ public class Main_Form extends javax.swing.JFrame {
             text_tanggalket_tidakmampu.setText("");
             textarea_keperluan_tidakmampu.setText("");
             
-            //Keterangan Umum
+            //Keterangan Umum (13 Fileds) FIX
+            text_nosurat_ketumum.setText("");
             text_namalengkap_ketumum.setText("");
             text_tempatlahir_ketumum.setText("");
             text_tangallahir_ketumum.setText("");
             text_agama_ketumum.setText("");
             text_pekerjaan_ketumum.setText("");
             textarea_keperluan_ketumum.setText("");
+            text_tempattinggal_ketumum.setText("");
+            text_nokk_ketumum.setText("");
+            textarea_keperluan_ketumum.setText("");
+            txtarena_keperluanlain_ketumum.setText("");
+            text_masaberlaku_ketumum.setText("");
+            text_penandatangan_ketumum.setText("");
             
-            //Keterangan Domisili
+            //Keterangan Domisili (15 Fields) FIX
+            text_nosurat_ketdomisili.setText("");
+            text_nik_ketdomisili.setText("");
             text_namalengkap_ketdomisili.setText("");
+            text_bin_ketdomisili.setText("");
+            text_binti_ketdomisili.setText("");
             text_tempatlahir_ketdomisili.setText("");
             text_tanggallahir_ketdomisili.setText("");
+            text_warganegara_ketdomisili.setText("");
             text_agama_ketdomisili.setText("");
             text_pekerjaan_ketdomisili.setText("");
+            text_tempattinggal_ketdomisili.setText("");
             text_keteranganrt_ketdomisili.setText("");
             text_nomorket_ketdomisili.setText("");
             text_tanggalket_ketdomisili.setText("");
             textarea_keperluan_ketdomisili.setText("");
+            text_oenandatangan_ketdomisili.setText("");
             
-            //`namalengkap`, `tempatlahir`, `tanggallahir`, `agama`, `pekerjaan`, `pendidikan`, `alamat`
-            //`rt`, `rw`, `statuskawin`, `namaayah`, `namaibu`, `goldarah`
+            //Catatan Kepolisian (15 Fields) FIX
+            text_nosurat_catkepolisian.setText("");
+            text_nik_catkepolisian.setText("");
+            text_namalengkap_catkepolisian.setText("");
+            text_tempatlahir_catkepolisian.setText("");
+            text_tangglalahir_catkepolisian.setText("");
+            text_warganegara_catkepolisian.setText("");
+            text_agama_catkepolisian.setText("");
+            text_statuskawin_catkepolisian.setText("");
+            text_perkerjaan_catkepolisian.setText("");
+            text_tempattinggal_catkepolisian.setText("");
+            text_keteranganrt_catkepolisian.setText("");
+            text_nomorket_catkepolisian.setText("");
+            text_tanggalket_catkepolisian.setText("");
+            textarea_keperluan_catkepolisian.setText("");
+            text_penandatangan_catkepolisian.setText("");
+            
+            //Pernyataan Umum (16 Fields) FIX
+            text_nosurat_perumum.setText("");
+            text_nik_perumum.setText("");
+            text_namalengkap_perumum.setText("");
+            text_tempatlahir_perumum.setText("");
+            text_tanggallahir_perumum.setText("");
+            text_agama_perumum.setText("");
+            text_pekerjaan_perumum.setText("");
+            text_tempattinggal_perumum.setText("");
+            text_suratpernyataan_perumum.setText("");
+            text_warganegara_perumum.setText("");
+            text_saksisatu_perumum.setText("");
+            text_saksidua_perumum.setText("");
+            text_namart_perumum.setText("");
+            text_namarw_perumum.setText("");
+            text_penandatangan_perumum.setText("");
+            jTextArea3.setText("");
+            
+            //Daftar Warga (15 Fields) FIX
+            text_nik_warga.setText("");
+            text_nik_warga.setEnabled(true);
+            text_nik_warga.requestFocus();
+            text_nik_warga.setBackground(Color.WHITE);
             text_namalengkap_warga.setText("");
             text_tempatlahir_warga.setText("");
             text_tanggallahir_warga.setText("");
@@ -1794,6 +1859,7 @@ public class Main_Form extends javax.swing.JFrame {
             text_golongandarah_warga.setText("");
             text_warganegara_warga.setText("");
 
+            //Set buttongroup ke pilihan kosong
             buttonGroup1.clearSelection();
 
             //Set disable untuk field yang tidak di gunakan di awal
@@ -2291,6 +2357,33 @@ public class Main_Form extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, ex);
         }
     }//GEN-LAST:event_btn_clear_ketumumActionPerformed
+
+    private void btn_clear_ketdomisiliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clear_ketdomisiliActionPerformed
+        try {
+            //Menjalankan fungsi formWindowOpened
+            formWindowOpened(null);
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }//GEN-LAST:event_btn_clear_ketdomisiliActionPerformed
+
+    private void btn_clear_catkepolisianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clear_catkepolisianActionPerformed
+     try {
+            //Menjalankan fungsi formWindowOpened
+            formWindowOpened(null);
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }//GEN-LAST:event_btn_clear_catkepolisianActionPerformed
+
+    private void btn_clear_perumumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clear_perumumActionPerformed
+      try {
+            //Menjalankan fungsi formWindowOpened
+            formWindowOpened(null);
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }//GEN-LAST:event_btn_clear_perumumActionPerformed
 
     /**
      * *

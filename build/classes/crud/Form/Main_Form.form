@@ -1173,6 +1173,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="CLEAR"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_clear_ketdomisiliActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn_print_ketdomisili">
               <Properties>
@@ -1539,6 +1542,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="CLEAR"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_clear_catkepolisianActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn_print_catkepolisian">
               <Properties>
@@ -1914,6 +1920,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="CLEAR"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_clear_perumumActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn_print_perumum">
               <Properties>
