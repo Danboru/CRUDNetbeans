@@ -839,7 +839,7 @@
                                               <Group type="102" attributes="0">
                                                   <Component id="radiobutton_pria_ketdomisili" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="radiobutton__wanita_ketdomisili" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="radiobutton_wanita_ketdomisili" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace min="-2" pref="451" max="-2" attributes="0"/>
@@ -950,7 +950,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                               <Component id="radiobutton_pria_ketdomisili" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="radiobutton__wanita_ketdomisili" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="radiobutton_wanita_ketdomisili" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jLabel35" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -1149,6 +1149,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="SEARCH"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_search_ketdomisiliActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel47">
               <Properties>
@@ -1187,7 +1190,7 @@
                 <Property name="text" type="java.lang.String" value="Pria"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="radiobutton__wanita_ketdomisili">
+            <Component class="javax.swing.JRadioButton" name="radiobutton_wanita_ketdomisili">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Wanita"/>
               </Properties>
@@ -1286,7 +1289,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jLabel57" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="text_tangglalahir_catkepolisian" min="-2" pref="121" max="-2" attributes="0"/>
+                                      <Component id="text_tangallahir_catkepolisian" min="-2" pref="121" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
@@ -1299,7 +1302,7 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="text_perkerjaan_catkepolisian" min="-2" pref="161" max="-2" attributes="0"/>
+                                      <Component id="text_pekerjaan_catkepolisian" min="-2" pref="161" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="jLabel60" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
@@ -1346,7 +1349,7 @@
                           <Component id="jLabel52" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="text_tempatlahir_catkepolisian" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel57" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="text_tangglalahir_catkepolisian" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_tangallahir_catkepolisian" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -1366,7 +1369,7 @@
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel59" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="text_perkerjaan_catkepolisian" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="text_pekerjaan_catkepolisian" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="text_tempattinggal_catkepolisian" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel60" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -1462,14 +1465,14 @@
                 <Property name="text" type="java.lang.String" value="Tanggal Lahir"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="text_tangglalahir_catkepolisian">
+            <Component class="javax.swing.JTextField" name="text_tangallahir_catkepolisian">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel59">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Pekerjaan"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="text_perkerjaan_catkepolisian">
+            <Component class="javax.swing.JTextField" name="text_pekerjaan_catkepolisian">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel60">
               <Properties>
@@ -1537,6 +1540,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="SEARCH"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_search_catkepolisianActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn_clear_catkepolisian">
               <Properties>
@@ -1891,6 +1897,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="SEARCH"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_search_perumumActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="text_namalengkap_perumum">
             </Component>

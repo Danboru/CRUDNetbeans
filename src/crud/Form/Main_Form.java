@@ -29,7 +29,7 @@ public class Main_Form extends javax.swing.JFrame {
     //Constructor
     public Main_Form() {
         initComponents();
-        
+
         //Button Grup Setting
         buttonGroup1.add(radiobutton_pria_tidakmampu);
         buttonGroup1.add(radiobutton_wanita_tidakmampu);
@@ -190,7 +190,7 @@ public class Main_Form extends javax.swing.JFrame {
         btn_clear_ketdomisili = new javax.swing.JButton();
         btn_print_ketdomisili = new javax.swing.JButton();
         radiobutton_pria_ketdomisili = new javax.swing.JRadioButton();
-        radiobutton__wanita_ketdomisili = new javax.swing.JRadioButton();
+        radiobutton_wanita_ketdomisili = new javax.swing.JRadioButton();
         TabEmpat = new javax.swing.JPanel();
         jLabel50 = new javax.swing.JLabel();
         text_nosurat_catkepolisian = new javax.swing.JTextField();
@@ -208,9 +208,9 @@ public class Main_Form extends javax.swing.JFrame {
         radiobutton_pria_catkepolisian = new javax.swing.JRadioButton();
         radiobutton_wanita_catkepolisian = new javax.swing.JRadioButton();
         jLabel57 = new javax.swing.JLabel();
-        text_tangglalahir_catkepolisian = new javax.swing.JTextField();
+        text_tangallahir_catkepolisian = new javax.swing.JTextField();
         jLabel59 = new javax.swing.JLabel();
-        text_perkerjaan_catkepolisian = new javax.swing.JTextField();
+        text_pekerjaan_catkepolisian = new javax.swing.JTextField();
         jLabel60 = new javax.swing.JLabel();
         text_tempattinggal_catkepolisian = new javax.swing.JTextField();
         jLabel61 = new javax.swing.JLabel();
@@ -804,6 +804,11 @@ public class Main_Form extends javax.swing.JFrame {
         jScrollPane4.setViewportView(textarea_keperluan_ketdomisili);
 
         btn_search_ketdomisili.setText("SEARCH");
+        btn_search_ketdomisili.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_search_ketdomisiliActionPerformed(evt);
+            }
+        });
 
         jLabel47.setText("Binti");
 
@@ -822,7 +827,7 @@ public class Main_Form extends javax.swing.JFrame {
 
         radiobutton_pria_ketdomisili.setText("Pria");
 
-        radiobutton__wanita_ketdomisili.setText("Wanita");
+        radiobutton_wanita_ketdomisili.setText("Wanita");
 
         javax.swing.GroupLayout TabTigaLayout = new javax.swing.GroupLayout(TabTiga);
         TabTiga.setLayout(TabTigaLayout);
@@ -866,7 +871,7 @@ public class Main_Form extends javax.swing.JFrame {
                                         .addGroup(TabTigaLayout.createSequentialGroup()
                                             .addComponent(radiobutton_pria_ketdomisili)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(radiobutton__wanita_ketdomisili)))
+                                            .addComponent(radiobutton_wanita_ketdomisili)))
                                     .addGap(451, 451, 451))))
                         .addGroup(TabTigaLayout.createSequentialGroup()
                             .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -944,7 +949,7 @@ public class Main_Form extends javax.swing.JFrame {
                 .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(radiobutton_pria_ketdomisili)
-                        .addComponent(radiobutton__wanita_ketdomisili))
+                        .addComponent(radiobutton_wanita_ketdomisili))
                     .addComponent(jLabel35))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1047,6 +1052,11 @@ public class Main_Form extends javax.swing.JFrame {
         jLabel66.setText("Tanggal");
 
         btn_search_catkepolisian.setText("SEARCH");
+        btn_search_catkepolisian.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_search_catkepolisianActionPerformed(evt);
+            }
+        });
 
         btn_clear_catkepolisian.setText("CLEAR");
         btn_clear_catkepolisian.addActionListener(new java.awt.event.ActionListener() {
@@ -1130,7 +1140,7 @@ public class Main_Form extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel57)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(text_tangglalahir_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(text_tangallahir_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(TabEmpatLayout.createSequentialGroup()
                         .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1139,7 +1149,7 @@ public class Main_Form extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(TabEmpatLayout.createSequentialGroup()
-                                .addComponent(text_perkerjaan_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(text_pekerjaan_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel60)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1175,7 +1185,7 @@ public class Main_Form extends javax.swing.JFrame {
                     .addComponent(jLabel52)
                     .addComponent(text_tempatlahir_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel57)
-                    .addComponent(text_tangglalahir_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(text_tangallahir_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel53)
@@ -1191,7 +1201,7 @@ public class Main_Form extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addGroup(TabEmpatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel59)
-                    .addComponent(text_perkerjaan_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(text_pekerjaan_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(text_tempattinggal_catkepolisian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel60))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1254,6 +1264,11 @@ public class Main_Form extends javax.swing.JFrame {
         jLabel83.setText("Pejabat Penandatangan");
 
         btn_search_perumum.setText("SEARCH");
+        btn_search_perumum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_search_perumumActionPerformed(evt);
+            }
+        });
 
         btn_clear_perumum.setText("CLEAR");
         btn_clear_perumum.addActionListener(new java.awt.event.ActionListener() {
@@ -1746,7 +1761,7 @@ public class Main_Form extends javax.swing.JFrame {
             stat = koneksi.createStatement();
             hasil = stat.executeQuery(query);
             this._setModel(hasil);
-            
+
             btn_clear_tidakmampu.setEnabled(false);
             btn_search_tidakmampu.setEnabled(true);
             btn_search_warga.setEnabled(true);
@@ -1770,8 +1785,12 @@ public class Main_Form extends javax.swing.JFrame {
             text_nomorket_tidakmampu.setText("");
             text_tanggalket_tidakmampu.setText("");
             textarea_keperluan_tidakmampu.setText("");
-            
+
             //Keterangan Umum (13 Fileds) FIX
+            text_nik_ketumum.setText("");
+            text_nik_ketumum.setEnabled(true);
+            text_nik_ketumum.requestFocus();
+            text_nik_ketumum.setBackground(Color.WHITE);
             text_nosurat_ketumum.setText("");
             text_namalengkap_ketumum.setText("");
             text_tempatlahir_ketumum.setText("");
@@ -1785,7 +1804,7 @@ public class Main_Form extends javax.swing.JFrame {
             txtarena_keperluanlain_ketumum.setText("");
             text_masaberlaku_ketumum.setText("");
             text_penandatangan_ketumum.setText("");
-            
+
             //Keterangan Domisili (15 Fields) FIX
             text_nosurat_ketdomisili.setText("");
             text_nik_ketdomisili.setText("");
@@ -1803,24 +1822,24 @@ public class Main_Form extends javax.swing.JFrame {
             text_tanggalket_ketdomisili.setText("");
             textarea_keperluan_ketdomisili.setText("");
             text_oenandatangan_ketdomisili.setText("");
-            
+
             //Catatan Kepolisian (15 Fields) FIX
             text_nosurat_catkepolisian.setText("");
             text_nik_catkepolisian.setText("");
             text_namalengkap_catkepolisian.setText("");
             text_tempatlahir_catkepolisian.setText("");
-            text_tangglalahir_catkepolisian.setText("");
+            text_tangallahir_catkepolisian.setText("");
             text_warganegara_catkepolisian.setText("");
             text_agama_catkepolisian.setText("");
             text_statuskawin_catkepolisian.setText("");
-            text_perkerjaan_catkepolisian.setText("");
+            text_pekerjaan_catkepolisian.setText("");
             text_tempattinggal_catkepolisian.setText("");
             text_keteranganrt_catkepolisian.setText("");
             text_nomorket_catkepolisian.setText("");
             text_tanggalket_catkepolisian.setText("");
             textarea_keperluan_catkepolisian.setText("");
             text_penandatangan_catkepolisian.setText("");
-            
+
             //Pernyataan Umum (16 Fields) FIX
             text_nosurat_perumum.setText("");
             text_nik_perumum.setText("");
@@ -1838,7 +1857,7 @@ public class Main_Form extends javax.swing.JFrame {
             text_namarw_perumum.setText("");
             text_penandatangan_perumum.setText("");
             jTextArea3.setText("");
-            
+
             //Daftar Warga (15 Fields) FIX
             text_nik_warga.setText("");
             text_nik_warga.setEnabled(true);
@@ -2035,6 +2054,7 @@ public class Main_Form extends javax.swing.JFrame {
 
                 stat = koneksi.createStatement();
                 int res = stat.executeUpdate(query);
+
                 if (res == 1) {
                     JOptionPane.showMessageDialog(null, "Insert Data Sukses !");
                     formWindowOpened(null);
@@ -2055,7 +2075,7 @@ public class Main_Form extends javax.swing.JFrame {
 
     private void btn_search_ketumumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_search_ketumumActionPerformed
         try {
-            String j_kelamin = "";
+
             if (text_nik_ketumum.getText().equals("")) {
                 JOptionPane.showMessageDialog(null, "Tidak Ada data Yang Anda Pilih");
             } else {
@@ -2070,30 +2090,22 @@ public class Main_Form extends javax.swing.JFrame {
                     text_tangallahir_ketumum.setText(hasil.getString("tanggallahir"));
                     text_agama_ketumum.setText(hasil.getString("agama"));
                     text_pekerjaan_ketumum.setText(hasil.getString("pekerjaan"));
-                    
+
                 }
+                query = "select * from warga where nik = '" + text_nik_ketumum.getText() + "'";
+                stat = koneksi.createStatement();
+                hasil = stat.executeQuery(query);
 
-                
-                    query = "select * from warga where nik = '" + text_nik_ketumum.getText() + "'";
-                    stat = koneksi.createStatement();
-                    hasil = stat.executeQuery(query);
-                    
-                    _setModel(hasil);
-                    btn_search_tidakmampu.setEnabled(false);
-                    btn_clear_tidakmampu.setEnabled(true);
-                    text_nik_tidakmampu.setEnabled(false);
-                    text_nik_tidakmampu.setBackground(Color.GRAY);
+                _setModel(hasil);
+                btn_search_tidakmampu.setEnabled(false);
+                btn_clear_tidakmampu.setEnabled(true);
+                text_nik_tidakmampu.setEnabled(false);
+                text_nik_tidakmampu.setBackground(Color.GRAY);
 
-                    //Aktifkan field yang sebelumnya mati
-                    text_keteranganrt_tidakmampu.setEnabled(true);
-                    text_keteranganrt_tidakmampu.setBackground(Color.WHITE);
-                    text_nomorket_tidakmampu.setEnabled(true);
-                    text_nomorket_tidakmampu.setBackground(Color.WHITE);
-                    text_tanggalket_tidakmampu.setEnabled(true);
-                    text_tanggalket_tidakmampu.setBackground(Color.WHITE);
-                    textarea_keperluan_tidakmampu.setEnabled(true);
-                    textarea_keperluan_tidakmampu.setBackground(Color.WHITE);
-            
+                //Aktifkan field yang sebelumnya mati
+//                    text_keteranganrt_tidakmampu.setEnabled(true);
+//                    text_keteranganrt_tidakmampu.setBackground(Color.WHITE);
+//                    
             }
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
@@ -2113,7 +2125,7 @@ public class Main_Form extends javax.swing.JFrame {
             } else {
                 //Empty
             }
-            
+
             if (text_nik_tidakmampu.getText().equals("") && text_namalengkap_tidakmampu.getText().equals("") && text_tempatlahir_tidakmampu.getText().equals("")
                     && text_tanggallahir_tidakmampu.getText().equals("") && text_agama_tidakmampu.getText().equals("")
                     && text_pekerjaan_tidakmampu.getText().equals("") || j_kelamin.equals("")) {
@@ -2121,9 +2133,8 @@ public class Main_Form extends javax.swing.JFrame {
             } else {
 
                 //Fungsi akan di jalankan ketika semua field sudah terisi
-                
                 JFrame fr = new JFrame("Surat Keterangan Tidak Mampu | Print Preview");
-                
+
                 fr.setSize(600, 850);//Ukuran Frame Login
                 fr.setLocation(380, 0);//Set Lokasi Running
 
@@ -2153,13 +2164,13 @@ public class Main_Form extends javax.swing.JFrame {
                 JButton btnLog = new JButton("Cetak & Simpan");
                 btnLog.setBounds(140, 300, 200, 50);
                 panel.add(btnLog);
-                
+
                 //Set action untuk button ceetak dan simpan
                 btnLog.addActionListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
                         takePicture(panel); //Memanggil fungsi take picture
-             
-             /* setSize(getPreferredSize());
+
+                        /* setSize(getPreferredSize());
                 BufferedImage image = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_RGB);
                 Graphics2D g = image.createGraphics();
                 printAll(g);
@@ -2169,10 +2180,10 @@ public class Main_Form extends javax.swing.JFrame {
                 } catch (IOException ex) {
                     Logger.getLogger(Main_Form.class.getName()).log(Level.SEVERE, null, ex);
                 }
-             */
+                         */
                     }
                 });
-                
+
                 //Fungsi yang akan di jalankan ketika buttun cancel di tekan
                 JButton btnLog2 = new JButton("Cancel");
                 btnLog2.setBounds(140, 300, 200, 50);
@@ -2187,8 +2198,8 @@ public class Main_Form extends javax.swing.JFrame {
                 fr.add(panel);
                 fr.pack();
                 fr.setVisible(true);
-         
-        /*
+
+                /*
             JPanel jp = new JPanel();
             fr.add(jp);
             fr.setVisible(true);
@@ -2225,8 +2236,7 @@ public class Main_Form extends javax.swing.JFrame {
         g.setFont(g.getFont().deriveFont(12f));
         g.drawString("Hello World!", 100, 100);
         g.dispose();
-        */
-
+                 */
                 //ImageIO.write(image, "png", new File("test.png"));  
             }
         } catch (HeadlessException ex) {
@@ -2239,7 +2249,7 @@ public class Main_Form extends javax.swing.JFrame {
     void takePicture(JPanel panel) {
         BufferedImage img = new BufferedImage(panel.getWidth(), panel.getHeight(), BufferedImage.TYPE_INT_RGB);
         panel.print(img.getGraphics()); // or: panel.printAll(...);
-        
+
         try {
             ImageIO.write(img, "jpg", new File("Hasil//Hasil.jpg"));
             JOptionPane.showMessageDialog(null, "Data Tersimpan");
@@ -2345,12 +2355,12 @@ public class Main_Form extends javax.swing.JFrame {
 
     private void btn_print_ketumumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_print_ketumumActionPerformed
 
-         new TestPreview();
-      
+        new TestPreview();
+
     }//GEN-LAST:event_btn_print_ketumumActionPerformed
 
     private void btn_clear_ketumumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clear_ketumumActionPerformed
-       try {
+        try {
             //Menjalankan fungsi formWindowOpened
             formWindowOpened(null);
         } catch (Exception ex) {
@@ -2368,7 +2378,7 @@ public class Main_Form extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_clear_ketdomisiliActionPerformed
 
     private void btn_clear_catkepolisianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clear_catkepolisianActionPerformed
-     try {
+        try {
             //Menjalankan fungsi formWindowOpened
             formWindowOpened(null);
         } catch (Exception ex) {
@@ -2377,13 +2387,163 @@ public class Main_Form extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_clear_catkepolisianActionPerformed
 
     private void btn_clear_perumumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clear_perumumActionPerformed
-      try {
+        try {
             //Menjalankan fungsi formWindowOpened
             formWindowOpened(null);
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, ex);
         }
     }//GEN-LAST:event_btn_clear_perumumActionPerformed
+
+    private void btn_search_ketdomisiliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_search_ketdomisiliActionPerformed
+        try {
+            String j_kelamin = "";
+            if (text_nik_ketdomisili.getText().equals("")) {
+                JOptionPane.showMessageDialog(null, "Tidak Ada data Yang Anda Pilih");
+            } else {
+                query = "select * from warga where nik = '" + text_nik_ketdomisili.getText() + "'";
+                stat = koneksi.createStatement();
+                hasil = stat.executeQuery(query);
+                while (hasil.next()) {
+
+                    //Set data dari pencarian ke field inputan
+                    text_namalengkap_ketdomisili.setText(hasil.getString("namalengkap"));
+                    text_bin_ketdomisili.setText(hasil.getString("namaayah"));
+                    text_binti_ketdomisili.setText(hasil.getString("namaibu"));
+                    text_tempatlahir_ketdomisili.setText(hasil.getString("tempatlahir"));
+                    text_tanggallahir_ketdomisili.setText(hasil.getString("tanggallahir"));
+                    text_agama_ketdomisili.setText(hasil.getString("agama"));
+                    text_warganegara_ketdomisili.setText(hasil.getString("warganegara"));
+                    text_pekerjaan_ketdomisili.setText(hasil.getString("pekerjaan"));
+                    j_kelamin = hasil.getString("jeniskelamin");
+                }
+
+                if (j_kelamin.equals("")) {
+                    JOptionPane.showMessageDialog(null, "Data Yang Anda Pilih Tidak Ada di database");//pesan ketika data tidak di temukan
+                    formWindowOpened(null);
+                } else {
+                    if (j_kelamin.equals("Pria")) {
+                        radiobutton_pria_ketdomisili.setSelected(true);
+                    } else {
+                        radiobutton_wanita_ketdomisili.setSelected(true);
+                    }
+                    query = "select * from warga where nik = '" + text_nik_ketdomisili.getText() + "'";
+                    stat = koneksi.createStatement();
+                    hasil = stat.executeQuery(query);
+                    _setModel(hasil);
+                    btn_search_ketdomisili.setEnabled(false);
+                    btn_clear_ketdomisili.setEnabled(true);
+                    text_nik_ketdomisili.setEnabled(false);
+                    text_nik_ketdomisili.setBackground(Color.GRAY);
+
+                    //Aktifkan field yang sebelumnya mati
+//                    text_keteranganrt_ketdomisili.setEnabled(true);
+//                    text_keteranganrt_ketdomisili.setBackground(Color.WHITE);
+                }
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }//GEN-LAST:event_btn_search_ketdomisiliActionPerformed
+
+    private void btn_search_catkepolisianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_search_catkepolisianActionPerformed
+        try {
+            String j_kelamin = "";
+            if (text_nik_catkepolisian.getText().equals("")) {
+                JOptionPane.showMessageDialog(null, "Tidak Ada data Yang Anda Pilih");
+            } else {
+                query = "select * from warga where nik = '" + text_nik_catkepolisian.getText() + "'";
+                stat = koneksi.createStatement();
+                hasil = stat.executeQuery(query);
+                while (hasil.next()) {
+
+                    //Set data dari pencarian ke field inputan
+                    text_namalengkap_catkepolisian.setText(hasil.getString("namalengkap"));
+                    text_tempatlahir_catkepolisian.setText(hasil.getString("tempatlahir"));
+                    text_tangallahir_catkepolisian.setText(hasil.getString("tanggallahir"));
+                    text_agama_catkepolisian.setText(hasil.getString("agama"));
+                    text_statuskawin_catkepolisian.setText(hasil.getString("statuskawin"));
+                    text_warganegara_catkepolisian.setText(hasil.getString("warganegara"));
+                    text_pekerjaan_catkepolisian.setText(hasil.getString("pekerjaan"));
+                    j_kelamin = hasil.getString("jeniskelamin");
+                }
+
+                if (j_kelamin.equals("")) {
+                    JOptionPane.showMessageDialog(null, "Data Yang Anda Pilih Tidak Ada di database");//pesan ketika data tidak di temukan
+                    formWindowOpened(null);
+                } else {
+                    if (j_kelamin.equals("Pria")) {
+                        radiobutton_pria_catkepolisian.setSelected(true);
+                    } else {
+                        radiobutton_wanita_catkepolisian.setSelected(true);
+                    }
+                    query = "select * from warga where nik = '" + text_nik_catkepolisian.getText() + "'";
+                    stat = koneksi.createStatement();
+                    hasil = stat.executeQuery(query);
+                    _setModel(hasil);
+                    btn_search_ketdomisili.setEnabled(false);
+                    btn_clear_ketdomisili.setEnabled(true);
+                    text_nik_ketdomisili.setEnabled(false);
+                    text_nik_ketdomisili.setBackground(Color.GRAY);
+
+                    //Aktifkan field yang sebelumnya mati
+//                    text_keteranganrt_ketdomisili.setEnabled(true);
+//                    text_keteranganrt_ketdomisili.setBackground(Color.WHITE);
+                }
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }//GEN-LAST:event_btn_search_catkepolisianActionPerformed
+
+    private void btn_search_perumumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_search_perumumActionPerformed
+  try {
+            String j_kelamin = "";
+            if (text_nik_perumum.getText().equals("")) {
+                JOptionPane.showMessageDialog(null, "Tidak Ada data Yang Anda Pilih");
+            } else {
+                query = "select * from warga where nik = '" + text_nik_perumum.getText() + "'";
+                stat = koneksi.createStatement();
+                hasil = stat.executeQuery(query);
+                while (hasil.next()) {
+
+                    //Set data dari pencarian ke field inputan
+                    text_namalengkap_perumum.setText(hasil.getString("namalengkap"));
+                    text_tempatlahir_perumum.setText(hasil.getString("tempatlahir"));
+                    text_tanggallahir_perumum.setText(hasil.getString("tanggallahir"));
+                    text_agama_perumum.setText(hasil.getString("agama"));
+                    text_warganegara_perumum.setText(hasil.getString("warganegara"));
+                    text_pekerjaan_perumum.setText(hasil.getString("pekerjaan"));
+                    j_kelamin = hasil.getString("jeniskelamin");
+                }
+
+                if (j_kelamin.equals("")) {
+                    JOptionPane.showMessageDialog(null, "Data Yang Anda Pilih Tidak Ada di database");//pesan ketika data tidak di temukan
+                    formWindowOpened(null);
+                } else {
+                    if (j_kelamin.equals("Pria")) {
+                        radiobutton_pria_perumum.setSelected(true);
+                    } else {
+                        radiobutton_wanita_perumum.setSelected(true);
+                    }
+                    query = "select * from warga where nik = '" + text_nik_perumum.getText() + "'";
+                    stat = koneksi.createStatement();
+                    hasil = stat.executeQuery(query);
+                    _setModel(hasil);
+                    btn_search_perumum.setEnabled(false);
+                    btn_clear_perumum.setEnabled(true);
+                    text_nik_perumum.setEnabled(false);
+                    text_nik_perumum.setBackground(Color.GRAY);
+
+                    //Aktifkan field yang sebelumnya mati
+//                    text_keteranganrt_ketdomisili.setEnabled(true);
+//                    text_keteranganrt_ketdomisili.setBackground(Color.WHITE);
+                }
+            }
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }//GEN-LAST:event_btn_search_perumumActionPerformed
 
     /**
      * *
@@ -2563,13 +2723,13 @@ public class Main_Form extends javax.swing.JFrame {
     private javax.swing.JLabel label_pekerjaan;
     private javax.swing.JLabel label_tanggal;
     private javax.swing.JLabel label_tempatlahir;
-    private javax.swing.JRadioButton radiobutton__wanita_ketdomisili;
     private javax.swing.JRadioButton radiobutton_pria_catkepolisian;
     private javax.swing.JRadioButton radiobutton_pria_ketdomisili;
     private javax.swing.JRadioButton radiobutton_pria_perumum;
     private javax.swing.JRadioButton radiobutton_pria_tidakmampu;
     private javax.swing.JRadioButton radiobutton_pria_warga;
     private javax.swing.JRadioButton radiobutton_wanita_catkepolisian;
+    private javax.swing.JRadioButton radiobutton_wanita_ketdomisili;
     private javax.swing.JRadioButton radiobutton_wanita_perumum;
     private javax.swing.JRadioButton radiobutton_wanita_tidakmampu;
     private javax.swing.JRadioButton radiobutton_wanita_warga;
@@ -2615,6 +2775,7 @@ public class Main_Form extends javax.swing.JFrame {
     private javax.swing.JTextField text_nosurat_perumum;
     private javax.swing.JTextField text_nosurat_tidakmampu;
     private javax.swing.JTextField text_oenandatangan_ketdomisili;
+    private javax.swing.JTextField text_pekerjaan_catkepolisian;
     private javax.swing.JTextField text_pekerjaan_ketdomisili;
     private javax.swing.JTextField text_pekerjaan_ketumum;
     private javax.swing.JTextField text_pekerjaan_perumum;
@@ -2624,7 +2785,6 @@ public class Main_Form extends javax.swing.JFrame {
     private javax.swing.JTextField text_penandatangan_ketumum;
     private javax.swing.JTextField text_penandatangan_perumum;
     private javax.swing.JTextField text_pendidikan_warga;
-    private javax.swing.JTextField text_perkerjaan_catkepolisian;
     private javax.swing.JTextField text_rt_warga;
     private javax.swing.JTextField text_rw_warga;
     private javax.swing.JTextField text_saksidua_perumum;
@@ -2632,6 +2792,7 @@ public class Main_Form extends javax.swing.JFrame {
     private javax.swing.JTextField text_statuskawin_catkepolisian;
     private javax.swing.JTextField text_statuskawin_warga;
     private javax.swing.JTextField text_suratpernyataan_perumum;
+    private javax.swing.JTextField text_tangallahir_catkepolisian;
     private javax.swing.JTextField text_tangallahir_ketumum;
     private javax.swing.JTextField text_tanggalket_catkepolisian;
     private javax.swing.JTextField text_tanggalket_ketdomisili;
@@ -2640,7 +2801,6 @@ public class Main_Form extends javax.swing.JFrame {
     private javax.swing.JTextField text_tanggallahir_perumum;
     private javax.swing.JTextField text_tanggallahir_tidakmampu;
     private javax.swing.JTextField text_tanggallahir_warga;
-    private javax.swing.JTextField text_tangglalahir_catkepolisian;
     private javax.swing.JTextField text_tempatlahir_catkepolisian;
     private javax.swing.JTextField text_tempatlahir_ketdomisili;
     private javax.swing.JTextField text_tempatlahir_ketumum;
