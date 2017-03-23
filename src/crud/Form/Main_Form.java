@@ -2291,7 +2291,6 @@ public class Main_Form extends javax.swing.JFrame {
                     text_tanggalket_tidakmampu.setBackground(Color.WHITE);
                     textarea_keperluan_tidakmampu.setEnabled(true);
                     textarea_keperluan_tidakmampu.setBackground(Color.WHITE);
-
                 }
             }
         } catch (SQLException ex) {
@@ -2300,8 +2299,6 @@ public class Main_Form extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_search_tidakmampuActionPerformed
 
     private void btn_print_ketumumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_print_ketumumActionPerformed
-
-        new TestPreview();
 
     }//GEN-LAST:event_btn_print_ketumumActionPerformed
 
