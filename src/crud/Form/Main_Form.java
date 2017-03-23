@@ -1,5 +1,9 @@
 package crud.Form;
 
+import com.itextpdf.text.BadElementException;
+import com.itextpdf.text.Chunk;
+import com.itextpdf.text.DocumentException;
+import com.sun.xml.internal.txw2.Document;
 import crud.DataAdapter.Data_Adapter;
 import crud.DataProvider.Data_Provider;
 import java.awt.Color;
@@ -10,6 +14,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
@@ -23,6 +29,17 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.OverlayLayout;
 import javax.swing.table.TableModel;
+
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfWriter;
+import java.io.FileOutputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import com.itextpdf.text.Image;
+import com.itextpdf.text.pdf.PdfWriter;
+import java.io.FileOutputStream;
+import java.net.URL;
 
 public class Main_Form extends javax.swing.JFrame {
 
@@ -345,6 +362,7 @@ public class Main_Form extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Java Connect Mysql");
+        setPreferredSize(new java.awt.Dimension(1041, 1053));
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
@@ -587,10 +605,10 @@ public class Main_Form extends javax.swing.JFrame {
             PanelUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelUtamaLayout.createSequentialGroup()
                 .addComponent(TidakMampu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 18, Short.MAX_VALUE))
+                .addGap(0, 29, Short.MAX_VALUE))
         );
 
-        TabSatu.addTab("TIDAK MAMPU", PanelUtama);
+        TabSatu.addTab("SURAT TIDAK MAMPU", PanelUtama);
 
         jLabel10.setText("No Surat");
 
@@ -791,10 +809,10 @@ public class Main_Form extends javax.swing.JFrame {
                 .addGroup(TabDuaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_clear_ketumum, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_print_ketumum, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 70, Short.MAX_VALUE))
+                .addGap(0, 81, Short.MAX_VALUE))
         );
 
-        TabSatu.addTab("KETERANGAN UMUM", TabDua);
+        TabSatu.addTab("SURAT KETERANGAN UMUM", TabDua);
 
         jLabel32.setText("No Surat");
 
@@ -851,6 +869,11 @@ public class Main_Form extends javax.swing.JFrame {
         });
 
         btn_print_ketdomisili.setText("PRINT");
+        btn_print_ketdomisili.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_print_ketdomisiliActionPerformed(evt);
+            }
+        });
 
         radiobutton_pria_ketdomisili.setText("Pria");
 
@@ -1028,7 +1051,7 @@ public class Main_Form extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btn_print_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(24, 24, 24)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel48)
                     .addComponent(text_oenandatangan_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1036,7 +1059,7 @@ public class Main_Form extends javax.swing.JFrame {
                 .addGap(42, 42, 42))
         );
 
-        TabSatu.addTab("KETERANGAN DOMISILI", TabTiga);
+        TabSatu.addTab("SURAT KETERANGAN DOMISILI", TabTiga);
 
         jLabel50.setText("No SUrat");
 
@@ -1254,7 +1277,7 @@ public class Main_Form extends javax.swing.JFrame {
                 .addGap(34, 34, 34))
         );
 
-        TabSatu.addTab("CATATAN KEPOLISIAN", TabEmpat);
+        TabSatu.addTab("SURAT CATATAN KEPOLISIAN", TabEmpat);
 
         jLabel67.setText("No Surat");
 
@@ -1405,7 +1428,7 @@ public class Main_Form extends javax.swing.JFrame {
                                         .addGap(0, 0, Short.MAX_VALUE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel78)))
-                        .addContainerGap(350, Short.MAX_VALUE))))
+                        .addContainerGap(357, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1493,10 +1516,10 @@ public class Main_Form extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_clear_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_print_perumum, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
-        TabSatu.addTab("PERNYATAAN UMUM", jPanel1);
+        TabSatu.addTab("SURAT PERNYATAAN UMUM", jPanel1);
 
         table_warga.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1675,7 +1698,7 @@ public class Main_Form extends javax.swing.JFrame {
                                 .addComponent(btn_update_warga, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(btn_delete_warga)))))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         TabLimaLayout.setVerticalGroup(
             TabLimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1747,7 +1770,7 @@ public class Main_Form extends javax.swing.JFrame {
                 .addGap(19, 19, 19))
         );
 
-        TabSatu.addTab("DAFTAR WARGA", TabLima);
+        TabSatu.addTab("DAFTAR PENDUDUK", TabLima);
 
         jLabel11.setText("Keperluan");
 
@@ -2125,10 +2148,10 @@ public class Main_Form extends javax.swing.JFrame {
     //Button Search untuk tab keterangan umum
     private void btn_search_ketumumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_search_ketumumActionPerformed
         try {
-
             if (text_nik_ketumum.getText().equals("")) {
                 JOptionPane.showMessageDialog(null, "Tidak Ada data Yang Anda Pilih");
             } else {
+                               
                 query = "select * from warga where nik = '" + text_nik_ketumum.getText() + "'";
                 stat = koneksi.createStatement();
                 hasil = stat.executeQuery(query);
@@ -2155,7 +2178,8 @@ public class Main_Form extends javax.swing.JFrame {
                 //Aktifkan field yang sebelumnya mati
 //                    text_keteranganrt_tidakmampu.setEnabled(true);
 //                    text_keteranganrt_tidakmampu.setBackground(Color.WHITE);
-//                    
+
+          
             }
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
@@ -2165,148 +2189,7 @@ public class Main_Form extends javax.swing.JFrame {
     //fungsi untuk cetak surat (Masih belum berfungsi)
     private void btn_print_tidakmampuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_print_tidakmampuActionPerformed
 
-        try {
-
-            String j_kelamin = "";
-            if (radiobutton_pria_tidakmampu.isSelected()) {
-                j_kelamin = "Pria";
-            } else if (radiobutton_wanita_tidakmampu.isSelected()) {
-                j_kelamin = "Wanita";
-            } else {
-                //Empty
-            }
-
-            if (text_nik_tidakmampu.getText().equals("") && text_namalengkap_tidakmampu.getText().equals("") && text_tempatlahir_tidakmampu.getText().equals("")
-                    && text_tanggallahir_tidakmampu.getText().equals("") && text_agama_tidakmampu.getText().equals("")
-                    && text_pekerjaan_tidakmampu.getText().equals("") || j_kelamin.equals("")) {
-                JOptionPane.showMessageDialog(null, "Semua Form Harus di Isi");
-            } else {
-
-                //Fungsi akan di jalankan ketika semua field sudah terisi
-                JFrame fr = new JFrame("Surat Keterangan Tidak Mampu | Print Preview");
-
-                fr.setSize(600, 850);//Ukuran Frame Login
-                fr.setLocation(380, 0);//Set Lokasi Running
-
-                final JPanel panel = new JPanel();
-                LayoutManager overlay = new OverlayLayout(panel);
-                panel.setLayout(overlay);
-
-                JLabel label1 = new JLabel(text_namalengkap_tidakmampu.getText());
-                label1.setForeground(Color.BLACK);
-                label1.setFont(new Font("Times New Roman", Font.BOLD, 12));
-                label1.setAlignmentX(0);
-                label1.setAlignmentY(0);
-                panel.add(label1);
-
-                JLabel label2 = new JLabel("Contoh");
-                label2.setForeground(Color.BLACK);
-                label2.setFont(new Font("Times New Roman", Font.BOLD, 12));
-                label2.setAlignmentX(0.5f);
-                label2.setAlignmentY(0.5f);
-                panel.add(label2);
-
-                JLabel label3 = new JLabel(new ImageIcon(Main_Form.class.getResource("TemplateSurat\\SKTM.jpg")));
-                label3.setAlignmentX(0.5f);
-                label3.setAlignmentY(0.5f);
-                panel.add(label3);
-
-                JButton btnLog = new JButton("Cetak & Simpan");
-                btnLog.setBounds(140, 300, 200, 50);
-                panel.add(btnLog);
-
-                //Set action untuk button ceetak dan simpan
-                btnLog.addActionListener(new ActionListener() {
-                    public void actionPerformed(ActionEvent e) {
-                        takePicture(panel); //Memanggil fungsi take picture
-
-                        /* setSize(getPreferredSize());
-                BufferedImage image = new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_RGB);
-                Graphics2D g = image.createGraphics();
-                printAll(g);
-                g.dispose();
-                try {
-                    ImageIO.write(image, "png", new File("aa.png"));
-                } catch (IOException ex) {
-                    Logger.getLogger(Main_Form.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                         */
-                    }
-                });
-
-                //Fungsi yang akan di jalankan ketika buttun cancel di tekan
-                JButton btnLog2 = new JButton("Cancel");
-                btnLog2.setBounds(140, 300, 200, 50);
-                panel.add(btnLog2);
-                btnLog2.addActionListener(new ActionListener() {
-                    public void actionPerformed(ActionEvent e) {
-                        //new Login().setVisible(true);
-                        //fr.setVisible(false);
-                    }
-                });
-
-                fr.add(panel);
-                fr.pack();
-                fr.setVisible(true);
-
-                /*
-            JPanel jp = new JPanel();
-            fr.add(jp);
-            fr.setVisible(true);
-            jp.setLayout(null);
-        //ImageIcon sktm = new ImageIcon(this.getClass().getResource("template\\SKTM.jpg"));      
-        //fr.add(new JLabelh(new ImageIcon("template\\SKTM.jpg")));
-        //JLabel lb = new JLabel(sktm);
-        //Graphics g = lb.getGraphics();
-            //g.setFont(g.getFont().deriveFont(12f));
-            //g.drawString("Hello World!", 100, 100);
-            //g.dispose();
-        //lb.setBounds(0, 0, 595, 842);
-        //jp.add(lb);
-        //String path = "template\\SKTM.jpg";
-        
-        JLabel nm = new JLabel();
-            nm.setText("Example Text");
-            nm.setBounds(100, 100, 300, 20);
-        jp.add(nm);
-                
-        //*
-            JButton btnLog = new JButton("Login");
-            btnLog.setBounds(140, 300, 200, 50);
-            jp.add(btnLog);        
-        btnLog.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e) {
-                //new Login().setVisible(true);
-                //fr.setVisible(false);
-            }
-        });
-        
-        Graphics g = SKTM.getGraphics();
-
-        g.setFont(g.getFont().deriveFont(12f));
-        g.drawString("Hello World!", 100, 100);
-        g.dispose();
-                 */
-                //ImageIO.write(image, "png", new File("test.png"));  
-            }
-        } catch (HeadlessException ex) {
-            JOptionPane.showMessageDialog(null, ex);
-        }
-
     }//GEN-LAST:event_btn_print_tidakmampuActionPerformed
-
-    //Fungsi TakePicture
-    void takePicture(JPanel panel) {
-        BufferedImage img = new BufferedImage(panel.getWidth(), panel.getHeight(), BufferedImage.TYPE_INT_RGB);
-        panel.print(img.getGraphics()); // or: panel.printAll(...);
-
-        try {
-            ImageIO.write(img, "jpg", new File("Hasil//Hasil.jpg"));
-            JOptionPane.showMessageDialog(null, "Data Tersimpan");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     private void text_nik_tidakmampuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_nik_tidakmampuActionPerformed
         // TODO add your handling code here:
@@ -2615,6 +2498,197 @@ public class Main_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_search_perumumActionPerformed
 
+    private void btn_print_ketdomisiliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_print_ketdomisiliActionPerformed
+
+        com.itextpdf.text.Document document = new com.itextpdf.text.Document();
+        try {
+            //Membuat dokume, lokasi dir ada di argumentnya
+            PdfWriter.getInstance(document,new FileOutputStream("surat//SuratKeteranganDomisili_" + text_nosurat_ketdomisili.getText() +".pdf"));
+            //Membuka dokumen yang di buat
+            document.open();
+            
+            com.itextpdf.text.Image image = com.itextpdf.text.Image.getInstance("surat//Header.jpg");
+            image.setAbsolutePosition(0f, 650f); //X = Mendorong gambar dari kiri ke kanan --- Y = mendorong gambar dari bawah ke atas
+            image.scalePercent(100f);//Ukuran gambar
+            
+            
+            com.itextpdf.text.Font font1 = new com.itextpdf.text.Font(com.itextpdf.text.Font.FontFamily.HELVETICA  , 25, Font.BOLD);
+            
+            document.add(image);
+
+            //Text yana akan di masukkan ke dalam dokumen
+            Paragraph paragraph1 = new Paragraph();Paragraph paragraph2 = new Paragraph();
+            Paragraph paragraph3 = new Paragraph();Paragraph paragraph4 = new Paragraph();
+            Paragraph paragraph5 = new Paragraph();Paragraph paragraph6 = new Paragraph();
+            Paragraph paragraph7 = new Paragraph();Paragraph paragraph8 = new Paragraph();
+            Paragraph paragraph9 = new Paragraph();Paragraph paragraph10 = new Paragraph();
+            Paragraph paragraph11 = new Paragraph();Paragraph paragraph12 = new Paragraph();
+            Paragraph paragraph13 = new Paragraph();Paragraph paragraph14 = new Paragraph();
+            Paragraph paragraph15 = new Paragraph();Paragraph paragraph16 = new Paragraph();
+            Paragraph paragraph17 = new Paragraph();Paragraph paragraph18 = new Paragraph();
+            Paragraph paragraph19 = new Paragraph();Paragraph paragraph20 = new Paragraph();
+            Paragraph paragraph21 = new Paragraph();Paragraph paragraph22 = new Paragraph();
+            Paragraph paragraph23 = new Paragraph();Paragraph paragraph24 = new Paragraph();
+            Paragraph paragraph25 = new Paragraph();Paragraph paragraph26 = new Paragraph();
+            Paragraph paragraph27 = new Paragraph();Paragraph paragraph28 = new Paragraph();
+            Paragraph paragraph29 = new Paragraph();Paragraph paragraph30 = new Paragraph();
+            Paragraph paragraph31 = new Paragraph();Paragraph paragraph32 = new Paragraph();
+            Paragraph paragraph33 = new Paragraph();Paragraph paragraph34 = new Paragraph();
+            Paragraph paragraph35 = new Paragraph();Paragraph paragraph36 = new Paragraph();
+            Paragraph paragraph37 = new Paragraph();Paragraph paragraph38 = new Paragraph();
+            Paragraph paragraph39 = new Paragraph();Paragraph paragraph40 = new Paragraph();
+                        
+            /***
+             * 
+             * Fungsi ini melakukan pengaturan posisi secara absolute
+             * Pengaturan masih di lakukan secara manual menggunakan koordinat X dan Y
+             * Namun di sini hanya di gunakan koordinat X
+             * Untuk Koordinat Y, membuat paragraf baru
+             * 
+             */
+            
+           //===================== Pengaturan Text ======================
+           //Fungsi yang bisa di gunakan
+           //paragraph.setSpacingAfter(int);
+           //paragraph.setSpacingBefore(int);
+           //paragraph.setIndentationRight(int);
+           //paragraph2.setIndentationLeft(int);
+           //paragraph2.setAlignment( com.itextpdf.text.Element.ALIGN_CENTER);
+
+                paragraph1.setIndentationLeft(100);paragraph2.setIndentationLeft(100);
+                paragraph3.setIndentationLeft(100);paragraph4.setIndentationLeft(100);
+                paragraph5.setIndentationLeft(100);paragraph6.setIndentationLeft(100);
+                paragraph7.setIndentationLeft(100);
+                //Kode Desa
+                paragraph8.setIndentationLeft(20);
+                paragraph9.setIndentationLeft(100);paragraph10.setIndentationLeft(100);
+                paragraph11.setIndentationLeft(100);
+                //Nama Surat
+                paragraph12.setAlignment( com.itextpdf.text.Element.ALIGN_CENTER);
+                //Nomor Surat
+                paragraph13.setAlignment( com.itextpdf.text.Element.ALIGN_CENTER);
+                paragraph14.setIndentationLeft(100);paragraph15.setIndentationLeft(100);
+                //Pesan terlampir
+                paragraph16.setAlignment( com.itextpdf.text.Element.ALIGN_LEFT);
+                paragraph17.setIndentationLeft(100);
+                //Nama
+                paragraph18.setIndentationLeft(70);
+                //Jenis Kelamin
+                paragraph19.setIndentationLeft(70);
+                //Tempat / Tanggal Lahir
+                paragraph20.setIndentationLeft(70);
+                //Warga Negara / Agama
+                paragraph21.setIndentationLeft(70);
+                //Nomor KTP / NIK
+                paragraph22.setIndentationLeft(70);
+                //Pekerjaan
+                paragraph23.setIndentationLeft(70);
+                //Alamat
+                paragraph24.setIndentationLeft(70);
+                
+                paragraph25.setIndentationLeft(100);
+                //Penutup
+                paragraph26.setAlignment( com.itextpdf.text.Element.ALIGN_LEFT);
+                
+                paragraph27.setIndentationLeft(100);
+                
+                //penutup
+                paragraph28.setAlignment( com.itextpdf.text.Element.ALIGN_LEFT);
+                paragraph29.setIndentationLeft(100);
+                
+                paragraph30.setIndentationLeft(100);
+                
+                //Tanggal Surat di buat
+                paragraph31.setIndentationLeft(250);
+                paragraph32.setIndentationLeft(100);paragraph33.setIndentationLeft(100);
+                paragraph34.setIndentationLeft(100);paragraph35.setIndentationLeft(100);
+                paragraph36.setIndentationLeft(100);paragraph37.setIndentationLeft(100);
+                paragraph38.setIndentationLeft(100);paragraph39.setIndentationLeft(100);
+                //Penamdatangan
+                paragraph40.setIndentationLeft(300);
+                
+           //===================== Pengaturan Text ======================
+
+               //Set Text paragraft yang ada, bisa melalui inputan bisa juga secara hard coded string
+                paragraph1.add("  ");paragraph2.add("  ");paragraph3.add("  ");paragraph4.add("  ");
+                paragraph5.add("  ");paragraph6.add("  ");paragraph7.add("  ");paragraph8.add("  ");
+                //Nomor
+                paragraph8.add("Kode Desa - " + "Kode Desa");
+                paragraph9.add("  ");paragraph10.add("  ");paragraph11.add("  ");
+                paragraph12.add("SURAT KETERANGAN DOMISILI TEMPAT TINGGAL");
+                paragraph13.add("Nomor " + text_nosurat_ketdomisili.getText());
+                paragraph14.add("  ");
+                paragraph15.add("  ");paragraph16.add("  ");
+                //Pesan
+                String tab = "          ";
+                paragraph16.add( tab + "Kepala Desa Urut Sewu Kecamatan Ampel Kabupaten Boyolali, dengan ini menerangkan bahwa warga Urutsewu :");
+                paragraph17.add("  ");
+                //Nama
+                paragraph18.add("1. Nama Lengkap                                       : " + text_namalengkap_ketdomisili.getText());
+                //Jenis Kelamin
+                
+                String kelamin;
+                if(radiobutton_pria_ketdomisili.isSelected()){
+                    paragraph19.add("2. Jenis Kelamin                      : " + "Laki - Laki");
+                }else {
+                   paragraph19.add("2. Jenis Kelamin                      : " + "Perempuan");
+                }
+                
+                //Tempat / Tanggal Lahir
+                paragraph20.add("3. Tempat / Tanggal Lahir   : " + text_tempatlahir_ketdomisili.getText() + ", " + text_tanggallahir_ketdomisili.getText());
+                //Warga Negara / Agama
+                paragraph21.add("4.Warga Negara / Agama   : " + text_warganegara_ketdomisili.getText() + " / " + text_agama_ketdomisili.getText());
+                //Nomor KTP / NIK
+                paragraph22.add("5. Nomor KTP / NIK                   : " + "KTP" + " / " + text_nik_ketdomisili.getText());
+                //Pekerjaan
+                paragraph23.add("6. Pekerjaan                            : " + text_pekerjaan_ketdomisili.getText());
+                //Alamat
+                paragraph24.add("7 ALAMAT                                    : " + text_tempattinggal_ketdomisili.getText());
+                paragraph25.add("  ");
+                //Penutup
+                paragraph26.add(tab + "Berdasarjan Surat Keterangan dari Ketua Rukun Tetangga + var + nomor + var + Tanggal + var + , bahwa yang bersangkutan betul warga "
+                        + "Desa Urutsewu Kecamatan Ampel Kabupaten Boyolali yang beralamat pada alamat tersebut di atas, surat ini di buat untuk keperluatn + var");
+                paragraph27.add("  ");paragraph29.add("  ");
+                //Penutup Kedua
+                paragraph28.add(tab + "Demikian Surat KEterangan ini kami buat atas permintaan yang bersangkutan agar yang berkepentingan mengetahui dan maklum.");
+                paragraph30.add("  ");paragraph31.add("TANGGAL " + "INPUTAN TANGGAL");
+                paragraph32.add("  ");paragraph33.add("  ");paragraph34.add("  ");paragraph35.add("  ");
+                paragraph36.add("");paragraph37.add("  ");paragraph38.add("  ");
+                paragraph39.add("  ");paragraph40.add("(" + "PENANDATANGAN" + ")");
+              
+                //Menambahkan paragraf yang sudah di set posisi dan text yang akan di tampilkan kedalam dokumen
+                document.add(paragraph1);document.add(paragraph2); document.add(paragraph3);
+                document.add(paragraph4);document.add(paragraph5);document.add(paragraph6);
+                document.add(paragraph7);document.add(paragraph8);document.add(paragraph9);
+                document.add(paragraph10);document.add(paragraph11);document.add(paragraph12);
+                document.add(paragraph13);document.add(paragraph14);document.add(paragraph15);
+                document.add(paragraph16);document.add(paragraph17);document.add(paragraph18);
+                document.add(paragraph19);document.add(paragraph20);document.add(paragraph21);
+                document.add(paragraph22);document.add(paragraph23);document.add(paragraph24);
+                document.add(paragraph25);document.add(paragraph26);document.add(paragraph27);
+                document.add(paragraph28);document.add(paragraph29);document.add(paragraph30);
+                document.add(paragraph31);document.add(paragraph32);document.add(paragraph33);
+                document.add(paragraph34);document.add(paragraph35);document.add(paragraph36);
+                document.add(paragraph37);document.add(paragraph38);document.add(paragraph39);
+                document.add(paragraph40);
+                
+                //setelah dokumen di add, harus di close() untuk menyimpan data inputan
+                document.close();
+        } catch (DocumentException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Main_Form.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Main_Form.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        //========== Bagian Priview Surat ============
+        
+        
+        
+    }//GEN-LAST:event_btn_print_ketdomisiliActionPerformed
+
+    
     /**
      * *
      *
