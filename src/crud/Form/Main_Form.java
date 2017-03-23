@@ -1,45 +1,37 @@
 package crud.Form;
 
-import com.itextpdf.text.BadElementException;
-import com.itextpdf.text.Chunk;
+import com.adobe.acrobat.Viewer;
 import com.itextpdf.text.DocumentException;
-import com.sun.xml.internal.txw2.Document;
 import crud.DataAdapter.Data_Adapter;
 import crud.DataProvider.Data_Provider;
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.HeadlessException;
-import java.awt.LayoutManager;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.OverlayLayout;
 import javax.swing.table.TableModel;
-
 import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.pdf.PdfWriter;
-import java.io.FileOutputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import com.itextpdf.text.Image;
 import com.itextpdf.text.pdf.PdfWriter;
+import java.awt.BorderLayout;
+import java.awt.Desktop;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.net.URL;
+import java.io.IOException;
+import javax.print.Doc;
+import javax.print.DocFlavor;
+import javax.print.PrintException;
+import javax.print.PrintService;
+import javax.print.PrintServiceLookup;
+import javax.print.SimpleDoc;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+
 
 public class Main_Form extends javax.swing.JFrame {
 
@@ -2627,12 +2619,14 @@ public class Main_Form extends javax.swing.JFrame {
                 String kelamin;
                 if(radiobutton_pria_ketdomisili.isSelected()){
                     paragraph19.add("2. Jenis Kelamin                      : " + "Laki - Laki");
-                }else {
+                }else if(radiobutton_wanita_ketdomisili.isSelected()) {
                    paragraph19.add("2. Jenis Kelamin                      : " + "Perempuan");
+                }else {
+                   paragraph19.add("2. Jenis Kelamin                      : " + "");
                 }
                 
                 //Tempat / Tanggal Lahir
-                paragraph20.add("3. Tempat / Tanggal Lahir   : " + text_tempatlahir_ketdomisili.getText() + ", " + text_tanggallahir_ketdomisili.getText());
+                paragraph20.add("3. Tempat / Tanggal Lahir   : " + text_tempatlahir_ketdomisili.getText() + " " + text_tanggallahir_ketdomisili.getText());
                 //Warga Negara / Agama
                 paragraph21.add("4.Warga Negara / Agama   : " + text_warganegara_ketdomisili.getText() + " / " + text_agama_ketdomisili.getText());
                 //Nomor KTP / NIK
@@ -2679,10 +2673,18 @@ public class Main_Form extends javax.swing.JFrame {
             Logger.getLogger(Main_Form.class.getName()).log(Level.SEVERE, null, ex);
         }
         
+       
         //========== Bagian Priview Surat ============
-        
-        //Masih belum tak buat , , tak usahain secepatnya
-        
+        try {
+            Desktop desktop = Desktop.getDesktop();
+            if (desktop.isSupported(Desktop.Action.OPEN)) {
+                desktop.open(new File("surat//SuratKeteranganDomisili_" + text_nosurat_ketdomisili.getText() + ".pdf"));
+            } else {
+                System.out.println("Open is not supported");
+            }
+        } catch (IOException exp) {
+            exp.printStackTrace();
+        }
     }//GEN-LAST:event_btn_print_ketdomisiliActionPerformed
 
     /**
