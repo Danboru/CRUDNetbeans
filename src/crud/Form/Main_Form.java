@@ -2681,11 +2681,10 @@ public class Main_Form extends javax.swing.JFrame {
         
         //========== Bagian Priview Surat ============
         
-        
+        //Masih belum tak buat , , tak usahain secepatnya
         
     }//GEN-LAST:event_btn_print_ketdomisiliActionPerformed
 
-    
     /**
      * *
      *
