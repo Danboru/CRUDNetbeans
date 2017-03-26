@@ -850,78 +850,75 @@
                                   </Group>
                               </Group>
                               <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="jLabel38" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel37" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel39" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel40" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel41" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel42" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel46" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel48" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="jLabel38" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel37" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel39" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel40" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel41" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel42" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel46" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel48" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                      <Component id="text_oenandatangan_ketdomisili" alignment="0" max="32767" attributes="0"/>
-                                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                                          <Component id="jScrollPane4" min="-2" pref="386" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                              <Component id="text_oenandatangan_ketdomisili" alignment="0" max="32767" attributes="0"/>
+                                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                                  <Component id="jScrollPane4" min="-2" pref="386" max="-2" attributes="0"/>
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Group type="103" groupAlignment="1" attributes="0">
+                                                          <Group type="102" attributes="0">
+                                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                                  <Component id="text_keteranganrt_ketdomisili" min="-2" pref="128" max="-2" attributes="0"/>
+                                                                  <Component id="text_tempattinggal_ketdomisili" alignment="1" min="-2" pref="128" max="-2" attributes="0"/>
+                                                              </Group>
+                                                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                                                              <Component id="jLabel44" min="-2" max="-2" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                                                          </Group>
                                                           <Group type="102" alignment="1" attributes="0">
-                                                              <Group type="103" groupAlignment="1" attributes="0">
-                                                                  <Group type="102" attributes="0">
-                                                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                                          <Component id="text_keteranganrt_ketdomisili" min="-2" pref="128" max="-2" attributes="0"/>
-                                                                          <Component id="text_tempattinggal_ketdomisili" alignment="1" min="-2" pref="128" max="-2" attributes="0"/>
-                                                                      </Group>
-                                                                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                                                                      <Component id="jLabel44" min="-2" max="-2" attributes="0"/>
-                                                                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-                                                                  </Group>
-                                                                  <Group type="102" alignment="1" attributes="0">
-                                                                      <Component id="jLabel45" min="-2" max="-2" attributes="0"/>
-                                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                                  </Group>
-                                                              </Group>
-                                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                                  <Component id="text_nomorket_ketdomisili" min="-2" pref="186" max="-2" attributes="0"/>
-                                                                  <Component id="text_tanggalket_ketdomisili" min="-2" pref="186" max="-2" attributes="0"/>
-                                                              </Group>
+                                                              <Component id="jLabel45" min="-2" max="-2" attributes="0"/>
+                                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
-                                                  </Group>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Group type="102" attributes="0">
-                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                          <Component id="checkbox_ttdcamat" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Group type="102" attributes="0">
-                                                          <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                                                          <Group type="103" groupAlignment="0" attributes="0">
-                                                              <Component id="btn_print_ketdomisili" max="32767" attributes="0"/>
-                                                              <Component id="btn_clear_ketdomisili" max="32767" attributes="0"/>
-                                                          </Group>
+                                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                          <Component id="text_nomorket_ketdomisili" min="-2" pref="186" max="-2" attributes="0"/>
+                                                          <Component id="text_tanggalket_ketdomisili" min="-2" pref="186" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                               </Group>
+                                          </Group>
+                                          <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" attributes="0">
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="checkbox_ttdcamat" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="text_warganegara_ketdomisili" alignment="0" min="-2" pref="277" max="-2" attributes="0"/>
-                                                      <Component id="text_agama_ketdomisili" alignment="0" min="-2" pref="277" max="-2" attributes="0"/>
-                                                      <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="text_tempatlahir_ketdomisili" min="-2" pref="353" max="-2" attributes="0"/>
-                                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                          <Component id="jLabel43" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Component id="text_pekerjaan_ketdomisili" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                                      <Component id="btn_print_ketdomisili" max="32767" attributes="0"/>
+                                                      <Component id="btn_clear_ketdomisili" max="32767" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
-                                      <Component id="text_tanggallahir_ketdomisili" alignment="1" min="-2" pref="249" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="text_warganegara_ketdomisili" alignment="0" min="-2" pref="277" max="-2" attributes="0"/>
+                                              <Component id="text_agama_ketdomisili" alignment="0" min="-2" pref="277" max="-2" attributes="0"/>
+                                              <Component id="text_pekerjaan_ketdomisili" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="text_tempatlahir_ketdomisili" min="-2" pref="353" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="jLabel43" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="datechooser_tanggallahir_ketdomisili" min="-2" pref="249" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      </Group>
                                   </Group>
                                   <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
                               </Group>
@@ -967,11 +964,13 @@
                           </Group>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel37" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="text_tempatlahir_ketdomisili" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel43" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="text_tanggallahir_ketdomisili" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel37" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="text_tempatlahir_ketdomisili" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel43" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="datechooser_tanggallahir_ketdomisili" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -1020,7 +1019,7 @@
                               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="36" max="32767" attributes="0"/>
+                      <EmptySpace pref="20" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel48" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="text_oenandatangan_ketdomisili" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1112,8 +1111,6 @@
                 <Property name="text" type="java.lang.String" value="Tanggal Lahir"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="text_tanggallahir_ketdomisili">
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel44">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Nomor"/>
@@ -1200,6 +1197,8 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Wanita"/>
               </Properties>
+            </Component>
+            <Component class="com.toedter.calendar.JDateChooser" name="datechooser_tanggallahir_ketdomisili">
             </Component>
           </SubComponents>
         </Container>

@@ -19,6 +19,9 @@ import java.awt.Desktop;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class Main_Form extends javax.swing.JFrame {
 
@@ -196,7 +199,6 @@ public class Main_Form extends javax.swing.JFrame {
         text_tempattinggal_ketdomisili = new javax.swing.JTextField();
         text_keteranganrt_ketdomisili = new javax.swing.JTextField();
         jLabel43 = new javax.swing.JLabel();
-        text_tanggallahir_ketdomisili = new javax.swing.JTextField();
         jLabel44 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
         text_nomorket_ketdomisili = new javax.swing.JTextField();
@@ -214,6 +216,7 @@ public class Main_Form extends javax.swing.JFrame {
         btn_print_ketdomisili = new javax.swing.JButton();
         radiobutton_pria_ketdomisili = new javax.swing.JRadioButton();
         radiobutton_wanita_ketdomisili = new javax.swing.JRadioButton();
+        datechooser_tanggallahir_ketdomisili = new com.toedter.calendar.JDateChooser();
         TabEmpat = new javax.swing.JPanel();
         jLabel50 = new javax.swing.JLabel();
         text_nosurat_catkepolisian = new javax.swing.JTextField();
@@ -903,59 +906,58 @@ public class Main_Form extends javax.swing.JFrame {
                                             .addComponent(radiobutton_wanita_ketdomisili)))
                                     .addGap(451, 451, 451))))
                         .addGroup(TabTigaLayout.createSequentialGroup()
+                            .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel38)
+                                .addComponent(jLabel37)
+                                .addComponent(jLabel39)
+                                .addComponent(jLabel40)
+                                .addComponent(jLabel41)
+                                .addComponent(jLabel42)
+                                .addComponent(jLabel46)
+                                .addComponent(jLabel48))
+                            .addGap(18, 18, 18)
                             .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(TabTigaLayout.createSequentialGroup()
-                                    .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel38)
-                                        .addComponent(jLabel37)
-                                        .addComponent(jLabel39)
-                                        .addComponent(jLabel40)
-                                        .addComponent(jLabel41)
-                                        .addComponent(jLabel42)
-                                        .addComponent(jLabel46)
-                                        .addComponent(jLabel48))
-                                    .addGap(18, 18, 18)
+                                    .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(text_oenandatangan_ketdomisili, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(TabTigaLayout.createSequentialGroup()
+                                                .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addGroup(TabTigaLayout.createSequentialGroup()
+                                                        .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                            .addComponent(text_keteranganrt_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addComponent(text_tempattinggal_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGap(24, 24, 24)
+                                                        .addComponent(jLabel44)
+                                                        .addGap(13, 13, 13))
+                                                    .addGroup(TabTigaLayout.createSequentialGroup()
+                                                        .addComponent(jLabel45)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                                                .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addComponent(text_nomorket_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(text_tanggalket_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                                     .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(TabTigaLayout.createSequentialGroup()
-                                            .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                .addComponent(text_oenandatangan_ketdomisili, javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGroup(TabTigaLayout.createSequentialGroup()
-                                                        .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                            .addGroup(TabTigaLayout.createSequentialGroup()
-                                                                .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                                    .addComponent(text_keteranganrt_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                    .addComponent(text_tempattinggal_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                .addGap(24, 24, 24)
-                                                                .addComponent(jLabel44)
-                                                                .addGap(13, 13, 13))
-                                                            .addGroup(TabTigaLayout.createSequentialGroup()
-                                                                .addComponent(jLabel45)
-                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                                                        .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                            .addComponent(text_nomorket_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addComponent(text_tanggalket_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                            .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(TabTigaLayout.createSequentialGroup()
-                                                    .addGap(18, 18, 18)
-                                                    .addComponent(checkbox_ttdcamat))
-                                                .addGroup(TabTigaLayout.createSequentialGroup()
-                                                    .addGap(50, 50, 50)
-                                                    .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(btn_print_ketdomisili, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(btn_clear_ketdomisili, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                            .addGap(18, 18, 18)
+                                            .addComponent(checkbox_ttdcamat))
                                         .addGroup(TabTigaLayout.createSequentialGroup()
+                                            .addGap(50, 50, 50)
                                             .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(text_warganegara_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(text_agama_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGroup(TabTigaLayout.createSequentialGroup()
-                                                    .addComponent(text_tempatlahir_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                    .addComponent(jLabel43))
-                                                .addComponent(text_pekerjaan_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGap(0, 0, Short.MAX_VALUE))))
-                                .addComponent(text_tanggallahir_ketdomisili, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(btn_print_ketdomisili, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(btn_clear_ketdomisili, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                .addGroup(TabTigaLayout.createSequentialGroup()
+                                    .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(text_warganegara_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(text_agama_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(text_pekerjaan_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(TabTigaLayout.createSequentialGroup()
+                                            .addComponent(text_tempatlahir_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(jLabel43)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(datechooser_tanggallahir_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGap(0, 0, Short.MAX_VALUE)))
                             .addGap(108, 108, 108)))))
         );
         TabTigaLayout.setVerticalGroup(
@@ -988,11 +990,12 @@ public class Main_Form extends javax.swing.JFrame {
                         .addComponent(jLabel47)
                         .addComponent(text_binti_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel37)
-                    .addComponent(text_tempatlahir_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel43)
-                    .addComponent(text_tanggallahir_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel37)
+                        .addComponent(text_tempatlahir_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel43))
+                    .addComponent(datechooser_tanggallahir_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel38)
@@ -1030,7 +1033,7 @@ public class Main_Form extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btn_print_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(24, 24, 24)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                 .addGroup(TabTigaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel48)
                     .addComponent(text_oenandatangan_ketdomisili, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1863,7 +1866,6 @@ public class Main_Form extends javax.swing.JFrame {
             text_bin_ketdomisili.setText("");
             text_binti_ketdomisili.setText("");
             text_tempatlahir_ketdomisili.setText("");
-            text_tanggallahir_ketdomisili.setText("");
             text_warganegara_ketdomisili.setText("");
             text_agama_ketdomisili.setText("");
             text_pekerjaan_ketdomisili.setText("");
@@ -2333,7 +2335,17 @@ public class Main_Form extends javax.swing.JFrame {
                     text_bin_ketdomisili.setText(hasil.getString("namaayah"));
                     text_binti_ketdomisili.setText(hasil.getString("namaibu"));
                     text_tempatlahir_ketdomisili.setText(hasil.getString("tempatlahir"));
-                    text_tanggallahir_ketdomisili.setText(hasil.getString("tanggallahir"));
+                    
+                    //Set datechooser dengan data yang ada di dalam database
+                    String dateValue = hasil.getString("tanggallahir");//Nama kolom yang ada di database
+                    java.util.Date date;
+                    try {
+                        date = new SimpleDateFormat("dd-MM-yyyy").parse(dateValue);
+                        datechooser_tanggallahir_ketdomisili.setDate(date);
+                    } catch (ParseException ex) {
+                        Logger.getLogger(Main_Form.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    
                     text_agama_ketdomisili.setText(hasil.getString("agama"));
                     text_warganegara_ketdomisili.setText(hasil.getString("warganegara"));
                     text_pekerjaan_ketdomisili.setText(hasil.getString("pekerjaan"));
@@ -2640,8 +2652,13 @@ public class Main_Form extends javax.swing.JFrame {
                 paragraph19.add("2. Jenis Kelamin                      : " + "");
             }
 
+            //Setting tanggal lahir
+            String date = new SimpleDateFormat("dd-MM-yyyy").format(Calendar.getInstance().getTime());
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+            String tanggalLahir =(String) dateFormat.format(datechooser_tanggallahir_ketdomisili.getDate());
+            
             //Tempat / Tanggal Lahir
-            paragraph20.add("3. Tempat / Tanggal Lahir   : " + text_tempatlahir_ketdomisili.getText() + " " + text_tanggallahir_ketdomisili.getText());
+            paragraph20.add("3. Tempat / Tanggal Lahir   : " + text_tempatlahir_ketdomisili.getText() + " " + tanggalLahir);
             //Warga Negara / Agama
             paragraph21.add("4.Warga Negara / Agama   : " + text_warganegara_ketdomisili.getText() + " / " + text_agama_ketdomisili.getText());
             //Nomor KTP / NIK
@@ -2811,6 +2828,7 @@ public class Main_Form extends javax.swing.JFrame {
     private javax.swing.JButton btn_update_warga;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JCheckBox checkbox_ttdcamat;
+    private com.toedter.calendar.JDateChooser datechooser_tanggallahir_ketdomisili;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -2987,7 +3005,6 @@ public class Main_Form extends javax.swing.JFrame {
     private javax.swing.JTextField text_tanggalket_catkepolisian;
     private javax.swing.JTextField text_tanggalket_ketdomisili;
     private javax.swing.JTextField text_tanggalket_tidakmampu;
-    private javax.swing.JTextField text_tanggallahir_ketdomisili;
     private javax.swing.JTextField text_tanggallahir_perumum;
     private javax.swing.JTextField text_tanggallahir_tidakmampu;
     private javax.swing.JTextField text_tanggallahir_warga;
