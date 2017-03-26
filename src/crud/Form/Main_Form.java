@@ -1,6 +1,5 @@
 package crud.Form;
 
-import com.adobe.acrobat.Viewer;
 import com.itextpdf.text.DocumentException;
 import crud.DataAdapter.Data_Adapter;
 import crud.DataProvider.Data_Provider;
@@ -16,22 +15,10 @@ import com.itextpdf.text.Paragraph;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import com.itextpdf.text.pdf.PdfWriter;
-import java.awt.BorderLayout;
 import java.awt.Desktop;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import javax.print.Doc;
-import javax.print.DocFlavor;
-import javax.print.PrintException;
-import javax.print.PrintService;
-import javax.print.PrintServiceLookup;
-import javax.print.SimpleDoc;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-
-
 
 public class Main_Form extends javax.swing.JFrame {
 
@@ -2024,7 +2011,6 @@ public class Main_Form extends javax.swing.JFrame {
 
                     text_nik_warga.setEnabled(false);
                     text_nik_warga.setBackground(Color.GRAY);
-
                 }
             }
         } catch (SQLException ex) {
@@ -2051,7 +2037,6 @@ public class Main_Form extends javax.swing.JFrame {
 
     //Update data warga (FIX)
     private void btn_update_wargaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_update_wargaActionPerformed
-
         try {
             String j_kelamin_warga = "";
             if (radiobutton_pria_warga.isSelected()) {
@@ -2084,7 +2069,6 @@ public class Main_Form extends javax.swing.JFrame {
 
     //insert data warga (FIX)
     private void btn_insert_wargaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_insert_wargaActionPerformed
-
         try {
             String j_kelamin_warga = "";
             if (radiobutton_pria_warga.isSelected()) {
@@ -2143,7 +2127,7 @@ public class Main_Form extends javax.swing.JFrame {
             if (text_nik_ketumum.getText().equals("")) {
                 JOptionPane.showMessageDialog(null, "Tidak Ada data Yang Anda Pilih");
             } else {
-                               
+
                 query = "select * from warga where nik = '" + text_nik_ketumum.getText() + "'";
                 stat = koneksi.createStatement();
                 hasil = stat.executeQuery(query);
@@ -2170,8 +2154,6 @@ public class Main_Form extends javax.swing.JFrame {
                 //Aktifkan field yang sebelumnya mati
 //                    text_keteranganrt_tidakmampu.setEnabled(true);
 //                    text_keteranganrt_tidakmampu.setBackground(Color.WHITE);
-
-          
             }
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex);
@@ -2304,7 +2286,7 @@ public class Main_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_clear_ketumumActionPerformed
 
-     //Tombol clear keterangan domisili
+    //Tombol clear keterangan domisili
     private void btn_clear_ketdomisiliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clear_ketdomisiliActionPerformed
         try {
             //Menjalankan fungsi formWindowOpened
@@ -2314,7 +2296,7 @@ public class Main_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_clear_ketdomisiliActionPerformed
 
-     //Tombol clear catatan kepolisian
+    //Tombol clear catatan kepolisian
     private void btn_clear_catkepolisianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clear_catkepolisianActionPerformed
         try {
             //Menjalankan fungsi formWindowOpened
@@ -2324,7 +2306,7 @@ public class Main_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_clear_catkepolisianActionPerformed
 
-     //Tombol clear pernyataan umum
+    //Tombol clear pernyataan umum
     private void btn_clear_perumumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clear_perumumActionPerformed
         try {
             //Menjalankan fungsi formWindowOpened
@@ -2386,7 +2368,7 @@ public class Main_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_search_ketdomisiliActionPerformed
 
-     //Tombol cari catatan kepolisian
+    //Tombol cari catatan kepolisian
     private void btn_search_catkepolisianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_search_catkepolisianActionPerformed
         try {
             String j_kelamin = "";
@@ -2437,7 +2419,7 @@ public class Main_Form extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_search_catkepolisianActionPerformed
 
-     //Tombol cari pernyataan umum
+    //Tombol cari pernyataan umum
     private void btn_search_perumumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_search_perumumActionPerformed
         try {
             String j_kelamin = "";
@@ -2478,8 +2460,8 @@ public class Main_Form extends javax.swing.JFrame {
                     text_nik_perumum.setBackground(Color.GRAY);
 
                     //Aktifkan field yang sebelumnya mati
-//                    text_keteranganrt_ketdomisili.setEnabled(true);
-//                    text_keteranganrt_ketdomisili.setBackground(Color.WHITE);
+                    //text_keteranganrt_ketdomisili.setEnabled(true);
+                    //text_keteranganrt_ketdomisili.setBackground(Color.WHITE);
                 }
             }
         } catch (SQLException ex) {
@@ -2492,179 +2474,246 @@ public class Main_Form extends javax.swing.JFrame {
         com.itextpdf.text.Document document = new com.itextpdf.text.Document();
         try {
             //Membuat dokume, lokasi dir ada di argumentnya
-            PdfWriter.getInstance(document,new FileOutputStream("surat//SuratKeteranganDomisili_" + text_nosurat_ketdomisili.getText() +".pdf"));
+            PdfWriter.getInstance(document, new FileOutputStream("surat//SuratKeteranganDomisili_" + text_nosurat_ketdomisili.getText() + ".pdf"));
             //Membuka dokumen yang di buat
             document.open();
-            
+
             com.itextpdf.text.Image image = com.itextpdf.text.Image.getInstance("surat//Header.jpg");
             image.setAbsolutePosition(0f, 650f); //X = Mendorong gambar dari kiri ke kanan --- Y = mendorong gambar dari bawah ke atas
             image.scalePercent(100f);//Ukuran gambar
-            
-            
-            com.itextpdf.text.Font font1 = new com.itextpdf.text.Font(com.itextpdf.text.Font.FontFamily.HELVETICA  , 25, Font.BOLD);
-            
+
+            com.itextpdf.text.Font font1 = new com.itextpdf.text.Font(com.itextpdf.text.Font.FontFamily.HELVETICA, 25, Font.BOLD);
             document.add(image);
-
             //Text yana akan di masukkan ke dalam dokumen
-            Paragraph paragraph1 = new Paragraph();Paragraph paragraph2 = new Paragraph();
-            Paragraph paragraph3 = new Paragraph();Paragraph paragraph4 = new Paragraph();
-            Paragraph paragraph5 = new Paragraph();Paragraph paragraph6 = new Paragraph();
-            Paragraph paragraph7 = new Paragraph();Paragraph paragraph8 = new Paragraph();
-            Paragraph paragraph9 = new Paragraph();Paragraph paragraph10 = new Paragraph();
-            Paragraph paragraph11 = new Paragraph();Paragraph paragraph12 = new Paragraph();
-            Paragraph paragraph13 = new Paragraph();Paragraph paragraph14 = new Paragraph();
-            Paragraph paragraph15 = new Paragraph();Paragraph paragraph16 = new Paragraph();
-            Paragraph paragraph17 = new Paragraph();Paragraph paragraph18 = new Paragraph();
-            Paragraph paragraph19 = new Paragraph();Paragraph paragraph20 = new Paragraph();
-            Paragraph paragraph21 = new Paragraph();Paragraph paragraph22 = new Paragraph();
-            Paragraph paragraph23 = new Paragraph();Paragraph paragraph24 = new Paragraph();
-            Paragraph paragraph25 = new Paragraph();Paragraph paragraph26 = new Paragraph();
-            Paragraph paragraph27 = new Paragraph();Paragraph paragraph28 = new Paragraph();
-            Paragraph paragraph29 = new Paragraph();Paragraph paragraph30 = new Paragraph();
-            Paragraph paragraph31 = new Paragraph();Paragraph paragraph32 = new Paragraph();
-            Paragraph paragraph33 = new Paragraph();Paragraph paragraph34 = new Paragraph();
-            Paragraph paragraph35 = new Paragraph();Paragraph paragraph36 = new Paragraph();
-            Paragraph paragraph37 = new Paragraph();Paragraph paragraph38 = new Paragraph();
-            Paragraph paragraph39 = new Paragraph();Paragraph paragraph40 = new Paragraph();
-                        
-            /***
-             * 
-             * Fungsi ini melakukan pengaturan posisi secara absolute
-             * Pengaturan masih di lakukan secara manual menggunakan koordinat X dan Y
-             * Namun di sini hanya di gunakan koordinat X
-             * Untuk Koordinat Y, membuat paragraf baru
-             * 
+            Paragraph paragraph1 = new Paragraph();
+            Paragraph paragraph2 = new Paragraph();
+            Paragraph paragraph3 = new Paragraph();
+            Paragraph paragraph4 = new Paragraph();
+            Paragraph paragraph5 = new Paragraph();
+            Paragraph paragraph6 = new Paragraph();
+            Paragraph paragraph7 = new Paragraph();
+            Paragraph paragraph8 = new Paragraph();
+            Paragraph paragraph9 = new Paragraph();
+            Paragraph paragraph10 = new Paragraph();
+            Paragraph paragraph11 = new Paragraph();
+            Paragraph paragraph12 = new Paragraph();
+            Paragraph paragraph13 = new Paragraph();
+            Paragraph paragraph14 = new Paragraph();
+            Paragraph paragraph15 = new Paragraph();
+            Paragraph paragraph16 = new Paragraph();
+            Paragraph paragraph17 = new Paragraph();
+            Paragraph paragraph18 = new Paragraph();
+            Paragraph paragraph19 = new Paragraph();
+            Paragraph paragraph20 = new Paragraph();
+            Paragraph paragraph21 = new Paragraph();
+            Paragraph paragraph22 = new Paragraph();
+            Paragraph paragraph23 = new Paragraph();
+            Paragraph paragraph24 = new Paragraph();
+            Paragraph paragraph25 = new Paragraph();
+            Paragraph paragraph26 = new Paragraph();
+            Paragraph paragraph27 = new Paragraph();
+            Paragraph paragraph28 = new Paragraph();
+            Paragraph paragraph29 = new Paragraph();
+            Paragraph paragraph30 = new Paragraph();
+            Paragraph paragraph31 = new Paragraph();
+            Paragraph paragraph32 = new Paragraph();
+            Paragraph paragraph33 = new Paragraph();
+            Paragraph paragraph34 = new Paragraph();
+            Paragraph paragraph35 = new Paragraph();
+            Paragraph paragraph36 = new Paragraph();
+            Paragraph paragraph37 = new Paragraph();
+            Paragraph paragraph38 = new Paragraph();
+            Paragraph paragraph39 = new Paragraph();
+            Paragraph paragraph40 = new Paragraph();
+
+            /**
+             * *
+             *
+             * Fungsi ini melakukan pengaturan posisi secara absolute Pengaturan
+             * masih di lakukan secara manual menggunakan koordinat X dan Y
+             * Namun di sini hanya di gunakan koordinat X Untuk Koordinat Y,
+             * membuat paragraf baru
+             *
              */
-            
-           //===================== Pengaturan Text ======================
-           //Fungsi yang bisa di gunakan
-           //paragraph.setSpacingAfter(int);
-           //paragraph.setSpacingBefore(int);
-           //paragraph.setIndentationRight(int);
-           //paragraph2.setIndentationLeft(int);
-           //paragraph2.setAlignment( com.itextpdf.text.Element.ALIGN_CENTER);
+            //===================== Pengaturan Text ======================
+            //Fungsi yang bisa di gunakan
+            //paragraph.setSpacingAfter(int);
+            //paragraph.setSpacingBefore(int);
+            //paragraph.setIndentationRight(int);
+            //paragraph2.setIndentationLeft(int);
+            //paragraph2.setAlignment( com.itextpdf.text.Element.ALIGN_CENTER);
+            paragraph1.setIndentationLeft(100);
+            paragraph2.setIndentationLeft(100);
+            paragraph3.setIndentationLeft(100);
+            paragraph4.setIndentationLeft(100);
+            paragraph5.setIndentationLeft(100);
+            paragraph6.setIndentationLeft(100);
+            paragraph7.setIndentationLeft(100);
+            //Kode Desa
+            paragraph8.setIndentationLeft(20);
+            paragraph9.setIndentationLeft(100);
+            paragraph10.setIndentationLeft(100);
+            paragraph11.setIndentationLeft(100);
+            //Nama Surat
+            paragraph12.setAlignment(com.itextpdf.text.Element.ALIGN_CENTER);
+            //Nomor Surat
+            paragraph13.setAlignment(com.itextpdf.text.Element.ALIGN_CENTER);
+            paragraph14.setIndentationLeft(100);
+            paragraph15.setIndentationLeft(100);
+            //Pesan terlampir
+            paragraph16.setAlignment(com.itextpdf.text.Element.ALIGN_LEFT);
+            paragraph17.setIndentationLeft(100);
+            //Nama
+            paragraph18.setIndentationLeft(70);
+            //Jenis Kelamin
+            paragraph19.setIndentationLeft(70);
+            //Tempat / Tanggal Lahir
+            paragraph20.setIndentationLeft(70);
+            //Warga Negara / Agama
+            paragraph21.setIndentationLeft(70);
+            //Nomor KTP / NIK
+            paragraph22.setIndentationLeft(70);
+            //Pekerjaan
+            paragraph23.setIndentationLeft(70);
+            //Alamat
+            paragraph24.setIndentationLeft(70);
 
-                paragraph1.setIndentationLeft(100);paragraph2.setIndentationLeft(100);
-                paragraph3.setIndentationLeft(100);paragraph4.setIndentationLeft(100);
-                paragraph5.setIndentationLeft(100);paragraph6.setIndentationLeft(100);
-                paragraph7.setIndentationLeft(100);
-                //Kode Desa
-                paragraph8.setIndentationLeft(20);
-                paragraph9.setIndentationLeft(100);paragraph10.setIndentationLeft(100);
-                paragraph11.setIndentationLeft(100);
-                //Nama Surat
-                paragraph12.setAlignment( com.itextpdf.text.Element.ALIGN_CENTER);
-                //Nomor Surat
-                paragraph13.setAlignment( com.itextpdf.text.Element.ALIGN_CENTER);
-                paragraph14.setIndentationLeft(100);paragraph15.setIndentationLeft(100);
-                //Pesan terlampir
-                paragraph16.setAlignment( com.itextpdf.text.Element.ALIGN_LEFT);
-                paragraph17.setIndentationLeft(100);
-                //Nama
-                paragraph18.setIndentationLeft(70);
-                //Jenis Kelamin
-                paragraph19.setIndentationLeft(70);
-                //Tempat / Tanggal Lahir
-                paragraph20.setIndentationLeft(70);
-                //Warga Negara / Agama
-                paragraph21.setIndentationLeft(70);
-                //Nomor KTP / NIK
-                paragraph22.setIndentationLeft(70);
-                //Pekerjaan
-                paragraph23.setIndentationLeft(70);
-                //Alamat
-                paragraph24.setIndentationLeft(70);
-                
-                paragraph25.setIndentationLeft(100);
-                //Penutup
-                paragraph26.setAlignment( com.itextpdf.text.Element.ALIGN_LEFT);
-                
-                paragraph27.setIndentationLeft(100);
-                
-                //penutup
-                paragraph28.setAlignment( com.itextpdf.text.Element.ALIGN_LEFT);
-                paragraph29.setIndentationLeft(100);
-                
-                paragraph30.setIndentationLeft(100);
-                
-                //Tanggal Surat di buat
-                paragraph31.setIndentationLeft(250);
-                paragraph32.setIndentationLeft(100);paragraph33.setIndentationLeft(100);
-                paragraph34.setIndentationLeft(100);paragraph35.setIndentationLeft(100);
-                paragraph36.setIndentationLeft(100);paragraph37.setIndentationLeft(100);
-                paragraph38.setIndentationLeft(100);paragraph39.setIndentationLeft(100);
-                //Penamdatangan
-                paragraph40.setIndentationLeft(300);
-                
-           //===================== Pengaturan Text ======================
+            paragraph25.setIndentationLeft(100);
+            //Penutup
+            paragraph26.setAlignment(com.itextpdf.text.Element.ALIGN_LEFT);
 
-               //Set Text paragraft yang ada, bisa melalui inputan bisa juga secara hard coded string
-                paragraph1.add("  ");paragraph2.add("  ");paragraph3.add("  ");paragraph4.add("  ");
-                paragraph5.add("  ");paragraph6.add("  ");paragraph7.add("  ");paragraph8.add("  ");
-                //Nomor
-                paragraph8.add("Kode Desa - " + "Kode Desa");
-                paragraph9.add("  ");paragraph10.add("  ");paragraph11.add("  ");
-                paragraph12.add("SURAT KETERANGAN DOMISILI TEMPAT TINGGAL");
-                paragraph13.add("Nomor " + text_nosurat_ketdomisili.getText());
-                paragraph14.add("  ");
-                paragraph15.add("  ");paragraph16.add("  ");
-                //Pesan
-                String tab = "          ";
-                paragraph16.add( tab + "Kepala Desa Urut Sewu Kecamatan Ampel Kabupaten Boyolali, dengan ini menerangkan bahwa warga Urutsewu :");
-                paragraph17.add("  ");
-                //Nama
-                paragraph18.add("1. Nama Lengkap                                       : " + text_namalengkap_ketdomisili.getText());
-                //Jenis Kelamin
-                
-                String kelamin;
-                if(radiobutton_pria_ketdomisili.isSelected()){
-                    paragraph19.add("2. Jenis Kelamin                      : " + "Laki - Laki");
-                }else if(radiobutton_wanita_ketdomisili.isSelected()) {
-                   paragraph19.add("2. Jenis Kelamin                      : " + "Perempuan");
-                }else {
-                   paragraph19.add("2. Jenis Kelamin                      : " + "");
-                }
-                
-                //Tempat / Tanggal Lahir
-                paragraph20.add("3. Tempat / Tanggal Lahir   : " + text_tempatlahir_ketdomisili.getText() + " " + text_tanggallahir_ketdomisili.getText());
-                //Warga Negara / Agama
-                paragraph21.add("4.Warga Negara / Agama   : " + text_warganegara_ketdomisili.getText() + " / " + text_agama_ketdomisili.getText());
-                //Nomor KTP / NIK
-                paragraph22.add("5. Nomor KTP / NIK                   : " + "KTP" + " / " + text_nik_ketdomisili.getText());
-                //Pekerjaan
-                paragraph23.add("6. Pekerjaan                            : " + text_pekerjaan_ketdomisili.getText());
-                //Alamat
-                paragraph24.add("7 ALAMAT                                    : " + text_tempattinggal_ketdomisili.getText());
-                paragraph25.add("  ");
-                //Penutup
-                paragraph26.add(tab + "Berdasarjan Surat Keterangan dari Ketua Rukun Tetangga + var + nomor + var + Tanggal + var + , bahwa yang bersangkutan betul warga "
-                        + "Desa Urutsewu Kecamatan Ampel Kabupaten Boyolali yang beralamat pada alamat tersebut di atas, surat ini di buat untuk keperluatn + var");
-                paragraph27.add("  ");paragraph29.add("  ");
-                //Penutup Kedua
-                paragraph28.add(tab + "Demikian Surat KEterangan ini kami buat atas permintaan yang bersangkutan agar yang berkepentingan mengetahui dan maklum.");
-                paragraph30.add("  ");paragraph31.add("TANGGAL " + "INPUTAN TANGGAL");
-                paragraph32.add("  ");paragraph33.add("  ");paragraph34.add("  ");paragraph35.add("  ");
-                paragraph36.add("");paragraph37.add("  ");paragraph38.add("  ");
-                paragraph39.add("  ");paragraph40.add("(" + "PENANDATANGAN" + ")");
-              
-                //Menambahkan paragraf yang sudah di set posisi dan text yang akan di tampilkan kedalam dokumen
-                document.add(paragraph1);document.add(paragraph2); document.add(paragraph3);
-                document.add(paragraph4);document.add(paragraph5);document.add(paragraph6);
-                document.add(paragraph7);document.add(paragraph8);document.add(paragraph9);
-                document.add(paragraph10);document.add(paragraph11);document.add(paragraph12);
-                document.add(paragraph13);document.add(paragraph14);document.add(paragraph15);
-                document.add(paragraph16);document.add(paragraph17);document.add(paragraph18);
-                document.add(paragraph19);document.add(paragraph20);document.add(paragraph21);
-                document.add(paragraph22);document.add(paragraph23);document.add(paragraph24);
-                document.add(paragraph25);document.add(paragraph26);document.add(paragraph27);
-                document.add(paragraph28);document.add(paragraph29);document.add(paragraph30);
-                document.add(paragraph31);document.add(paragraph32);document.add(paragraph33);
-                document.add(paragraph34);document.add(paragraph35);document.add(paragraph36);
-                document.add(paragraph37);document.add(paragraph38);document.add(paragraph39);
-                document.add(paragraph40);
-                
-                //setelah dokumen di add, harus di close() untuk menyimpan data inputan
-                document.close();
+            paragraph27.setIndentationLeft(100);
+
+            //penutup
+            paragraph28.setAlignment(com.itextpdf.text.Element.ALIGN_LEFT);
+            paragraph29.setIndentationLeft(100);
+
+            paragraph30.setIndentationLeft(100);
+
+            //Tanggal Surat di buat
+            paragraph31.setIndentationLeft(250);
+            paragraph32.setIndentationLeft(100);
+            paragraph33.setIndentationLeft(100);
+            paragraph34.setIndentationLeft(100);
+            paragraph35.setIndentationLeft(100);
+            paragraph36.setIndentationLeft(100);
+            paragraph37.setIndentationLeft(100);
+            paragraph38.setIndentationLeft(100);
+            paragraph39.setIndentationLeft(100);
+            //Penamdatangan
+            paragraph40.setIndentationLeft(300);
+
+            //===================== Pengaturan Text ======================
+            //Set Text paragraft yang ada, bisa melalui inputan bisa juga secara hard coded string
+            paragraph1.add("  ");
+            paragraph2.add("  ");
+            paragraph3.add("  ");
+            paragraph4.add("  ");
+            paragraph5.add("  ");
+            paragraph6.add("  ");
+            paragraph7.add("  ");
+            paragraph8.add("  ");
+            //Nomor
+            paragraph8.add("Kode Desa - " + "Kode Desa");
+            paragraph9.add("  ");
+            paragraph10.add("  ");
+            paragraph11.add("  ");
+            paragraph12.add("SURAT KETERANGAN DOMISILI TEMPAT TINGGAL");
+            paragraph13.add("Nomor " + text_nosurat_ketdomisili.getText());
+            paragraph14.add("  ");
+            paragraph15.add("  ");
+            paragraph16.add("  ");
+            //Pesan
+            String tab = "          ";
+            paragraph16.add(tab + "Kepala Desa Urut Sewu Kecamatan Ampel Kabupaten Boyolali, dengan ini menerangkan bahwa warga Urutsewu :");
+            paragraph17.add("  ");
+            //Nama
+            paragraph18.add("1. Nama Lengkap                                       : " + text_namalengkap_ketdomisili.getText());
+            //Jenis Kelamin
+
+            String kelamin;
+            if (radiobutton_pria_ketdomisili.isSelected()) {
+                paragraph19.add("2. Jenis Kelamin                      : " + "Laki - Laki");
+            } else if (radiobutton_wanita_ketdomisili.isSelected()) {
+                paragraph19.add("2. Jenis Kelamin                      : " + "Perempuan");
+            } else {
+                paragraph19.add("2. Jenis Kelamin                      : " + "");
+            }
+
+            //Tempat / Tanggal Lahir
+            paragraph20.add("3. Tempat / Tanggal Lahir   : " + text_tempatlahir_ketdomisili.getText() + " " + text_tanggallahir_ketdomisili.getText());
+            //Warga Negara / Agama
+            paragraph21.add("4.Warga Negara / Agama   : " + text_warganegara_ketdomisili.getText() + " / " + text_agama_ketdomisili.getText());
+            //Nomor KTP / NIK
+            paragraph22.add("5. Nomor KTP / NIK                   : " + "KTP" + " / " + text_nik_ketdomisili.getText());
+            //Pekerjaan
+            paragraph23.add("6. Pekerjaan                            : " + text_pekerjaan_ketdomisili.getText());
+            //Alamat
+            paragraph24.add("7 ALAMAT                                    : " + text_tempattinggal_ketdomisili.getText());
+            paragraph25.add("  ");
+            //Penutup
+            paragraph26.add(tab + "Berdasarjan Surat Keterangan dari Ketua Rukun Tetangga + var + nomor + var + Tanggal + var + , bahwa yang bersangkutan betul warga "
+                    + "Desa Urutsewu Kecamatan Ampel Kabupaten Boyolali yang beralamat pada alamat tersebut di atas, surat ini di buat untuk keperluatn + var");
+            paragraph27.add("  ");
+            paragraph29.add("  ");
+            //Penutup Kedua
+            paragraph28.add(tab + "Demikian Surat KEterangan ini kami buat atas permintaan yang bersangkutan agar yang berkepentingan mengetahui dan maklum.");
+            paragraph30.add("  ");
+            paragraph31.add("TANGGAL " + "INPUTAN TANGGAL");
+            paragraph32.add("  ");
+            paragraph33.add("  ");
+            paragraph34.add("  ");
+            paragraph35.add("  ");
+            paragraph36.add("");
+            paragraph37.add("  ");
+            paragraph38.add("  ");
+            paragraph39.add("  ");
+            paragraph40.add("(" + "PENANDATANGAN" + ")");
+
+            //Menambahkan paragraf yang sudah di set posisi dan text yang akan di tampilkan kedalam dokumen
+            document.add(paragraph1);
+            document.add(paragraph2);
+            document.add(paragraph3);
+            document.add(paragraph4);
+            document.add(paragraph5);
+            document.add(paragraph6);
+            document.add(paragraph7);
+            document.add(paragraph8);
+            document.add(paragraph9);
+            document.add(paragraph10);
+            document.add(paragraph11);
+            document.add(paragraph12);
+            document.add(paragraph13);
+            document.add(paragraph14);
+            document.add(paragraph15);
+            document.add(paragraph16);
+            document.add(paragraph17);
+            document.add(paragraph18);
+            document.add(paragraph19);
+            document.add(paragraph20);
+            document.add(paragraph21);
+            document.add(paragraph22);
+            document.add(paragraph23);
+            document.add(paragraph24);
+            document.add(paragraph25);
+            document.add(paragraph26);
+            document.add(paragraph27);
+            document.add(paragraph28);
+            document.add(paragraph29);
+            document.add(paragraph30);
+            document.add(paragraph31);
+            document.add(paragraph32);
+            document.add(paragraph33);
+            document.add(paragraph34);
+            document.add(paragraph35);
+            document.add(paragraph36);
+            document.add(paragraph37);
+            document.add(paragraph38);
+            document.add(paragraph39);
+            document.add(paragraph40);
+
+            //setelah dokumen di add, harus di close() untuk menyimpan data inputan
+            document.close();
         } catch (DocumentException e) {
             e.printStackTrace();
         } catch (FileNotFoundException ex) {
@@ -2672,8 +2721,7 @@ public class Main_Form extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(Main_Form.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-       
+
         //========== Bagian Priview Surat ============
         try {
             Desktop desktop = Desktop.getDesktop();
